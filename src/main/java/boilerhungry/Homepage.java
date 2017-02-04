@@ -1,12 +1,19 @@
 package boilerhungry;
 
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
 /**
- * Created by eric on 2/4/17.
+ * Created by eric on 10/23/16.
  */
-public class Homepage {
+public class Homepage extends HttpServlet {
 
-    public static void main(String[] args) {
-
+    @Override
+    public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+        // TODO
     }
 
 }

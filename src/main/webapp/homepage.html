@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Search</title>
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/default.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/search-engine">BoilerHungry</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/search-engine">Home</a></li>
+          <li><a href="https://www.cs.purdue.edu/homes/cs390lang/java/lab1-java-search-engine/">About</a></li>
+          <li><a href="mailto:eaguiler@purdue.edu?Subject=Search%20Engine">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div id="carousel" class="carousel slide" data-ride="carousel">
+      <!-- Menu -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel" data-slide-to="1"></li>
+        <li data-target="#carousel" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Items -->
+      <div class="carousel-inner">
+
+        <div class="item active">
+          <img src="http://lorempixel.com/1500/600/food/1" alt="Earhart" />
+        </div>
+        <div class="item">
+          <img src="http://lorempixel.com/1500/600/food/2" alt="Wiley" />
+        </div>
+        <div class="item">
+          <img src="http://lorempixel.com/1500/600/food/3" alt="Ford" />
+        </div>
+      </div>
+      <a href="#carousel" class="left carousel-control" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <a href="#carousel" class="right carousel-control" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
+    </div>
+    <div class="search-content">
+      <h1>Welcome to BoilerHungry</h1>
+      <p class="lead">Use this website to access Purdue dining courts.</p>
+      <form class="form-search" action="search" method="get">
+        <input type="text" name="query" class="form-control" placeholder="Search query" required>
+        <div class="search-buttons">
+          <button class="btn btn-lg btn-primary" type="submit">Search</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>
