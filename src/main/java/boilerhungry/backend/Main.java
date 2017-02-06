@@ -10,6 +10,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by Matthew on 2/6/2017.
@@ -19,7 +20,7 @@ public class Main {
 
     }
 
-    public ArrayList<DiningCourt> getDiningMenus(Date date) throws Exception{
+    public List<DiningCourt> getDiningMenus(Date date) throws Exception{
         DateFormat format = new SimpleDateFormat("/MM-dd-yyyy");
         String day = format.format(date);
         String dCourtNames [] = {"Earhart", "Wiley", "Ford", "Hillenbrand", "Windsor" };

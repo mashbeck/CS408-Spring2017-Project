@@ -16,7 +16,8 @@ public class Food {
     private boolean treeNuts;
     private boolean wheat;
 
-    public Food(String name, boolean isVegetarian, boolean eggs, boolean fish, boolean gluten, boolean milk, boolean peanuts, boolean shellfish, boolean soy, boolean treeNuts, boolean wheat) {
+    public Food(String name, boolean isVegetarian, boolean eggs, boolean fish, boolean gluten, boolean milk,
+                boolean peanuts, boolean shellfish, boolean soy, boolean treeNuts, boolean wheat) {
         this.name = name;
         this.isVegetarian = isVegetarian;
         this.eggs = eggs;
