@@ -1,26 +1,4 @@
 /********************************/
-/*       Fade Bs-carousel       */
-/********************************/
-.fade-carousel {
-    position: relative;
-    height: 100vh;
-}
-.fade-carousel .carousel-inner .item {
-    height: 100vh;
-}
-.fade-carousel .carousel-indicators > li {
-    margin: 0 2px;
-    background-color: #f39c12;
-    border-color: #f39c12;
-    opacity: .7;
-}
-.fade-carousel .carousel-indicators > li.active {
-  width: 10px;
-  height: 10px;
-  opacity: 1;
-}
-
-/********************************/
 /*          Hero Headers        */
 /********************************/
 .hero {
@@ -38,40 +16,12 @@
            -o-transform: translate3d(-50%,-50%,0);
               transform: translate3d(-50%,-50%,0);
 }
+
 .hero h1 {
     font-size: 6em;
     font-weight: bold;
     margin: 0;
     padding: 0;
-}
-
-.fade-carousel .carousel-inner .item .hero {
-    opacity: 0;
-    -webkit-transition: 2s all ease-in-out .1s;
-       -moz-transition: 2s all ease-in-out .1s;
-        -ms-transition: 2s all ease-in-out .1s;
-         -o-transition: 2s all ease-in-out .1s;
-            transition: 2s all ease-in-out .1s;
-}
-.fade-carousel .carousel-inner .item.active .hero {
-    opacity: 1;
-    -webkit-transition: 2s all ease-in-out .1s;
-       -moz-transition: 2s all ease-in-out .1s;
-        -ms-transition: 2s all ease-in-out .1s;
-         -o-transition: 2s all ease-in-out .1s;
-            transition: 2s all ease-in-out .1s;
-}
-
-/********************************/
-/*            Overlay           */
-/********************************/
-.overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    background-color: #080d15;
-    opacity: .7;
 }
 
 /********************************/
@@ -86,27 +36,6 @@
     border-color: #1abc9c;
     outline: none;
     margin: 20px auto;
-}
-
-/********************************/
-/*       Slides backgrounds     */
-/********************************/
-.fade-carousel .slides .slide-1,
-.fade-carousel .slides .slide-2,
-.fade-carousel .slides .slide-3 {
-  height: 100vh;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-.fade-carousel .slides .slide-1 {
-  background-image: url(http://lorempixel.com/500/200/food/1);
-}
-.fade-carousel .slides .slide-2 {
-  background-image: url(http://lorempixel.com/500/200/food/2);
-}
-.fade-carousel .slides .slide-3 {
-  background-image: url(http://lorempixel.com/500/200/food/3);
 }
 
 /********************************/
