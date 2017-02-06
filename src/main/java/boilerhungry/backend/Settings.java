@@ -4,8 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by eric on 2/6/17.
@@ -14,11 +13,11 @@ public class Settings {
 
     private int version;
     private DietaryPreferences dietaryPreferences;
-    private List<String> myFoods;
+    private Collection<String> myFoods;
 
     private transient File file;
 
-    private Settings(File file, int version, DietaryPreferences dietaryPreferences, List<String> myFoods) {
+    private Settings(File file, int version, DietaryPreferences dietaryPreferences, Collection<String> myFoods) {
         this.file = file;
         this.version = version;
         this.dietaryPreferences = dietaryPreferences;
@@ -29,19 +28,33 @@ public class Settings {
         this.file = file;
         this.version = 1;
         this.dietaryPreferences = new DietaryPreferences();
-        this.myFoods = new ArrayList<>();
+        this.myFoods = new HashSet<>();
+    }
+
+    private void setFile(File file) {
+        this.file = file;
+    }
+
+    public DietaryPreferences getDietaryPreferences() {
+        return dietaryPreferences;
+    }
+
+    public Collection<String> getMyFoods() {
+        return myFoods;
     }
 
     public static Settings load(File file) throws IOException {
         Gson gson = new Gson();
+        Settings settings = null;
         if (file.exists()) {
             Reader reader = new FileReader(file);
-            return gson.fromJson(reader, Settings.class);
+            settings = gson.fromJson(reader, Settings.class);
+            settings.setFile(file);
         } else {
-            Settings settings = new Settings(file);
+            settings = new Settings(file);
             settings.save();
-            return settings;
         }
+        return settings;
     }
 
     public void save() throws IOException {

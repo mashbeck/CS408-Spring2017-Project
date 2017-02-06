@@ -2,8 +2,8 @@
   "version": 1,
   "dietaryPreferences": {
     "vegetarian": false,
-    "noEggs": false,
-    "noFish": false,
+    "noEggs": true,
+    "noFish": true,
     "noGluten": false,
     "noMilk": false,
     "noPeanuts": false,
@@ -11,5 +11,8 @@
     "noSoy": false,
     "noWheat": false
   },
-  "myFoods": []
+  "myFoods": [
+    "bacon",
+    "strawberries"
+  ]
 }
