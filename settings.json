@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "dietaryPreferences": {
+    "vegetarian": false,
+    "noEggs": false,
+    "noFish": false,
+    "noGluten": false,
+    "noMilk": false,
+    "noPeanuts": false,
+    "noShellfish": false,
+    "noSoy": false,
+    "noWheat": false
+  },
+  "myFoods": []
+}

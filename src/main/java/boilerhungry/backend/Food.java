@@ -4,7 +4,8 @@ package boilerhungry.backend;
  * Created by Matthew on 2/6/2017.
  */
 public class Food {
-    String name;
+
+    private String name;
     private boolean isVegetarian;
     private boolean eggs;
     private boolean fish;
@@ -38,39 +39,39 @@ public class Food {
         return isVegetarian;
     }
 
-    public boolean isEggs() {
+    public boolean hasEggs() {
         return eggs;
     }
 
-    public boolean isFish() {
+    public boolean hasFish() {
         return fish;
     }
 
-    public boolean isGluten() {
+    public boolean hasGluten() {
         return gluten;
     }
 
-    public boolean isMilk() {
+    public boolean hasMilk() {
         return milk;
     }
 
-    public boolean isPeanuts() {
+    public boolean hasPeanuts() {
         return peanuts;
     }
 
-    public boolean isShellfish() {
+    public boolean hasShellfish() {
         return shellfish;
     }
 
-    public boolean isSoy() {
+    public boolean hasSoy() {
         return soy;
     }
 
-    public boolean isTreeNuts() {
+    public boolean hasTreeNuts() {
         return treeNuts;
     }
 
-    public boolean isWheat() {
+    public boolean hasWheat() {
         return wheat;
     }
 }

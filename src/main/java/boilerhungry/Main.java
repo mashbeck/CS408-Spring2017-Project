@@ -1,3 +1,5 @@
+import boilerhungry.backend.DiningCourt;
+import boilerhungry.backend.Food;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
