@@ -1,17 +1,18 @@
 package boilerhungry.backend;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Matthew on 2/4/2017.
  */
 public class DiningCourt {
-    String name;
-    private ArrayList<Food> breakfast;
-    private ArrayList<Food> lunch;
-    private ArrayList<Food> dinner;
 
-    public DiningCourt(String name, ArrayList<Food> breakfast, ArrayList<Food> lunch, ArrayList<Food> dinner) {
+    private String name;
+    private List<Food> breakfast;
+    private List<Food> lunch;
+    private List<Food> dinner;
+
+    public DiningCourt(String name, List<Food> breakfast, List<Food> lunch, List<Food> dinner) {
         this.name = name;
         this.breakfast = breakfast;
         this.lunch = lunch;
@@ -22,15 +23,15 @@ public class DiningCourt {
         return name;
     }
 
-    public ArrayList<Food> getBreakfast() {
+    public List<Food> getBreakfast() {
         return breakfast;
     }
 
-    public ArrayList<Food> getLunch() {
+    public List<Food> getLunch() {
         return lunch;
     }
 
-    public ArrayList<Food> getDinner() {
+    public List<Food> getDinner() {
         return dinner;
     }
 }
