@@ -6,11 +6,11 @@
     <display-name>BoilerHungry</display-name>
     <servlet>
         <servlet-name>ExampleServlet</servlet-name>
-        <servlet-class>boilerhungry.backend.demo.ExampleServlet</servlet-class>
+        <servlet-class>boilerhungry.backend.JavaServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ExampleServlet</servlet-name>
-        <url-pattern>/example</url-pattern>
+        <url-pattern>/ViewMenu</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
         <welcome-file>homepage.html</welcome-file>
