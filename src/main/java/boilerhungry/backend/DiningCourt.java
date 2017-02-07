@@ -107,7 +107,6 @@ public class DiningCourt extends DiningCourtAPI {
             String name = location.getString("Name");
             String address = getAddressString(location);
             // TODO get hours
-            // TODO the menu needs to be fetched
             diningCourts.add(new DiningCourt(name, address));
         }
         return diningCourts;
