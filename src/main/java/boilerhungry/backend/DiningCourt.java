@@ -2,17 +2,14 @@ package boilerhungry.backend;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by eric on 2/6/17.
@@ -48,11 +45,13 @@ public class DiningCourt extends DiningCourtAPI {
             JSONArray stations = meal.getJSONArray("Stations");
             for (int j = 0; j < stations.length(); j++) {
                 JSONObject station = stations.getJSONObject(j);
+                String stationName = station.getString("Name");
                 JSONArray items = station.getJSONArray("Items");
                 for (int k = 0; k < items.length(); k++) {
                     JSONObject item = items.getJSONObject(k);
                     String foodName = item.getString("Name");
                     Food food = new Food(foodName);
+                    food.setStation(stationName);
                     food.setVegetarian(item.getBoolean("IsVegetarian"));
                     if (item.has("Allergens")) {
                         JSONArray allergens = item.getJSONArray("Allergens");
@@ -106,4 +105,34 @@ public class DiningCourt extends DiningCourtAPI {
         }
         return menu;
     }
+
+    public static List<DiningCourt> getDiningCourts() {
+        List<DiningCourt> diningCourts = new ArrayList<>();
+        try {
+            JSONObject root = getJSON(new URL("https://api.hfs.purdue.edu/menus/v2/locations/"));
+            JSONArray locations = root.getJSONArray("Location");
+            for (int i = 0; i < locations.length(); i++) {
+                JSONObject location = locations.getJSONObject(i);
+                String name = location.getString("Name");
+                String address = getAddressString(location);
+                // TODO get hours
+                // TODO the menu needs to be fetched
+                diningCourts.add(new DiningCourt(name, address));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return diningCourts;
+    }
+
+    private static String getAddressString(JSONObject location) {
+        StringBuilder res = new StringBuilder();
+        JSONObject address = location.getJSONObject("Address");
+        res.append(address.getString("Street")).append(", ");
+        res.append(address.getString("City")).append(", ");
+        res.append(address.getString("State")).append(" ");
+        res.append(address.getString("ZipCode"));
+        return res.toString();
+    }
+
 }

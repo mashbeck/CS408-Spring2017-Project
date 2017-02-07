@@ -6,6 +6,7 @@ package boilerhungry.backend;
 public class Food {
 
     private String name;
+    private String station;
     private boolean isVegetarian;
     private boolean eggs;
     private boolean fish;
@@ -17,19 +18,12 @@ public class Food {
     private boolean treeNuts;
     private boolean wheat;
 
-    public Food(String name, boolean isVegetarian, boolean eggs, boolean fish, boolean gluten, boolean milk,
-                boolean peanuts, boolean shellfish, boolean soy, boolean treeNuts, boolean wheat) {
-        this.name = name;
-        this.isVegetarian = isVegetarian;
-        this.eggs = eggs;
-        this.fish = fish;
-        this.gluten = gluten;
-        this.milk = milk;
-        this.peanuts = peanuts;
-        this.shellfish = shellfish;
-        this.soy = soy;
-        this.treeNuts = treeNuts;
-        this.wheat = wheat;
+    public String getStation() {
+        return station;
+    }
+
+    public void setStation(String station) {
+        this.station = station;
     }
 
     public Food(String name) {

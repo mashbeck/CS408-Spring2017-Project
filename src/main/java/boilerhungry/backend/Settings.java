@@ -13,11 +13,11 @@ public class Settings {
 
     private int version;
     private DietaryPreferences dietaryPreferences;
-    private Collection<String> myFoods;
+    private Set<String> myFoods;
 
     private transient File file;
 
-    private Settings(File file, int version, DietaryPreferences dietaryPreferences, Collection<String> myFoods) {
+    private Settings(File file, int version, DietaryPreferences dietaryPreferences, Set<String> myFoods) {
         this.file = file;
         this.version = version;
         this.dietaryPreferences = dietaryPreferences;
@@ -39,13 +39,13 @@ public class Settings {
         return dietaryPreferences;
     }
 
-    public Collection<String> getMyFoods() {
+    public Set<String> getMyFoods() {
         return myFoods;
     }
 
     public static Settings load(File file) throws IOException {
         Gson gson = new Gson();
-        Settings settings = null;
+        Settings settings;
         if (file.exists()) {
             Reader reader = new FileReader(file);
             settings = gson.fromJson(reader, Settings.class);

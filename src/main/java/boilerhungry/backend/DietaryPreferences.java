@@ -15,21 +15,6 @@ public class DietaryPreferences {
     private boolean noSoy;
     private boolean noWheat;
 
-    public DietaryPreferences(boolean vegetarian, boolean noEggs, boolean noFish, boolean noGluten, boolean noMilk, boolean noPeanuts, boolean noShellfish, boolean noSoy, boolean noWheat) {
-        this.vegetarian = vegetarian;
-        this.noEggs = noEggs;
-        this.noFish = noFish;
-        this.noGluten = noGluten;
-        this.noMilk = noMilk;
-        this.noPeanuts = noPeanuts;
-        this.noShellfish = noShellfish;
-        this.noSoy = noSoy;
-        this.noWheat = noWheat;
-    }
-
-    public DietaryPreferences() {
-    }
-
     public boolean isVegetarian() {
         return vegetarian;
     }

@@ -15,15 +15,6 @@ public class Menu {
     private List<Food> lunch;
     private List<Food> dinner;
 
-
-    public Menu(String name, Date date, List<Food> breakfast, List<Food> lunch, List<Food> dinner) {
-        this.name = name;
-        this.date = date;
-        this.breakfast = breakfast;
-        this.lunch = lunch;
-        this.dinner = dinner;
-    }
-
     public Menu(String name, Date date) {
         this.name = name;
         this.date = date;
