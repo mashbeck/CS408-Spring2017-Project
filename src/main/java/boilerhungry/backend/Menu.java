@@ -7,18 +7,12 @@ import java.util.*;
  */
 public class Menu {
 
-    private String name;
     private Date date;
     private Map<String, List<Food>> meals;
 
-    public Menu(String name, Date date) {
-        this.name = name;
+    public Menu(Date date) {
         this.date = date;
         this.meals = new HashMap<>();
-    }
-
-    public String getName() {
-        return name;
     }
 
     public Date getDate() {

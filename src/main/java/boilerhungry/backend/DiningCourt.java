@@ -14,12 +14,14 @@ import java.util.List;
 /**
  * Created by eric on 2/6/17.
  */
-public class DiningCourt extends DiningCourtAPI {
+public class DiningCourt {
 
     private String name;
     private String address;
+    private DiningCourtAPI api;
 
-    public DiningCourt(String name, String address) {
+    public DiningCourt(DiningCourtAPI api, String name, String address) {
+        this.api = api;
         this.name = name;
         this.address = address;
     }
@@ -36,8 +38,8 @@ public class DiningCourt extends DiningCourtAPI {
         DateFormat format = new SimpleDateFormat("/MM-dd-yyyy");
         String day = format.format(date);
         URL url = new URL("https://api.hfs.purdue.edu/menus/v2/locations/" + this.name + day);
-        Menu menu = new Menu(this.name, date);
-        JSONObject root = getJSON(url);
+        Menu menu = new Menu(date);
+        JSONObject root = api.getJSON(url);
         JSONArray meals = root.getJSONArray("Meals");
         for (int i = 0; i < meals.length(); i++) {
             JSONObject meal = meals.getJSONObject(i);
@@ -98,29 +100,18 @@ public class DiningCourt extends DiningCourtAPI {
         return menu;
     }
 
-    public static List<DiningCourt> getDiningCourts() throws IOException {
+    public static List<DiningCourt> getDiningCourts(DiningCourtAPI api) throws IOException {
         List<DiningCourt> diningCourts = new ArrayList<>();
-        JSONObject root = getJSON(new URL("https://api.hfs.purdue.edu/menus/v2/locations/"));
+        JSONObject root = api.getJSON(new URL("https://api.hfs.purdue.edu/menus/v2/locations/"));
         JSONArray locations = root.getJSONArray("Location");
         for (int i = 0; i < locations.length(); i++) {
             JSONObject location = locations.getJSONObject(i);
             String name = location.getString("Name");
-            String address = getAddressString(location);
+            String address = api.getAddressString(location);
             // TODO get hours
-            // TODO the menu needs to be fetched
-            diningCourts.add(new DiningCourt(name, address));
+            diningCourts.add(new DiningCourt(api, name, address));
         }
         return diningCourts;
-    }
-
-    private static String getAddressString(JSONObject location) {
-        StringBuilder res = new StringBuilder();
-        JSONObject address = location.getJSONObject("Address");
-        res.append(address.getString("Street")).append(", ");
-        res.append(address.getString("City")).append(", ");
-        res.append(address.getString("State")).append(" ");
-        res.append(address.getString("ZipCode"));
-        return res.toString();
     }
 
 }

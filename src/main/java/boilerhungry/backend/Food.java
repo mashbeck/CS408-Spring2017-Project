@@ -18,16 +18,16 @@ public class Food {
     private boolean treeNuts;
     private boolean wheat;
 
+    public Food(String name) {
+        this.name = name;
+    }
+
     public String getStation() {
         return station;
     }
 
     public void setStation(String station) {
         this.station = station;
-    }
-
-    public Food(String name) {
-        this.name = name;
     }
 
     public String getName() {
