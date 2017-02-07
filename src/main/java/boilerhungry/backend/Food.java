@@ -32,6 +32,10 @@ public class Food {
         this.wheat = wheat;
     }
 
+    public Food(String name) {
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }
@@ -74,5 +78,45 @@ public class Food {
 
     public boolean hasWheat() {
         return wheat;
+    }
+
+    public void setVegetarian(boolean vegetarian) {
+        isVegetarian = vegetarian;
+    }
+
+    public void setEggs(boolean eggs) {
+        this.eggs = eggs;
+    }
+
+    public void setFish(boolean fish) {
+        this.fish = fish;
+    }
+
+    public void setGluten(boolean gluten) {
+        this.gluten = gluten;
+    }
+
+    public void setMilk(boolean milk) {
+        this.milk = milk;
+    }
+
+    public void setPeanuts(boolean peanuts) {
+        this.peanuts = peanuts;
+    }
+
+    public void setShellfish(boolean shellfish) {
+        this.shellfish = shellfish;
+    }
+
+    public void setSoy(boolean soy) {
+        this.soy = soy;
+    }
+
+    public void setTreeNuts(boolean treeNuts) {
+        this.treeNuts = treeNuts;
+    }
+
+    public void setWheat(boolean wheat) {
+        this.wheat = wheat;
     }
 }

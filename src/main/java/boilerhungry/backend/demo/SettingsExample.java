@@ -1,4 +1,6 @@
-package boilerhungry.backend;
+package boilerhungry.backend.demo;
+
+import boilerhungry.backend.Settings;
 
 import java.io.File;
 import java.io.IOException;

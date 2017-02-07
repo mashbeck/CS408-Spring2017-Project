@@ -6,7 +6,7 @@
     <display-name>BoilerHungry</display-name>
     <servlet>
         <servlet-name>ExampleServlet</servlet-name>
-        <servlet-class>boilerhungry.backend.ExampleServlet</servlet-class>
+        <servlet-class>boilerhungry.backend.demo.ExampleServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ExampleServlet</servlet-name>
