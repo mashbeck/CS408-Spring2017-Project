@@ -21,7 +21,7 @@ public class DownloadJSON {
     public static void main(String[] args) throws IOException {
         DownloadJSON dj = new DownloadJSON();
         dj.downloadLocations();
-        dj.downloadDiningCourtMenu("Earhart", "02-07-2017");
+        dj.downloadDiningCourtMenu("Wiley", "02-07-2017");
     }
 
     public void downloadLocations() throws IOException {

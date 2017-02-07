@@ -2,6 +2,7 @@ package boilerhungry;
 
 import boilerhungry.backend.DiningCourt;
 import boilerhungry.backend.DiningCourtAPI;
+import boilerhungry.backend.Food;
 import boilerhungry.backend.Menu;
 import boilerhungry.backend.mock.MockDiningCourtAPI;
 import org.junit.Before;
@@ -37,13 +38,28 @@ public class DiningCourtTest {
     }
 
     @Test
-    public void ChangingDiningCourtShouldChangeTheMenu(){
+    public void ChangingDiningCourtShouldChangeTheMenu() throws IOException {
+        Optional<DiningCourt> maybeEarhart = DiningCourt.getDiningCourt(mockApi, "Earhart");
+        assertTrue("Earhart dining court should exist", maybeEarhart.isPresent());
+        DiningCourt earhart = maybeEarhart.get();
+        Menu menu = earhart.getMenu(LocalDate.parse("2017-02-07"));
+        assertTrue("Earhart should serve breakfast", menu.getMealNames().contains("Breakfast"));
+        List<Food> foodList = menu.
+        assertTrue("Earhart should have blah blah in ");
+        assertTrue("Earhart should serve lunch", menu.getMealNames().contains("Lunch"));
+        assertTrue("Earhart should serve dinner", menu.getMealNames().contains("Dinner"));
 
+        Optional<DiningCourt> maybeWiley = DiningCourt.getDiningCourt(mockApi, "Wiley");
+        assertTrue("Wiley dining court should exist", maybeWiley.isPresent());
+        DiningCourt wiley = maybeWiley.get();
+        menu = wiley.getMenu(LocalDate.parse("2017-02-07"));
+        assertTrue("Wiley should serve breakfast", menu.getMealNames().contains("Breakfast"));
+        assertTrue("Wiley should serve lunch", menu.getMealNames().contains("Lunch"));
+        assertTrue("Wiley should serve dinner", menu.getMealNames().contains("Dinner"));
     }
 
     @Test
     public void ChangingDateShouldChangeTheMenu(){
-
 
     }
 
