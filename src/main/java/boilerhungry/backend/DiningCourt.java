@@ -98,21 +98,17 @@ public class DiningCourt extends DiningCourtAPI {
         return menu;
     }
 
-    public static List<DiningCourt> getDiningCourts() {
+    public static List<DiningCourt> getDiningCourts() throws IOException {
         List<DiningCourt> diningCourts = new ArrayList<>();
-        try {
-            JSONObject root = getJSON(new URL("https://api.hfs.purdue.edu/menus/v2/locations/"));
-            JSONArray locations = root.getJSONArray("Location");
-            for (int i = 0; i < locations.length(); i++) {
-                JSONObject location = locations.getJSONObject(i);
-                String name = location.getString("Name");
-                String address = getAddressString(location);
-                // TODO get hours
-                // TODO the menu needs to be fetched
-                diningCourts.add(new DiningCourt(name, address));
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
+        JSONObject root = getJSON(new URL("https://api.hfs.purdue.edu/menus/v2/locations/"));
+        JSONArray locations = root.getJSONArray("Location");
+        for (int i = 0; i < locations.length(); i++) {
+            JSONObject location = locations.getJSONObject(i);
+            String name = location.getString("Name");
+            String address = getAddressString(location);
+            // TODO get hours
+            // TODO the menu needs to be fetched
+            diningCourts.add(new DiningCourt(name, address));
         }
         return diningCourts;
     }
