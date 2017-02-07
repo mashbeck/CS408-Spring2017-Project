@@ -19,12 +19,12 @@ public class DiningCourtTest {
     }
 
     @Test
-    public void ChangingDiningCourtAndChaningDateShouldChangeTheMenu(){
+    public void ChangingDiningCourtAndChangingDateShouldChangeTheMenu(){
 
     }
 
     @Test
-    public void ChaningDiningCourtShouldChangeTheLocationAndOtherDetails(){
+    public void ChangingDiningCourtShouldChangeTheLocationAndOtherDetails(){
 
     }
 
