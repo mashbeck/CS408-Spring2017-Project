@@ -3,11 +3,7 @@ package boilerhungry;
 import org.junit.Test;
 
 public class DiningCourtTest {
-<<<<<<< HEAD
 
-    @Test
-    public void testAPI() {
-=======
     @Test
     public void OpeningDiningCourtMenuShouldGiveMenuForTheDay(){
 
@@ -20,6 +16,7 @@ public class DiningCourtTest {
 
     @Test
     public void ChangingDateShouldChangeTheMenu(){
+
 
     }
 
@@ -40,7 +37,7 @@ public class DiningCourtTest {
 
     @Test
     public void UnknownDiningCourtName(){
->>>>>>> 14ae47f7d4363a87064c80e59af071d721978029
+
 
     }
 
