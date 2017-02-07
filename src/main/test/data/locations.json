@@ -1,0 +1,1570 @@
+{"Location": [
+    {
+        "FormalName": "Earhart Dining Court",
+        "Address": {
+            "State": "IN",
+            "ZipCode": "47906-4231",
+            "Street": "1275 First Street",
+            "Country": "United States",
+            "City": "West Lafayette",
+            "CountryCode": "US"
+        },
+        "LineLengthCrowdsourcingEnabled": true,
+        "Images": ["02c6a8ea-4f3a-446b-a6d6-a593118758c9"],
+        "PhoneNumber": "(765) 494-2410",
+        "StreetViewUrl": "https://www.google.com/maps/@40.4253282,-86.9250632,3a,90y,348.2h,75.9t/data=!3m6!1e1!3m4!1stmwT21l-dU9F5ptKZb5M2g!2e0!7i3328!8i1664",
+        "Latitude": 40.425797,
+        "NormalHours": [{
+            "Days": [
+                {
+                    "DayOfWeek": 5,
+                    "Meals": [
+                        {
+                            "Order": 2,
+                            "Hours": {
+                                "EndTime": "14:00:00",
+                                "StartTime": "11:00:00"
+                            },
+                            "Name": "Lunch"
+                        },
+                        {
+                            "Order": 4,
+                            "Hours": {
+                                "EndTime": "21:00:00",
+                                "StartTime": "17:00:00"
+                            },
+                            "Name": "Dinner"
+                        },
+                        {
+                            "Order": 1,
+                            "Hours": {
+                                "EndTime": "10:00:00",
+                                "StartTime": "06:30:00"
+                            },
+                            "Name": "Breakfast"
+                        }
+                    ],
+                    "Name": "Friday"
+                },
+                {
+                    "DayOfWeek": 4,
+                    "Meals": [
+                        {
+                            "Order": 2,
+                            "Hours": {
+                                "EndTime": "14:00:00",
+                                "StartTime": "11:00:00"
+                            },
+                            "Name": "Lunch"
+                        },
+                        {
+                            "Order": 4,
+                            "Hours": {
+                                "EndTime": "21:00:00",
+                                "StartTime": "17:00:00"
+                            },
+                            "Name": "Dinner"
+                        },
+                        {
+                            "Order": 1,
+                            "Hours": {
+                                "EndTime": "10:00:00",
+                                "StartTime": "06:30:00"
+                            },
+                            "Name": "Breakfast"
+                        }
+                    ],
+                    "Name": "Thursday"
+                },
+                {
+                    "DayOfWeek": 0,
+                    "Meals": [
+                        {
+                            "Order": 1,
+                            "Status": "Closed",
+                            "Hours": null,
+                            "Name": "Breakfast"
+                        },
+                        {
+                            "Order": 2,
+                            "Hours": {
+                                "EndTime": "14:00:00",
+                                "StartTime": "10:00:00"
+                            },
+                            "Name": "Lunch"
+                        },
+                        {
+                            "Order": 4,
+                            "Status": "Closed",
+                            "Hours": null,
+                            "Name": "Dinner"
+                        }
+                    ],
+                    "Name": "Sunday"
+                },
+                {
+                    "DayOfWeek": 2,
+                    "Meals": [
+                        {
+                            "Order": 1,
+                            "Hours": {
+                                "EndTime": "10:00:00",
+                                "StartTime": "06:30:00"
+                            },
+                            "Name": "Breakfast"
+                        },
+                        {
+                            "Order": 2,
+                            "Hours": {
+                                "EndTime": "14:00:00",
+                                "StartTime": "11:00:00"
+                            },
+                            "Name": "Lunch"
+                        },
+                        {
+                            "Order": 4,
+                            "Hours": {
+                                "EndTime": "21:00:00",
+                                "StartTime": "17:00:00"
+                            },
+                            "Name": "Dinner"
+                        }
+                    ],
+                    "Name": "Tuesday"
+                },
+                {
+                    "DayOfWeek": 6,
+                    "Meals": [
+                        {
+                            "Order": 1,
+                            "Status": "Closed",
+                            "Hours": null,
+                            "Name": "Breakfast"
+                        },
+                        {
+                            "Order": 4,
+                            "Hours": {
+                                "EndTime": "20:00:00",
+                                "StartTime": "17:00:00"
+                            },
+                            "Name": "Dinner"
+                        },
+                        {
+                            "Order": 2,
+                            "Hours": {
+                                "EndTime": "14:00:00",
+                                "StartTime": "10:00:00"
+                            },
+                            "Name": "Lunch"
+                        }
+                    ],
+                    "Name": "Saturday"
+                },
+                {
+                    "DayOfWeek": 1,
+                    "Meals": [
+                        {
+                            "Order": 2,
+                            "Hours": {
+                                "EndTime": "14:00:00",
+                                "StartTime": "11:00:00"
+                            },
+                            "Name": "Lunch"
+                        },
+                        {
+                            "Order": 4,
+                            "Hours": {
+                                "EndTime": "21:00:00",
+                                "StartTime": "17:00:00"
+                            },
+                            "Name": "Dinner"
+                        },
+                        {
+                            "Order": 1,
+                            "Hours": {
+                                "EndTime": "10:00:00",
+                                "StartTime": "06:30:00"
+                            },
+                            "Name": "Breakfast"
+                        }
+                    ],
+                    "Name": "Monday"
+                },
+                {
+                    "DayOfWeek": 3,
+                    "Meals": [
+                        {
+                            "Order": 2,
+                            "Hours": {
+                                "EndTime": "14:00:00",
+                                "StartTime": "11:00:00"
+                            },
+                            "Name": "Lunch"
+                        },
+                        {
+                            "Order": 1,
+                            "Hours": {
+                                "EndTime": "10:00:00",
+                                "StartTime": "06:30:00"
+                            },
+                            "Name": "Breakfast"
+                        },
+                        {
+                            "Order": 4,
+                            "Hours": {
+                                "EndTime": "21:00:00",
+                                "StartTime": "17:00:00"
+                            },
+                            "Name": "Dinner"
+                        }
+                    ],
+                    "Name": "Wednesday"
+                }
+            ],
+            "Id": "abc95658-91ef-4c51-b6aa-b71ae02ae732",
+            "Name": "Academic Year",
+            "EffectiveDate": "2016-08-22T00:00:00"
+        }],
+        "UpcomingMeals": [
+            {
+                "Type": "Breakfast",
+                "EndTime": "2017-02-07T10:00:00-05:00",
+                "StartTime": "2017-02-07T06:30:00-05:00",
+                "ID": "b5620a2c-ffb6-4a77-b1a3-679d4f34cf96",
+                "Name": "Breakfast"
+            },
+            {
+                "Type": "Lunch",
+                "EndTime": "2017-02-07T14:00:00-05:00",
+                "StartTime": "2017-02-07T11:00:00-05:00",
+                "ID": "fa837591-a6aa-4dd0-90bc-6a72c8ffbba8",
+                "Name": "Lunch"
+            },
+            {
+                "Type": "Dinner",
+                "EndTime": "2017-02-07T21:00:00-05:00",
+                "StartTime": "2017-02-07T17:00:00-05:00",
+                "ID": "43e26b49-d5b5-4d1b-92f8-b93a182c76b1",
+                "Name": "Dinner"
+            },
+            {
+                "Type": "Breakfast",
+                "EndTime": "2017-02-08T10:00:00-05:00",
+                "StartTime": "2017-02-08T06:30:00-05:00",
+                "ID": "f217183a-e00e-4bf6-be59-3465628e4fa7",
+                "Name": "Breakfast"
+            },
+            {
+                "Type": "Lunch",
+                "EndTime": "2017-02-08T14:00:00-05:00",
+                "StartTime": "2017-02-08T11:00:00-05:00",
+                "ID": "123c5ca5-07d5-4d99-84b7-4b7cde9fc8f1",
+                "Name": "Lunch"
+            },
+            {
+                "Type": "Dinner",
+                "EndTime": "2017-02-08T21:00:00-05:00",
+                "StartTime": "2017-02-08T17:00:00-05:00",
+                "ID": "02e48baa-8fef-41ee-a617-91d8dd24b753",
+                "Name": "Dinner"
+            }
+        ],
+        "ShortName": "ERHT",
+        "Longitude": -86.924944,
+        "Name": "Earhart"
+    },
+    {
+        "FormalName": "Ford Dining Court",
+        "Address": {
+            "State": "IN",
+            "ZipCode": "47906-2102",
+            "Street": "1122 West Stadium Avenue",
+            "Country": "United States",
+            "City": "West Lafayette",
+            "CountryCode": "US"
+        },
+        "LineLengthCrowdsourcingEnabled": true,
+        "Images": ["154b5f9b-590e-47aa-98e0-5b38db838cd7"],
+        "PhoneNumber": "(765) 494-2482",
+        "StreetViewUrl": "https://www.google.com/maps/@40.431642,-86.9191937,3a,90y,303.77h,74.71t/data=!3m6!1e1!3m4!1sYjYkyWzb4W2QU0vlXdwqhQ!2e0!7i3328!8i1664",
+        "Latitude": 40.432082,
+        "NormalHours": [{
+            "Days": [
+                {
+                    "DayOfWeek": 3,
+                    "Meals": [
+                        {
+                            "Order": 1,
+                            "Hours": {
+                                "EndTime": "11:00:00",
+                                "StartTime": "07:00:00"
+                            },
+                            "Name": "Breakfast"
+                        },
+                        {
+                            "Order": 3,
+                            "Hours": {
+                                "EndTime": "17:00:00",
+                                "StartTime": "14:00:00"
+                            },
+                            "Name": "Late Lunch"
+                        },
+                        {
+                            "Order": 4,
+                            "Hours": {
+                                "EndTime": "20:00:00",
+                                "StartTime": "17:00:00"
+                            },
+                            "Name": "Dinner"
+                        },
+                        {
+                            "Order": 2,
+                            "Hours": {
+                                "EndTime": "14:00:00",
+                                "StartTime": "11:00:00"
+                            },
+                            "Name": "Lunch"
+                        }
+                    ],
+                    "Name": "Wednesday"
+                },
+                {
+                    "DayOfWeek": 6,
+                    "Meals": [
+                        {
+                            "Order": 2,
+                            "Hours": {
+                                "EndTime": "14:00:00",
+                                "StartTime": "11:00:00"
+                            },
+                            "Name": "Lunch"
+                        },
+                        {
+                            "Order": 1,
+                            "Status": "Closed",
+                            "Hours": null,
+                            "Name": "Breakfast"
+                        },
+                        {
+                            "Order": 4,
+                            "Hours": {
+                                "EndTime": "20:00:00",
+                                "StartTime": "17:00:00"
+                            },
+                            "Name": "Dinner"
+                        }
+                    ],
+                    "Name": "Saturday"
+                },
+                {
+                    "DayOfWeek": 4,
+                    "Meals": [
+                        {
+                            "Order": 2,
+                            "Hours": {
+                                "EndTime": "14:00:00",
+                                "StartTime": "11:00:00"
+                            },
+                            "Name": "Lunch"
+                        },
+                        {
+                            "Order": 3,
+                            "Hours": {
+                                "EndTime": "17:00:00",
+                                "StartTime": "14:00:00"
+                            },
+                            "Name": "Late Lunch"
+                        },
+                        {
+                            "Order": 1,
+                            "Hours": {
+                                "EndTime": "11:00:00",
+                                "StartTime": "07:00:00"
+                            },
+                            "Name": "Breakfast"
+                        },
+                        {
+                            "Order": 4,
+                            "Hours": {
+                                "EndTime": "20:00:00",
+                                "StartTime": "17:00:00"
+                            },
+                            "Name": "Dinner"
+                        }
+                    ],
+                    "Name": "Thursday"
+                },
+                {
+                    "DayOfWeek": 0,
+                    "Meals": [
+                        {
+                            "Order": 4,
+                            "Status": "Closed",
+                            "Hours": null,
+                            "Name": "Dinner"
+                        },
+                        {
+                            "Order": 2,
+                            "Hours": {
+                                "EndTime": "14:00:00",
+                                "StartTime": "11:00:00"
+                            },
+                            "Name": "Lunch"
+                        },
+                        {
+                            "Order": 1,
+                            "Status": "Closed",
+                            "Hours": null,
+                            "Name": "Breakfast"
+                        }
+                    ],
+                    "Name": "Sunday"
+                },
+                {
+                    "DayOfWeek": 5,
+                    "Meals": [
+                        {
+                            "Order": 3,
+                            "Hours": {
+                                "EndTime": "17:00:00",
+                                "StartTime": "14:00:00"
+                            },
+                            "Name": "Late Lunch"
+                        },
+                        {
+                            "Order": 1,
+                            "Hours": {
+                                "EndTime": "11:00:00",
+                                "StartTime": "07:00:00"
+                            },
+                            "Name": "Breakfast"
+                        },
+                        {
+                            "Order": 4,
+                            "Hours": {
+                                "EndTime": "20:00:00",
+                                "StartTime": "17:00:00"
+                            },
+                            "Name": "Dinner"
+                        },
+                        {
+                            "Order": 2,
+                            "Hours": {
+                                "EndTime": "14:00:00",
+                                "StartTime": "11:00:00"
+                            },
+                            "Name": "Lunch"
+                        }
+                    ],
+                    "Name": "Friday"
+                },
+                {
+                    "DayOfWeek": 1,
+                    "Meals": [
+                        {
+                            "Order": 3,
+                            "Hours": {
+                                "EndTime": "17:00:00",
+                                "StartTime": "14:00:00"
+                            },
+                            "Name": "Late Lunch"
+                        },
+                        {
+                            "Order": 1,
+                            "Hours": {
+                                "EndTime": "11:00:00",
+                                "StartTime": "07:00:00"
+                            },
+                            "Name": "Breakfast"
+                        },
+                        {
+                            "Order": 2,
+                            "Hours": {
+                                "EndTime": "14:00:00",
+                                "StartTime": "11:00:00"
+                            },
+                            "Name": "Lunch"
+                        },
+                        {
+                            "Order": 4,
+                            "Hours": {
+                                "EndTime": "20:00:00",
+                                "StartTime": "17:00:00"
+                            },
+                            "Name": "Dinner"
+                        }
+                    ],
+                    "Name": "Monday"
+                },
+                {
+                    "DayOfWeek": 2,
+                    "Meals": [
+                        {
+                            "Order": 1,
+                            "Hours": {
+                                "EndTime": "11:00:00",
+                                "StartTime": "07:00:00"
+                            },
+                            "Name": "Breakfast"
+                        },
+                        {
+                            "Order": 4,
+                            "Hours": {
+                                "EndTime": "20:00:00",
+                                "StartTime": "17:00:00"
+                            },
+                            "Name": "Dinner"
+                        },
+                        {
+                            "Order": 2,
+                            "Hours": {
+                                "EndTime": "14:00:00",
+                                "StartTime": "11:00:00"
+                            },
+                            "Name": "Lunch"
+                        },
+                        {
+                            "Order": 3,
+                            "Hours": {
+                                "EndTime": "17:00:00",
+                                "StartTime": "14:00:00"
+                            },
+                            "Name": "Late Lunch"
+                        }
+                    ],
+                    "Name": "Tuesday"
+                }
+            ],
+            "Id": "abc95658-91ef-4c51-b6aa-b71ae02ae732",
+            "Name": "Academic Year",
+            "EffectiveDate": "2016-08-22T00:00:00"
+        }],
+        "UpcomingMeals": [
+            {
+                "Type": "Lunch",
+                "EndTime": "2017-02-07T14:00:00-05:00",
+                "StartTime": "2017-02-07T11:00:00-05:00",
+                "ID": "46f68722-2393-4814-bffb-31c48611756f",
+                "Name": "Lunch"
+            },
+            {
+                "Type": "Dinner",
+                "EndTime": "2017-02-07T20:00:00-05:00",
+                "StartTime": "2017-02-07T17:00:00-05:00",
+                "ID": "d5303340-22a9-4106-a280-81ab18bc27bd",
+                "Name": "Dinner"
+            },
+            {
+                "Type": "Snack",
+                "EndTime": "2017-02-07T17:00:00-05:00",
+                "StartTime": "2017-02-07T14:00:00-05:00",
+                "ID": "df872034-2b95-43dc-9aba-e40995fb8a29",
+                "Name": "Late Lunch"
+            },
+            {
+                "Type": "Breakfast",
+                "EndTime": "2017-02-07T11:00:00-05:00",
+                "StartTime": "2017-02-07T07:00:00-05:00",
+                "ID": "dacf2103-e0b9-4e11-a6df-fda3c5b807a5",
+                "Name": "Breakfast"
+            },
+            {
+                "Type": "Lunch",
+                "EndTime": "2017-02-08T14:00:00-05:00",
+                "StartTime": "2017-02-08T11:00:00-05:00",
+                "ID": "1a25dbbc-1069-4455-b4f8-02a023f8facf",
+                "Name": "Lunch"
+            },
+            {
+                "Type": "Snack",
+                "EndTime": "2017-02-08T17:00:00-05:00",
+                "StartTime": "2017-02-08T14:00:00-05:00",
+                "ID": "6be52550-8592-499a-9311-1657abe46ed3",
+                "Name": "Late Lunch"
+            },
+            {
+                "Type": "Breakfast",
+                "EndTime": "2017-02-08T11:00:00-05:00",
+                "StartTime": "2017-02-08T07:00:00-05:00",
+                "ID": "f655dc08-ad44-47de-8674-b8336dfc1740",
+                "Name": "Breakfast"
+            },
+            {
+                "Type": "Dinner",
+                "EndTime": "2017-02-08T20:00:00-05:00",
+                "StartTime": "2017-02-08T17:00:00-05:00",
+                "ID": "c045621d-6570-4abe-8a08-d8af1bb8a379",
+                "Name": "Dinner"
+            }
+        ],
+        "ShortName": "FORD",
+        "Longitude": -86.919644,
+        "Name": "Ford"
+    },
+    {
+        "FormalName": "Hillenbrand Dining Court",
+        "Address": {
+            "State": "IN",
+            "ZipCode": "47906-4206",
+            "Street": "1301 Third Street",
+            "Country": "United States",
+            "City": "West Lafayette",
+            "CountryCode": "US"
+        },
+        "LineLengthCrowdsourcingEnabled": true,
+        "Images": ["d317c692-aae3-4082-9f99-070eaa82e97e"],
+        "PhoneNumber": "(765) 494-0325",
+        "StreetViewUrl": "https://www.google.com/maps/@40.4273948,-86.9262299,3a,90y,197.39h,82.2t/data=!3m6!1e1!3m4!1sVKYzkcq1QzRCQ9kvDrTCcw!2e0!7i3328!8i1664",
+        "Latitude": 40.426647,
+        "NormalHours": [{
+            "Days": [
+                {
+                    "DayOfWeek": 0,
+                    "Meals": [
+                        {
+                            "Order": 4,
+                            "Status": "Closed",
+                            "Hours": null,
+                            "Name": "Dinner"
+                        },
+                        {
+                            "Order": 2,
+                            "Hours": {
+                                "EndTime": "14:00:00",
+                                "StartTime": "10:00:00"
+                            },
+                            "Name": "Lunch"
+                        },
+                        {
+                            "Order": 1,
+                            "Status": "Closed",
+                            "Hours": null,
+                            "Name": "Breakfast"
+                        }
+                    ],
+                    "Name": "Sunday"
+                },
+                {
+                    "DayOfWeek": 2,
+                    "Meals": [
+                        {
+                            "Order": 4,
+                            "Hours": {
+                                "EndTime": "20:00:00",
+                                "StartTime": "17:00:00"
+                            },
+                            "Name": "Dinner"
+                        },
+                        {
+                            "Order": 3,
+                            "Hours": {
+                                "EndTime": "17:00:00",
+                                "StartTime": "14:00:00"
+                            },
+                            "Name": "Late Lunch"
+                        },
+                        {
+                            "Order": 2,
+                            "Hours": {
+                                "EndTime": "14:00:00",
+                                "StartTime": "10:00:00"
+                            },
+                            "Name": "Lunch"
+                        },
+                        {
+                            "Order": 1,
+                            "Status": "Closed",
+                            "Hours": null,
+                            "Name": "Breakfast"
+                        }
+                    ],
+                    "Name": "Tuesday"
+                },
+                {
+                    "DayOfWeek": 5,
+                    "Meals": [
+                        {
+                            "Order": 4,
+                            "Status": "Closed",
+                            "Hours": null,
+                            "Name": "Dinner"
+                        },
+                        {
+                            "Order": 2,
+                            "Hours": {
+                                "EndTime": "14:00:00",
+                                "StartTime": "10:00:00"
+                            },
+                            "Name": "Lunch"
+                        },
+                        {
+                            "Order": 3,
+                            "Status": "Closed",
+                            "Hours": null,
+                            "Name": "Late Lunch"
+                        },
+                        {
+                            "Order": 1,
+                            "Status": "Closed",
+                            "Hours": null,
+                            "Name": "Breakfast"
+                        }
+                    ],
+                    "Name": "Friday"
+                },
+                {
+                    "DayOfWeek": 3,
+                    "Meals": [
+                        {
+                            "Order": 2,
+                            "Hours": {
+                                "EndTime": "14:00:00",
+                                "StartTime": "10:00:00"
+                            },
+                            "Name": "Lunch"
+                        },
+                        {
+                            "Order": 3,
+                            "Hours": {
+                                "EndTime": "17:00:00",
+                                "StartTime": "14:00:00"
+                            },
+                            "Name": "Late Lunch"
+                        },
+                        {
+                            "Order": 4,
+                            "Hours": {
+                                "EndTime": "20:00:00",
+                                "StartTime": "17:00:00"
+                            },
+                            "Name": "Dinner"
+                        },
+                        {
+                            "Order": 1,
+                            "Status": "Closed",
+                            "Hours": null,
+                            "Name": "Breakfast"
+                        }
+                    ],
+                    "Name": "Wednesday"
+                },
+                {
+                    "DayOfWeek": 4,
+                    "Meals": [
+                        {
+                            "Order": 3,
+                            "Hours": {
+                                "EndTime": "17:00:00",
+                                "StartTime": "14:00:00"
+                            },
+                            "Name": "Late Lunch"
+                        },
+                        {
+                            "Order": 4,
+                            "Hours": {
+                                "EndTime": "20:00:00",
+                                "StartTime": "17:00:00"
+                            },
+                            "Name": "Dinner"
+                        },
+                        {
+                            "Order": 1,
+                            "Status": "Closed",
+                            "Hours": null,
+                            "Name": "Breakfast"
+                        },
+                        {
+                            "Order": 2,
+                            "Hours": {
+                                "EndTime": "14:00:00",
+                                "StartTime": "10:00:00"
+                            },
+                            "Name": "Lunch"
+                        }
+                    ],
+                    "Name": "Thursday"
+                },
+                {
+                    "DayOfWeek": 1,
+                    "Meals": [
+                        {
+                            "Order": 2,
+                            "Hours": {
+                                "EndTime": "14:00:00",
+                                "StartTime": "10:00:00"
+                            },
+                            "Name": "Lunch"
+                        },
+                        {
+                            "Order": 1,
+                            "Status": "Closed",
+                            "Hours": null,
+                            "Name": "Breakfast"
+                        },
+                        {
+                            "Order": 3,
+                            "Hours": {
+                                "EndTime": "17:00:00",
+                                "StartTime": "14:00:00"
+                            },
+                            "Name": "Late Lunch"
+                        },
+                        {
+                            "Order": 4,
+                            "Hours": {
+                                "EndTime": "20:00:00",
+                                "StartTime": "17:00:00"
+                            },
+                            "Name": "Dinner"
+                        }
+                    ],
+                    "Name": "Monday"
+                },
+                {
+                    "DayOfWeek": 6,
+                    "Meals": [
+                        {
+                            "Order": 2,
+                            "Hours": {
+                                "EndTime": "14:00:00",
+                                "StartTime": "10:00:00"
+                            },
+                            "Name": "Lunch"
+                        },
+                        {
+                            "Order": 1,
+                            "Status": "Closed",
+                            "Hours": null,
+                            "Name": "Breakfast"
+                        },
+                        {
+                            "Order": 4,
+                            "Status": "Closed",
+                            "Hours": null,
+                            "Name": "Dinner"
+                        }
+                    ],
+                    "Name": "Saturday"
+                }
+            ],
+            "Id": "abc95658-91ef-4c51-b6aa-b71ae02ae732",
+            "Name": "Academic Year",
+            "EffectiveDate": "2016-08-22T00:00:00"
+        }],
+        "UpcomingMeals": [
+            {
+                "Type": "Dinner",
+                "EndTime": "2017-02-07T20:00:00-05:00",
+                "StartTime": "2017-02-07T17:00:00-05:00",
+                "ID": "ac111e8b-26c8-4a3e-85da-2d3b7d7fb3d8",
+                "Name": "Dinner"
+            },
+            {
+                "Type": "Lunch",
+                "EndTime": "2017-02-07T14:00:00-05:00",
+                "StartTime": "2017-02-07T10:00:00-05:00",
+                "ID": "b08de920-573a-43df-bacc-2f82f2d8f335",
+                "Name": "Lunch"
+            },
+            {
+                "Type": "Snack",
+                "EndTime": "2017-02-07T17:00:00-05:00",
+                "StartTime": "2017-02-07T14:00:00-05:00",
+                "ID": "ceefba94-c7ee-4e9f-9725-737840aae320",
+                "Name": "Late Lunch"
+            },
+            {
+                "Type": "Snack",
+                "EndTime": "2017-02-08T17:00:00-05:00",
+                "StartTime": "2017-02-08T14:00:00-05:00",
+                "ID": "eea62898-746f-43f2-8075-548a01db2946",
+                "Name": "Late Lunch"
+            },
+            {
+                "Type": "Lunch",
+                "EndTime": "2017-02-08T14:00:00-05:00",
+                "StartTime": "2017-02-08T10:00:00-05:00",
+                "ID": "359f713d-6cf5-434b-bac2-9ea826e8a70d",
+                "Name": "Lunch"
+            },
+            {
+                "Type": "Dinner",
+                "EndTime": "2017-02-08T20:00:00-05:00",
+                "StartTime": "2017-02-08T17:00:00-05:00",
+                "ID": "f9ea174d-866a-4f21-b7eb-a17d290ce904",
+                "Name": "Dinner"
+            }
+        ],
+        "ShortName": "HILL",
+        "Longitude": -86.926792,
+        "Name": "Hillenbrand"
+    },
+    {
+        "FormalName": "The Gathering Place",
+        "Address": {
+            "State": "IN",
+            "ZipCode": "47906",
+            "Street": "201 North Martin Jischke Drive",
+            "Country": "United States",
+            "City": "West Lafayette",
+            "CountryCode": "US"
+        },
+        "LineLengthCrowdsourcingEnabled": true,
+        "Images": ["a6f87275-4d1e-4cb5-bb21-92716f8e85a3"],
+        "PhoneNumber": "(765) 494-6393",
+        "StreetViewUrl": "https://www.google.com/maps/@40.4263345,-86.9223442,3a,75y,273.21h,80.16t/data=!3m7!1e1!3m5!1ssTMyF5APbk_6VrxisJVOZA!2e0!6s%2F%2Fgeo0.ggpht.com%2Fcbk%3Fpanoid%3DsTMyF5APbk_6VrxisJVOZA%26output%3Dthumbnail%26cb_client%3Dmaps_sv.tactile.gps%26thumb%3D2%26w%3D203%26h%3D100%26yaw%3D76.809914%26pitch%3D0!7i3328!8i1664",
+        "Latitude": 40.426446,
+        "NormalHours": [{
+            "Days": [
+                {
+                    "DayOfWeek": 3,
+                    "Meals": [{
+                        "Order": 4,
+                        "Hours": {
+                            "EndTime": "19:00:00",
+                            "StartTime": "17:00:00"
+                        },
+                        "Name": "Dinner"
+                    }],
+                    "Name": "Wednesday"
+                },
+                {
+                    "DayOfWeek": 2,
+                    "Meals": [{
+                        "Order": 4,
+                        "Hours": {
+                            "EndTime": "19:00:00",
+                            "StartTime": "17:00:00"
+                        },
+                        "Name": "Dinner"
+                    }],
+                    "Name": "Tuesday"
+                },
+                {
+                    "DayOfWeek": 4,
+                    "Meals": [{
+                        "Order": 4,
+                        "Hours": {
+                            "EndTime": "19:00:00",
+                            "StartTime": "17:00:00"
+                        },
+                        "Name": "Dinner"
+                    }],
+                    "Name": "Thursday"
+                },
+                {
+                    "DayOfWeek": 1,
+                    "Meals": [{
+                        "Order": 4,
+                        "Hours": {
+                            "EndTime": "19:00:00",
+                            "StartTime": "17:00:00"
+                        },
+                        "Name": "Dinner"
+                    }],
+                    "Name": "Monday"
+                }
+            ],
+            "Id": "abc95658-91ef-4c51-b6aa-b71ae02ae732",
+            "Name": "Academic Year",
+            "EffectiveDate": "2016-08-22T00:00:00"
+        }],
+        "UpcomingMeals": [
+            {
+                "Type": "Dinner",
+                "EndTime": "2017-02-07T19:00:00-05:00",
+                "StartTime": "2017-02-07T17:00:00-05:00",
+                "ID": "d7e724b3-e7ec-4afc-a14b-4cdee3338c25",
+                "Name": "Dinner"
+            },
+            {
+                "Type": "Dinner",
+                "EndTime": "2017-02-08T19:00:00-05:00",
+                "StartTime": "2017-02-08T17:00:00-05:00",
+                "ID": "ac022885-c377-4c1f-aafc-04b8162540c2",
+                "Name": "Dinner"
+            }
+        ],
+        "ShortName": "@TGP",
+        "Longitude": -86.923184,
+        "Name": "The Gathering Place"
+    },
+    {
+        "FormalName": "Wiley Dining Court",
+        "Address": {
+            "State": "IN",
+            "ZipCode": "47906-4277",
+            "Street": "498 North Martin Jischke Drive",
+            "Country": "United States",
+            "City": "West Lafayette",
+            "CountryCode": "US"
+        },
+        "LineLengthCrowdsourcingEnabled": true,
+        "Images": ["7095364d-d93e-491c-a4ad-d7eedd99adbe"],
+        "PhoneNumber": "(765) 494-2264",
+        "StreetViewUrl": "https://www.google.com/maps/@40.4286163,-86.9216711,3a,90y,95.21h,85.4t/data=!3m6!1e1!3m4!1s-qUxJtja-Ni6PShpf-JTyg!2e0!7i3328!8i1664",
+        "Latitude": 40.428705,
+        "NormalHours": [{
+            "Days": [
+                {
+                    "DayOfWeek": 3,
+                    "Meals": [
+                        {
+                            "Order": 2,
+                            "Hours": {
+                                "EndTime": "14:00:00",
+                                "StartTime": "11:00:00"
+                            },
+                            "Name": "Lunch"
+                        },
+                        {
+                            "Order": 4,
+                            "Hours": {
+                                "EndTime": "21:00:00",
+                                "StartTime": "17:00:00"
+                            },
+                            "Name": "Dinner"
+                        },
+                        {
+                            "Order": 1,
+                            "Hours": {
+                                "EndTime": "10:00:00",
+                                "StartTime": "06:30:00"
+                            },
+                            "Name": "Breakfast"
+                        }
+                    ],
+                    "Name": "Wednesday"
+                },
+                {
+                    "DayOfWeek": 6,
+                    "Meals": [
+                        {
+                            "Order": 1,
+                            "Hours": {
+                                "EndTime": "10:00:00",
+                                "StartTime": "08:00:00"
+                            },
+                            "Name": "Breakfast"
+                        },
+                        {
+                            "Order": 4,
+                            "Hours": {
+                                "EndTime": "20:00:00",
+                                "StartTime": "17:00:00"
+                            },
+                            "Name": "Dinner"
+                        },
+                        {
+                            "Order": 2,
+                            "Hours": {
+                                "EndTime": "14:00:00",
+                                "StartTime": "11:00:00"
+                            },
+                            "Name": "Lunch"
+                        }
+                    ],
+                    "Name": "Saturday"
+                },
+                {
+                    "DayOfWeek": 2,
+                    "Meals": [
+                        {
+                            "Order": 1,
+                            "Hours": {
+                                "EndTime": "10:00:00",
+                                "StartTime": "06:30:00"
+                            },
+                            "Name": "Breakfast"
+                        },
+                        {
+                            "Order": 4,
+                            "Hours": {
+                                "EndTime": "21:00:00",
+                                "StartTime": "17:00:00"
+                            },
+                            "Name": "Dinner"
+                        },
+                        {
+                            "Order": 2,
+                            "Hours": {
+                                "EndTime": "14:00:00",
+                                "StartTime": "11:00:00"
+                            },
+                            "Name": "Lunch"
+                        }
+                    ],
+                    "Name": "Tuesday"
+                },
+                {
+                    "DayOfWeek": 0,
+                    "Meals": [
+                        {
+                            "Order": 4,
+                            "Status": "Closed",
+                            "Hours": null,
+                            "Name": "Dinner"
+                        },
+                        {
+                            "Order": 1,
+                            "Hours": {
+                                "EndTime": "10:00:00",
+                                "StartTime": "08:00:00"
+                            },
+                            "Name": "Breakfast"
+                        },
+                        {
+                            "Order": 2,
+                            "Hours": {
+                                "EndTime": "14:00:00",
+                                "StartTime": "11:00:00"
+                            },
+                            "Name": "Lunch"
+                        }
+                    ],
+                    "Name": "Sunday"
+                },
+                {
+                    "DayOfWeek": 4,
+                    "Meals": [
+                        {
+                            "Order": 2,
+                            "Hours": {
+                                "EndTime": "14:00:00",
+                                "StartTime": "11:00:00"
+                            },
+                            "Name": "Lunch"
+                        },
+                        {
+                            "Order": 4,
+                            "Hours": {
+                                "EndTime": "21:00:00",
+                                "StartTime": "17:00:00"
+                            },
+                            "Name": "Dinner"
+                        },
+                        {
+                            "Order": 1,
+                            "Hours": {
+                                "EndTime": "10:00:00",
+                                "StartTime": "06:30:00"
+                            },
+                            "Name": "Breakfast"
+                        }
+                    ],
+                    "Name": "Thursday"
+                },
+                {
+                    "DayOfWeek": 5,
+                    "Meals": [
+                        {
+                            "Order": 1,
+                            "Hours": {
+                                "EndTime": "10:00:00",
+                                "StartTime": "06:30:00"
+                            },
+                            "Name": "Breakfast"
+                        },
+                        {
+                            "Order": 2,
+                            "Hours": {
+                                "EndTime": "14:00:00",
+                                "StartTime": "11:00:00"
+                            },
+                            "Name": "Lunch"
+                        },
+                        {
+                            "Order": 4,
+                            "Hours": {
+                                "EndTime": "21:00:00",
+                                "StartTime": "17:00:00"
+                            },
+                            "Name": "Dinner"
+                        }
+                    ],
+                    "Name": "Friday"
+                },
+                {
+                    "DayOfWeek": 1,
+                    "Meals": [
+                        {
+                            "Order": 2,
+                            "Hours": {
+                                "EndTime": "14:00:00",
+                                "StartTime": "11:00:00"
+                            },
+                            "Name": "Lunch"
+                        },
+                        {
+                            "Order": 4,
+                            "Hours": {
+                                "EndTime": "21:00:00",
+                                "StartTime": "17:00:00"
+                            },
+                            "Name": "Dinner"
+                        },
+                        {
+                            "Order": 1,
+                            "Hours": {
+                                "EndTime": "10:00:00",
+                                "StartTime": "06:30:00"
+                            },
+                            "Name": "Breakfast"
+                        }
+                    ],
+                    "Name": "Monday"
+                }
+            ],
+            "Id": "abc95658-91ef-4c51-b6aa-b71ae02ae732",
+            "Name": "Academic Year",
+            "EffectiveDate": "2016-08-22T00:00:00"
+        }],
+        "UpcomingMeals": [
+            {
+                "Type": "Lunch",
+                "EndTime": "2017-02-07T14:00:00-05:00",
+                "StartTime": "2017-02-07T11:00:00-05:00",
+                "ID": "57806d5e-542b-414a-b167-06ac1ddcbe20",
+                "Name": "Lunch"
+            },
+            {
+                "Type": "Breakfast",
+                "EndTime": "2017-02-07T10:00:00-05:00",
+                "StartTime": "2017-02-07T06:30:00-05:00",
+                "ID": "885346a2-9a41-4748-9716-081693b11677",
+                "Name": "Breakfast"
+            },
+            {
+                "Type": "Dinner",
+                "EndTime": "2017-02-07T21:00:00-05:00",
+                "StartTime": "2017-02-07T17:00:00-05:00",
+                "ID": "6b4abd9c-6410-499a-8d52-dc2e1ac3c8d4",
+                "Name": "Dinner"
+            },
+            {
+                "Type": "Dinner",
+                "EndTime": "2017-02-08T21:00:00-05:00",
+                "StartTime": "2017-02-08T17:00:00-05:00",
+                "ID": "845bfb52-397a-4ac1-a961-2bf7978c8927",
+                "Name": "Dinner"
+            },
+            {
+                "Type": "Lunch",
+                "EndTime": "2017-02-08T14:00:00-05:00",
+                "StartTime": "2017-02-08T11:00:00-05:00",
+                "ID": "04240fdf-d1ad-4193-af66-789fcfc6743b",
+                "Name": "Lunch"
+            },
+            {
+                "Type": "Breakfast",
+                "EndTime": "2017-02-08T10:00:00-05:00",
+                "StartTime": "2017-02-08T06:30:00-05:00",
+                "ID": "97fabe8a-7492-429c-a72d-e1f94db6cb3a",
+                "Name": "Breakfast"
+            }
+        ],
+        "ShortName": "WILY",
+        "Longitude": -86.920867,
+        "Name": "Wiley"
+    },
+    {
+        "FormalName": "Windsor Dining Court",
+        "Address": {
+            "State": "IN",
+            "ZipCode": "47906-4238",
+            "Street": "205 North Russell Street",
+            "Country": "United States",
+            "City": "West Lafayette",
+            "CountryCode": "US"
+        },
+        "LineLengthCrowdsourcingEnabled": true,
+        "Images": ["0cd7ffd9-afe8-4e8b-8c09-8d63d3cd6116"],
+        "PhoneNumber": "(765) 494-2612",
+        "StreetViewUrl": "https://www.google.com/maps/@40.4273291,-86.9210363,3a,90y,167.84h,84.5t/data=!3m6!1e1!3m4!1s0KIg25EwRfc2In4ksyFtqw!2e0!7i3328!8i1664",
+        "Latitude": 40.4271,
+        "NormalHours": [{
+            "Days": [
+                {
+                    "DayOfWeek": 1,
+                    "Meals": [
+                        {
+                            "Order": 3,
+                            "Hours": {
+                                "EndTime": "17:00:00",
+                                "StartTime": "14:00:00"
+                            },
+                            "Name": "Late Lunch"
+                        },
+                        {
+                            "Order": 4,
+                            "Hours": {
+                                "EndTime": "22:00:00",
+                                "StartTime": "17:00:00"
+                            },
+                            "Name": "Dinner"
+                        },
+                        {
+                            "Order": 2,
+                            "Hours": {
+                                "EndTime": "14:00:00",
+                                "StartTime": "10:00:00"
+                            },
+                            "Name": "Lunch"
+                        },
+                        {
+                            "Order": 1,
+                            "Status": "Closed",
+                            "Hours": null,
+                            "Name": "Breakfast"
+                        }
+                    ],
+                    "Name": "Monday"
+                },
+                {
+                    "DayOfWeek": 0,
+                    "Meals": [
+                        {
+                            "Order": 2,
+                            "Status": "Closed",
+                            "Hours": null,
+                            "Name": "Lunch"
+                        },
+                        {
+                            "Order": 1,
+                            "Status": "Closed",
+                            "Hours": null,
+                            "Name": "Breakfast"
+                        },
+                        {
+                            "Order": 4,
+                            "Status": "Closed",
+                            "Hours": null,
+                            "Name": "Dinner"
+                        }
+                    ],
+                    "Name": "Sunday"
+                },
+                {
+                    "DayOfWeek": 6,
+                    "Meals": [
+                        {
+                            "Order": 4,
+                            "Hours": {
+                                "EndTime": "20:00:00",
+                                "StartTime": "16:00:00"
+                            },
+                            "Name": "Dinner"
+                        },
+                        {
+                            "Order": 2,
+                            "Status": "Closed",
+                            "Hours": null,
+                            "Name": "Lunch"
+                        },
+                        {
+                            "Order": 1,
+                            "Status": "Closed",
+                            "Hours": null,
+                            "Name": "Breakfast"
+                        }
+                    ],
+                    "Name": "Saturday"
+                },
+                {
+                    "DayOfWeek": 3,
+                    "Meals": [
+                        {
+                            "Order": 1,
+                            "Status": "Closed",
+                            "Hours": null,
+                            "Name": "Breakfast"
+                        },
+                        {
+                            "Order": 4,
+                            "Hours": {
+                                "EndTime": "22:00:00",
+                                "StartTime": "17:00:00"
+                            },
+                            "Name": "Dinner"
+                        },
+                        {
+                            "Order": 2,
+                            "Hours": {
+                                "EndTime": "14:00:00",
+                                "StartTime": "10:00:00"
+                            },
+                            "Name": "Lunch"
+                        },
+                        {
+                            "Order": 3,
+                            "Hours": {
+                                "EndTime": "17:00:00",
+                                "StartTime": "14:00:00"
+                            },
+                            "Name": "Late Lunch"
+                        }
+                    ],
+                    "Name": "Wednesday"
+                },
+                {
+                    "DayOfWeek": 2,
+                    "Meals": [
+                        {
+                            "Order": 4,
+                            "Hours": {
+                                "EndTime": "22:00:00",
+                                "StartTime": "17:00:00"
+                            },
+                            "Name": "Dinner"
+                        },
+                        {
+                            "Order": 2,
+                            "Hours": {
+                                "EndTime": "14:00:00",
+                                "StartTime": "10:00:00"
+                            },
+                            "Name": "Lunch"
+                        },
+                        {
+                            "Order": 3,
+                            "Hours": {
+                                "EndTime": "17:00:00",
+                                "StartTime": "14:00:00"
+                            },
+                            "Name": "Late Lunch"
+                        },
+                        {
+                            "Order": 1,
+                            "Status": "Closed",
+                            "Hours": null,
+                            "Name": "Breakfast"
+                        }
+                    ],
+                    "Name": "Tuesday"
+                },
+                {
+                    "DayOfWeek": 4,
+                    "Meals": [
+                        {
+                            "Order": 4,
+                            "Hours": {
+                                "EndTime": "22:00:00",
+                                "StartTime": "17:00:00"
+                            },
+                            "Name": "Dinner"
+                        },
+                        {
+                            "Order": 2,
+                            "Hours": {
+                                "EndTime": "14:00:00",
+                                "StartTime": "10:00:00"
+                            },
+                            "Name": "Lunch"
+                        },
+                        {
+                            "Order": 1,
+                            "Status": "Closed",
+                            "Hours": null,
+                            "Name": "Breakfast"
+                        },
+                        {
+                            "Order": 3,
+                            "Hours": {
+                                "EndTime": "17:00:00",
+                                "StartTime": "14:00:00"
+                            },
+                            "Name": "Late Lunch"
+                        }
+                    ],
+                    "Name": "Thursday"
+                },
+                {
+                    "DayOfWeek": 5,
+                    "Meals": [
+                        {
+                            "Order": 2,
+                            "Hours": {
+                                "EndTime": "14:00:00",
+                                "StartTime": "10:00:00"
+                            },
+                            "Name": "Lunch"
+                        },
+                        {
+                            "Order": 3,
+                            "Hours": {
+                                "EndTime": "17:00:00",
+                                "StartTime": "14:00:00"
+                            },
+                            "Name": "Late Lunch"
+                        },
+                        {
+                            "Order": 4,
+                            "Hours": {
+                                "EndTime": "22:00:00",
+                                "StartTime": "17:00:00"
+                            },
+                            "Name": "Dinner"
+                        },
+                        {
+                            "Order": 1,
+                            "Status": "Closed",
+                            "Hours": null,
+                            "Name": "Breakfast"
+                        }
+                    ],
+                    "Name": "Friday"
+                }
+            ],
+            "Id": "abc95658-91ef-4c51-b6aa-b71ae02ae732",
+            "Name": "Academic Year",
+            "EffectiveDate": "2016-08-22T00:00:00"
+        }],
+        "UpcomingMeals": [
+            {
+                "Type": "Lunch",
+                "EndTime": "2017-02-07T14:00:00-05:00",
+                "StartTime": "2017-02-07T10:00:00-05:00",
+                "ID": "091578da-600c-4714-9f48-24a63c9a7952",
+                "Name": "Lunch"
+            },
+            {
+                "Type": "Dinner",
+                "EndTime": "2017-02-07T22:00:00-05:00",
+                "StartTime": "2017-02-07T17:00:00-05:00",
+                "ID": "055d667e-5f76-4594-a028-306bd8e5056e",
+                "Name": "Dinner"
+            },
+            {
+                "Type": "Snack",
+                "EndTime": "2017-02-07T17:00:00-05:00",
+                "StartTime": "2017-02-07T14:00:00-05:00",
+                "ID": "e557d36a-0e83-483f-ad43-ccbe8ceffcd8",
+                "Name": "Late Lunch"
+            },
+            {
+                "Type": "Dinner",
+                "EndTime": "2017-02-08T22:00:00-05:00",
+                "StartTime": "2017-02-08T17:00:00-05:00",
+                "ID": "64cbb0f3-ad1b-4c8c-9b43-261ab3920ece",
+                "Name": "Dinner"
+            },
+            {
+                "Type": "Snack",
+                "EndTime": "2017-02-08T17:00:00-05:00",
+                "StartTime": "2017-02-08T14:00:00-05:00",
+                "ID": "cb78c9b5-0b0c-4e63-bee4-e5a0a941f3fd",
+                "Name": "Late Lunch"
+            },
+            {
+                "Type": "Lunch",
+                "EndTime": "2017-02-08T14:00:00-05:00",
+                "StartTime": "2017-02-08T10:00:00-05:00",
+                "ID": "a5eb246e-2dac-4434-b3c5-fca902b204db",
+                "Name": "Lunch"
+            }
+        ],
+        "ShortName": "WIND",
+        "Longitude": -86.920744,
+        "Name": "Windsor"
+    }
+]}

@@ -5,11 +5,11 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.net.URL;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * Created by eric on 2/6/17.
@@ -34,10 +34,10 @@ public class DiningCourt {
         return address;
     }
 
-    public Menu getMenu(Date date) throws IOException {
-        DateFormat format = new SimpleDateFormat("/MM-dd-yyyy");
+    public Menu getMenu(LocalDate date) throws IOException {
+        DateTimeFormatter format = DateTimeFormatter.ofPattern("MM-dd-yyyy");
         String day = format.format(date);
-        URL url = new URL("https://api.hfs.purdue.edu/menus/v2/locations/" + this.name + day);
+        URL url = new URL("https://api.hfs.purdue.edu/menus/v2/locations/" + this.name + "/" + day);
         Menu menu = new Menu(date);
         JSONObject root = api.getJSON(url);
         JSONArray meals = root.getJSONArray("Meals");
@@ -112,6 +112,12 @@ public class DiningCourt {
             diningCourts.add(new DiningCourt(api, name, address));
         }
         return diningCourts;
+    }
+
+    public static Optional<DiningCourt> getDiningCourt(DiningCourtAPI api, String name) throws IOException {
+        return getDiningCourts(api).stream()
+                .filter(dc -> dc.getName().equals(name))
+                .findFirst();
     }
 
 }

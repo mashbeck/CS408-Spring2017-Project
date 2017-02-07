@@ -1,5 +1,6 @@
 package boilerhungry.backend;
 
+import java.time.LocalDate;
 import java.util.*;
 
 /**
@@ -7,15 +8,15 @@ import java.util.*;
  */
 public class Menu {
 
-    private Date date;
+    private LocalDate date;
     private Map<String, List<Food>> meals;
 
-    public Menu(Date date) {
+    public Menu(LocalDate date) {
         this.date = date;
         this.meals = new HashMap<>();
     }
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
 

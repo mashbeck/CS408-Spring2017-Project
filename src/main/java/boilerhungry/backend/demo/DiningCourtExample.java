@@ -1,15 +1,14 @@
 package boilerhungry.backend.demo;
 
 import boilerhungry.backend.DiningCourt;
+import boilerhungry.backend.DiningCourtAPI;
 import boilerhungry.backend.Food;
 import boilerhungry.backend.Menu;
-import boilerhungry.backend.DiningCourtAPI;
 import boilerhungry.backend.purdue.PurdueDiningCourtAPI;
 import com.google.gson.Gson;
 
 import java.io.IOException;
-import java.time.Instant;
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -27,7 +26,7 @@ public class DiningCourtExample {
             System.out.println(diningCourt.getAddress());
             System.out.println();
             try {
-                Menu menu = diningCourt.getMenu(Date.from(Instant.now()));
+                Menu menu = diningCourt.getMenu(LocalDate.now());
                 System.out.println("Meals Served: (" + menu.getMealNames().stream().collect(Collectors.joining(", ")) + ")");
                 String mealName = "Breakfast";
                 List<Food> breakfast = menu.getMeal(mealName);

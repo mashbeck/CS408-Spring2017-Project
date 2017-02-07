@@ -47,9 +47,10 @@ public class Settings {
         Gson gson = new Gson();
         Settings settings;
         if (file.exists()) {
-            Reader reader = new FileReader(file);
-            settings = gson.fromJson(reader, Settings.class);
-            settings.setFile(file);
+            try (Reader reader = new FileReader(file)) {
+                settings = gson.fromJson(reader, Settings.class);
+                settings.setFile(file);
+            }
         } else {
             settings = new Settings(file);
             settings.save();

@@ -14,15 +14,29 @@ import java.nio.file.Paths;
  */
 public class DownloadJSON {
 
+    private static final String DEST = "src/main/test/data/";
+    private static final String BASE = "https://api.hfs.purdue.edu/menus/v2/locations/";
+    private final DiningCourtAPI api = new PurdueDiningCourtAPI();
+
     public static void main(String[] args) throws IOException {
-        String dest = "src/main/test/data/";
-        String diningCourt = "Wiley";
-        String date = "02-02-2017";
-        String link = "https://api.hfs.purdue.edu/menus/v2/locations/" + diningCourt + "/" + date;
-        DiningCourtAPI api = new PurdueDiningCourtAPI();
+        DownloadJSON dj = new DownloadJSON();
+        dj.downloadLocations();
+        dj.downloadDiningCourtMenu("Earhart", "02-07-2017");
+    }
+
+    public void downloadLocations() throws IOException {
+        JSONObject jsonObject = api.getJSON(new URL(BASE));
+        String prettyJsonString = jsonObject.toString(4);
+        String file = DEST + "locations.json";
+        Files.write(Paths.get(file), prettyJsonString.getBytes());
+        System.out.println("Saved " + file);
+    }
+
+    public void downloadDiningCourtMenu(String diningCourt, String date) throws IOException {
+        String link = BASE + diningCourt + "/" + date;
         JSONObject jsonObject = api.getJSON(new URL(link));
         String prettyJsonString = jsonObject.toString(4);
-        String file = dest + diningCourt + "-" + date + ".json";
+        String file = DEST + diningCourt + "-" + date + ".json";
         Files.write(Paths.get(file), prettyJsonString.getBytes());
         System.out.println("Saved " + file);
     }
