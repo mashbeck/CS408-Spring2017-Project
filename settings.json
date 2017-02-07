@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "dietaryPreferences": {
+    "vegetarian": false,
+    "noEggs": true,
+    "noFish": true,
+    "noGluten": false,
+    "noMilk": false,
+    "noPeanuts": false,
+    "noShellfish": false,
+    "noSoy": false,
+    "noWheat": false
+  },
+  "myFoods": [
+    "bacon",
+    "strawberries"
+  ]
+}

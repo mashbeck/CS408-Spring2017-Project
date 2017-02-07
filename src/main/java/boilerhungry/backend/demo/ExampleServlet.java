@@ -1,4 +1,4 @@
-package boilerhungry;
+package boilerhungry.backend.demo;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
