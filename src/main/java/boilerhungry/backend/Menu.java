@@ -1,8 +1,6 @@
 package boilerhungry.backend;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by Matthew on 2/4/2017.
@@ -11,16 +9,12 @@ public class Menu {
 
     private String name;
     private Date date;
-    private List<Food> breakfast;
-    private List<Food> lunch;
-    private List<Food> dinner;
+    private Map<String, List<Food>> meals;
 
     public Menu(String name, Date date) {
         this.name = name;
         this.date = date;
-        this.breakfast = new ArrayList<>();
-        this.lunch = new ArrayList<>();
-        this.dinner = new ArrayList<>();
+        this.meals = new HashMap<>();
     }
 
     public String getName() {
@@ -31,15 +25,12 @@ public class Menu {
         return date;
     }
 
-    public List<Food> getBreakfast() {
-        return breakfast;
+    public Map<String, List<Food>> getMeals() {
+        return meals;
     }
 
-    public List<Food> getLunch() {
-        return lunch;
+    public List<Food> getMeal(String mealName) {
+        return meals.getOrDefault(mealName, new ArrayList<>());
     }
 
-    public List<Food> getDinner() {
-        return dinner;
-    }
 }

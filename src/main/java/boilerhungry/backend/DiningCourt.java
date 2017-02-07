@@ -89,17 +89,9 @@ public class DiningCourt extends DiningCourtAPI {
                             }
                         }
                     }
-                    switch (mealName) {
-                        case "Breakfast":
-                            menu.getBreakfast().add(food);
-                            break;
-                        case "Lunch":
-                            menu.getLunch().add(food);
-                            break;
-                        case "Dinner":
-                            menu.getDinner().add(food);
-                            break;
-                    }
+                    menu.getMeals()
+                        .computeIfAbsent(mealName, foods -> new ArrayList<>())
+                        .add(food);
                 }
             }
         }
