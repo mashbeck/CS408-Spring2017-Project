@@ -28,4 +28,14 @@ public class DiningCourtTest {
 
     }
 
+    @Test
+    public void LookingForMenuOutsideOfRange(){
+
+    }
+
+    @Test
+    public void UnknownDiningCourtName(){
+
+    }
+
 }
