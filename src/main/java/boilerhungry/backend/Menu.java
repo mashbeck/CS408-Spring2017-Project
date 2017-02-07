@@ -29,6 +29,10 @@ public class Menu {
         return meals;
     }
 
+    public Collection<String> getMealNames() {
+        return meals.keySet();
+    }
+
     public List<Food> getMeal(String mealName) {
         return meals.getOrDefault(mealName, new ArrayList<>());
     }
