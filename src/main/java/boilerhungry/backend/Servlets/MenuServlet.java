@@ -30,7 +30,7 @@ public class MenuServlet extends HttpServlet {
             System.out.println("requested parameter is null");
             return;
         }
-
+        DiningCourt earhart = (DiningCourt) getServletContext().getAttribute("Earhart");
         out.println(input);
         out.flush();
     }

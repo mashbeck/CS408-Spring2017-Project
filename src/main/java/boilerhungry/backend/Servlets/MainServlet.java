@@ -6,6 +6,7 @@ import boilerhungry.backend.purdue.PurdueDiningCourtAPI;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -27,37 +28,30 @@ public class MainServlet extends HttpServlet {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        DiningCourt earhart=null;
-        DiningCourt windsor=null;
-        DiningCourt wiley=null;
-        DiningCourt hillenbrand=null;
-        DiningCourt ford=null;
-        DiningCourt theGatheringPlace=null;
+
         for(DiningCourt dc: diningCourts){
             String name = dc.getName();
             switch(name){
                 case "Earhart":
-                    earhart = dc;
+                    getServletContext().setAttribute("Earhart",dc);
                     break;
                 case "Windsor":
-                    windsor = dc;
+                    getServletContext().setAttribute("Windsor",dc);
                     break;
                 case "Wiley":
-                    wiley = dc;
+                    getServletContext().setAttribute("Wiley",dc);
                     break;
                 case "Hillenbrand":
-                    hillenbrand = dc;
+                    getServletContext().setAttribute("Hillenbrand",dc);
                     break;
                 case "Ford":
-                    ford = dc;
+                    getServletContext().setAttribute("Ford",dc);
                     break;
                 case "The Gathering Place":
-                    theGatheringPlace = dc;
+                    getServletContext().setAttribute("The Gathering Place",dc);
                     break;
             }
         }
-        System.out.println(earhart.getName()+": "+earhart.getAddress());
-        System.out.println(windsor.getName()+": "+wiley.getAddress());
 
     }
     @Override
