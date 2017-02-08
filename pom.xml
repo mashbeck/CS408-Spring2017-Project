@@ -84,6 +84,11 @@
             <version>${jetty-version}</version>
             <type>pom</type>
         </dependency>
+        <dependency>
+            <groupId>boilerhungry</groupId>
+            <artifactId>BoilerHungry</artifactId>
+            <version>0.1</version>
+        </dependency>
     </dependencies>
 
 </project>
