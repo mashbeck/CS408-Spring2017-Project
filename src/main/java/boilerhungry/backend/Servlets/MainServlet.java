@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 
@@ -54,6 +56,8 @@ public class MainServlet extends HttpServlet {
                     break;
             }
         }
+        System.out.println(earhart.getName()+": "+earhart.getAddress());
+        System.out.println(windsor.getName()+": "+wiley.getAddress());
 
     }
     @Override
