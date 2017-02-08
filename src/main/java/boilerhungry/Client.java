@@ -19,7 +19,7 @@ public class Client extends Application {
         server.start();
 
         stage.setTitle("BoilerHungry");
-        Scene scene = new Scene(new Browser(LANDING_PAGE), 750, 500, Color.web("#666970"));
+        Scene scene = new Scene(new Browser(LANDING_PAGE), 1000, 667, Color.web("#666970"));
         stage.setScene(scene);
         //scene.getStylesheets().add("webviewsample/BrowserToolbar.css");
         stage.show();

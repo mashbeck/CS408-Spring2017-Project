@@ -44,8 +44,8 @@ public class DiningCourtTest {
         DiningCourt earhart = maybeEarhart.get();
         Menu menu = earhart.getMenu(LocalDate.parse("2017-02-07"));
         assertTrue("Earhart should serve breakfast", menu.getMealNames().contains("Breakfast"));
-        List<Food> foodList = menu.
-        assertTrue("Earhart should have blah blah in ");
+//        List<Food> foodList = menu.
+//        assertTrue("Earhart should have blah blah in ");
         assertTrue("Earhart should serve lunch", menu.getMealNames().contains("Lunch"));
         assertTrue("Earhart should serve dinner", menu.getMealNames().contains("Dinner"));
 
