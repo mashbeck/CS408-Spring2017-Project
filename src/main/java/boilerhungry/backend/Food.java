@@ -1,5 +1,9 @@
 package boilerhungry.backend;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 /**
  * Created by Matthew on 2/6/2017.
  */
@@ -72,6 +76,20 @@ public class Food {
 
     public boolean hasWheat() {
         return wheat;
+    }
+
+    public List<String> getAllergens(){
+        List<String> allergens= new ArrayList<>();
+        if(hasEggs())allergens.add("Eggs");
+        if(hasFish())allergens.add("Fish");
+        if(hasGluten())allergens.add("Gluten");
+        if(hasMilk())allergens.add("Peanuts");
+        if(hasPeanuts())allergens.add("Peanuts");
+        if(hasShellfish())allergens.add("Shellfish");
+        if(hasSoy())allergens.add("Soy");
+        if(hasTreeNuts())allergens.add("Tree Nuts");
+        if(hasWheat())allergens.add("Wheat");
+        return allergens;
     }
 
     public void setVegetarian(boolean vegetarian) {
