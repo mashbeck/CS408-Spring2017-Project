@@ -6,21 +6,19 @@
     <display-name>BoilerHungry</display-name>
     <servlet>
         <servlet-name>MainServlet</servlet-name>
-        <servlet-class>boilerhungry.backend.Servlets.MainServlet</servlet-class>
-        <load-on-startup>1</load-on-startup>
+        <servlet-class>boilerhungry.backend.servlets.MainServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>MenuServlet</servlet-name>
-        <servlet-class>boilerhungry.backend.Servlets.MenuServlet</servlet-class>
+        <servlet-class>boilerhungry.backend.servlets.MenuServlet</servlet-class>
     </servlet>
         <servlet-mapping>
             <servlet-name>MainServlet</servlet-name>
-            <url-pattern>/boilerhungry</url-pattern>
-
+            <url-pattern>/</url-pattern>
         </servlet-mapping>
     <servlet-mapping>
         <servlet-name>MenuServlet</servlet-name>
-        <url-pattern>/ViewMenu</url-pattern>
+        <url-pattern>/view-menu</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
         <welcome-file>homepage.html</welcome-file>

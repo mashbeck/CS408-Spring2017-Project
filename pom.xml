@@ -73,6 +73,7 @@
             <artifactId>jetty-webapp</artifactId>
             <version>${jetty-version}</version>
         </dependency>
+
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>apache-jsp</artifactId>
@@ -86,11 +87,7 @@
             <version>${jetty-version}</version>
             <type>pom</type>
         </dependency>
-        <dependency>
-            <groupId>boilerhungry</groupId>
-            <artifactId>BoilerHungry</artifactId>
-            <version>0.1</version>
-        </dependency>
+
     </dependencies>
 
 </project>

@@ -1,11 +1,8 @@
-package boilerhungry.backend.Servlets;
+package boilerhungry.backend.servlets;
 
 import boilerhungry.backend.DiningCourt;
-import boilerhungry.backend.DiningCourtAPI;
 import boilerhungry.backend.Food;
 import boilerhungry.backend.Menu;
-import boilerhungry.backend.purdue.PurdueDiningCourtAPI;
-import org.json.JSONObject;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -13,13 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.net.URL;
 import java.time.LocalDate;
 import java.util.Iterator;
 import java.util.List;
-import java.util.stream.Collectors;
-import com.google.gson.Gson;
 
 
 public class MenuServlet extends HttpServlet {

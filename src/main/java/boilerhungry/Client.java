@@ -33,6 +33,8 @@ public class Client extends Application {
     }
 
     public static void main(String[] args) {
+        System.setProperty("org.apache.jasper.compiler.disablejsr199","false");
+
         launch(args);
     }
 }

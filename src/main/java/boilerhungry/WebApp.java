@@ -1,6 +1,9 @@
 package boilerhungry;
 
+import boilerhungry.backend.servlets.JspStarter;
+import org.apache.jasper.servlet.JspServlet;
 import org.eclipse.jetty.server.Server;
+import org.eclipse.jetty.servlet.ServletHolder;
 import org.eclipse.jetty.webapp.WebAppContext;
 
 /**
@@ -21,6 +24,13 @@ public class WebApp {
         root.setDescriptor(WEBXML);
         root.setResourceBase(WEBAPP_DIR);
         root.setParentLoaderPriority(true);
+
+        root.addBean(new JspStarter(root));
+
+        ServletHolder holderJsp = new ServletHolder("jsp", JspServlet.class);
+        holderJsp.setInitOrder(0);
+        root.addServlet(holderJsp, "*.jsp");
+
         server.setHandler(root);
 
         return server;
