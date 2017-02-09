@@ -66,7 +66,7 @@ public class MenuServlet extends HttpServlet {
         }
         request.setAttribute("Menu",ret);
         RequestDispatcher view = request.getRequestDispatcher("menu.jsp");
-//        view.forward(request, response);
+        view.forward(request, response);
         System.out.println(ret);
     }
 
