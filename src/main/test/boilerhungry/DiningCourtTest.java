@@ -44,12 +44,14 @@ public class DiningCourtTest {
     @Test
     public void ChangingDiningCourtShouldChangeTheMenu() throws IOException {
         Optional<DiningCourt> maybeEarhart = DiningCourt.getDiningCourt(mockApi, "Earhart");
+        assertTrue("Earhart dining court should exist", maybeEarhart.isPresent());
         DiningCourt earhart = maybeEarhart.get();
         Menu earhartMenu = earhart.getMenu(LocalDate.parse("2017-02-07"));
         assertTrue("Earhart should serve breakfast", earhartMenu.getMealNames().contains("Lunch"));
         assertFalse("There should be data for Earhart lunch", earhartMenu.getMeal("Lunch").isEmpty());
 
         Optional<DiningCourt> maybeWiley = DiningCourt.getDiningCourt(mockApi, "Wiley");
+        assertTrue("Wiley dining court should exist", maybeWiley.isPresent());
         DiningCourt wiley = maybeWiley.get();
         Menu wileyMenu = wiley.getMenu(LocalDate.parse("2017-02-07"));
         // remove lunch from the mockdata for wiley to test if getMenu function works when we change the dining court
@@ -60,6 +62,7 @@ public class DiningCourtTest {
     @Test
     public void ChangingDateShouldChangeTheMenu() throws IOException{
         Optional<DiningCourt> maybeEarhart = DiningCourt.getDiningCourt(mockApi, "Earhart");
+        assertTrue("Earhart dining court should exist", maybeEarhart.isPresent());
         LocalDate currentDate = LocalDate.parse("2017-02-02");
         LocalDate newDate = LocalDate.parse("2017-02-07");
         DiningCourt earhart = maybeEarhart.get();
@@ -87,7 +90,7 @@ public class DiningCourtTest {
                 containsFood = true;
             }
         }
-        assertTrue("Erahrt breakfast menu should serve MYO Breakfast Bowl for this new changed date", containsFood);
+        assertTrue("Earhart breakfast menu should serve MYO Breakfast Bowl for this new changed date", containsFood);
     }
 
     @Test
@@ -108,6 +111,7 @@ public class DiningCourtTest {
     @Test
     public void LookingForMenuOutsideOfDateRange() throws IOException {
         Optional<DiningCourt> maybeWiley = DiningCourt.getDiningCourt(mockApi, "Wiley");
+        assertTrue("Wiley dining court should exist", maybeWiley.isPresent());
         DiningCourt wiley = maybeWiley.get();
         Menu wileyMenu = wiley.getMenu(LocalDate.parse("2017-02-09"));
         assertFalse("Wiley shouldn't serve breakfast on incorrect date", wileyMenu.getMealNames().contains("Breakfast"));
@@ -126,6 +130,7 @@ public class DiningCourtTest {
     //tests the right data is obtained when the user selects dining court and date
     public void OpenMenuCheckData() throws IOException {
         Optional<DiningCourt> maybeFord = DiningCourt.getDiningCourt(mockApi, "Ford");
+        assertTrue("Ford dining court should exist", maybeFord.isPresent());
         DiningCourt ford = maybeFord.get();
         Menu fordMenu = ford.getMenu(LocalDate.parse("2017-02-02"));
         boolean containsFood = false;
@@ -159,6 +164,7 @@ public class DiningCourtTest {
     @Test
     public void ChangingTimeShouldChangeTheMenu() throws IOException {
         Optional<DiningCourt> maybeWiley = DiningCourt.getDiningCourt(mockApi, "Wiley");
+        assertTrue("Wiley dining court should exist", maybeWiley.isPresent());
         DiningCourt wiley = maybeWiley.get();
         Menu wileyMenu = wiley.getMenu(LocalDate.parse("2017-02-02"));
         Boolean containsFood = false;
