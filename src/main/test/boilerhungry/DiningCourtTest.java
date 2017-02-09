@@ -12,10 +12,8 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
-import java.util.*;
-import java.util.logging.Logger;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 
@@ -49,13 +47,13 @@ public class DiningCourtTest {
         DiningCourt earhart = maybeEarhart.get();
         Menu earhartMenu = earhart.getMenu(LocalDate.parse("2017-02-07"));
         assertTrue("Earhart should serve breakfast", earhartMenu.getMealNames().contains("Lunch"));
-        assertTrue("There should be data for Earhart lunch", earhartMenu.getMeal("Lunch").isEmpty() == false);
+        assertFalse("There should be data for Earhart lunch", earhartMenu.getMeal("Lunch").isEmpty());
 
         Optional<DiningCourt> maybeWiley = DiningCourt.getDiningCourt(mockApi, "Wiley");
         DiningCourt wiley = maybeWiley.get();
         Menu wileyMenu = wiley.getMenu(LocalDate.parse("2017-02-07"));
         // remove lunch from the mockdata for wiley to test if getMenu function works when we change the dining court
-        assertTrue("Wiley should'nt serve lunch", wileyMenu.getMealNames().contains("Lunch")== false);
+        assertFalse("Wiley shouldn't serve lunch", wileyMenu.getMealNames().contains("Lunch"));
         assertTrue("There shouldn't be data for Wiley Lunch",wileyMenu.getMeal("Lunch").isEmpty());
     }
 
@@ -71,8 +69,8 @@ public class DiningCourtTest {
         List<Food> listFoodCurrent = menuCurrentDate.getMeal("Breakfast");
         //Breakfast should be served and should contain "Breakfast Polenta"
         assertTrue("Earhart should serve Breakfast for this current date", menuCurrentDate.getMealNames().contains("Breakfast"));
-        for(int i = 0; i < listFoodCurrent.size(); i++){
-            if(listFoodCurrent.get(i).getName().equals("Breakfast Polenta")){
+        for (Food food : listFoodCurrent) {
+            if (food.getName().equals("Breakfast Polenta")) {
                 containsFood = true;
             }
         }
@@ -84,8 +82,8 @@ public class DiningCourtTest {
         //When date changed breakfast should be served for new date and should contain "MYO Breakfast Bowl"
         assertTrue("Earhart should serve Breakfast for this new changed date", menuNewDate.getMealNames().contains("Breakfast"));
         containsFood = false;
-        for(int i = 0; i < listFoodNew.size(); i++){
-            if(listFoodNew.get(i).getName().equals("MYO Breakfast Bowl")){
+        for (Food food : listFoodNew) {
+            if (food.getName().equals("MYO Breakfast Bowl")) {
                 containsFood = true;
             }
         }
@@ -112,16 +110,16 @@ public class DiningCourtTest {
         Optional<DiningCourt> maybeWiley = DiningCourt.getDiningCourt(mockApi, "Wiley");
         DiningCourt wiley = maybeWiley.get();
         Menu wileyMenu = wiley.getMenu(LocalDate.parse("2017-02-09"));
-        assertTrue("Wiley shouldn't serve breakfast on incorrect date", wileyMenu.getMealNames().contains("Breakfast") == false);
-        assertTrue("Wiley shouldn't serve lunch on incorrect date", wileyMenu.getMealNames().contains("Lunch") == false);
-        assertTrue("Wiley shouldn't serve dinner on incorrect date", wileyMenu.getMealNames().contains("Dinner") == false);
+        assertFalse("Wiley shouldn't serve breakfast on incorrect date", wileyMenu.getMealNames().contains("Breakfast"));
+        assertFalse("Wiley shouldn't serve lunch on incorrect date", wileyMenu.getMealNames().contains("Lunch"));
+        assertFalse("Wiley shouldn't serve dinner on incorrect date", wileyMenu.getMealNames().contains("Dinner"));
 
     }
 
     @Test
     public void UnknownDiningCourtName() throws IOException{
         Optional<DiningCourt> maybeHungry = DiningCourt.getDiningCourt(mockApi, "Hungry");
-        assertTrue("Hungry dining court shouldn't exist", maybeHungry.isPresent() == false);
+        assertFalse("Hungry dining court shouldn't exist", maybeHungry.isPresent());
     }
 
     @Test
@@ -130,10 +128,10 @@ public class DiningCourtTest {
         Optional<DiningCourt> maybeFord = DiningCourt.getDiningCourt(mockApi, "Ford");
         DiningCourt ford = maybeFord.get();
         Menu fordMenu = ford.getMenu(LocalDate.parse("2017-02-02"));
-        Boolean containsFood = false;
+        boolean containsFood = false;
         List<Food> listFoodBreakfast = fordMenu.getMeal("Breakfast");
-        for(int i = 0; i < listFoodBreakfast.size(); i++){
-            if(listFoodBreakfast.get(i).getName().equals("Blueberry Pancakes")){
+        for (Food food : listFoodBreakfast) {
+            if (food.getName().equals("Blueberry Pancakes")) {
                 containsFood = true;
             }
         }
@@ -141,8 +139,8 @@ public class DiningCourtTest {
 
         List<Food> listFoodLunch = fordMenu.getMeal("Lunch");
         containsFood = false;
-        for(int i = 0; i < listFoodLunch.size(); i++){
-            if(listFoodLunch.get(i).getName().equals("Apple Nut Cake")){
+        for (Food food : listFoodLunch) {
+            if (food.getName().equals("Apple Nut Cake")) {
                 containsFood = true;
             }
         }
@@ -150,8 +148,8 @@ public class DiningCourtTest {
 
         List<Food> listFoodDinner = fordMenu.getMeal("Dinner");
         containsFood = false;
-        for(int i = 0; i < listFoodDinner.size(); i++){
-            if(listFoodDinner.get(i).getName().equals("Cheese Pizza")){
+        for (Food food : listFoodDinner) {
+            if (food.getName().equals("Cheese Pizza")) {
                 containsFood = true;
             }
         }
@@ -165,8 +163,8 @@ public class DiningCourtTest {
         Menu wileyMenu = wiley.getMenu(LocalDate.parse("2017-02-02"));
         Boolean containsFood = false;
         List<Food> listFoodLunch = wileyMenu.getMeal("Lunch");
-        for(int i = 0; i < listFoodLunch.size(); i++){
-            if(listFoodLunch.get(i).getName().equals("Broccoli Florets")){
+        for (Food food : listFoodLunch) {
+            if (food.getName().equals("Broccoli Florets")) {
                 containsFood = true;
             }
         }
@@ -175,8 +173,8 @@ public class DiningCourtTest {
 
         containsFood = false;
         List<Food> listFoodDinner = wileyMenu.getMeal("Dinner");
-        for(int i = 0; i < listFoodDinner.size(); i++){
-            if(listFoodDinner.get(i).getName().equals("Tortilla Chips")){
+        for (Food food : listFoodDinner) {
+            if (food.getName().equals("Tortilla Chips")) {
                 containsFood = true;
             }
         }
