@@ -1,4 +1,4 @@
-package boilerhungry.backend.Servlets;
+package boilerhungry.backend.servlets;
 
 import boilerhungry.backend.DiningCourt;
 import boilerhungry.backend.Food;

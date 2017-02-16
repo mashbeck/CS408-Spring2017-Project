@@ -1,4 +1,4 @@
-package boilerhungry.backend.Servlets;
+package boilerhungry.backend.servlets;
 
 import org.apache.tomcat.util.scan.StandardJarScanner;
 import org.eclipse.jetty.apache.jsp.JettyJasperInitializer;

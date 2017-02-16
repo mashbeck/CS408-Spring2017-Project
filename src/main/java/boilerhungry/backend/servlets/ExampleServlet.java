@@ -1,4 +1,4 @@
-package boilerhungry.backend.Servlets;
+package boilerhungry.backend.servlets;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

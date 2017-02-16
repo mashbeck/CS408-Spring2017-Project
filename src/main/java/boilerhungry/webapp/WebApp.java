@@ -142,7 +142,7 @@ public class WebApp {
         sch.addBean(new JspStarter(sch));
         sch.setClassLoader(getUrlClassLoader());
         sch.addServlet(jspServletHolder(), "*.jsp");
-        // Add Application Servlets
+        // Add Application servlets
         sch.addServlet(DateServlet.class, "/date/");
         sch.addServlet(exampleJspFileMappedServletHolder(), "/test/foo/");
         sch.addServlet(defaultServletHolder(baseUri), "/");
