@@ -72,7 +72,7 @@
                         <h2>Earhart</h2>
                     </hgroup>
                     <form method="get" action ="ViewMenu">
-                        <button class="btn btn-hero btn-lg" type="submit" name="viewMenu" role="button" value="Earhart">View Menu</button>
+                        <button class="btn btn-hero btn-lg" type="submit" name="diningCourt" role="button" value="Earhart">View Menu</button>
                     </form>
                 </div>
                 <img src="http://lorempixel.com/1500/600/food/1" alt="Earhart" />
@@ -83,7 +83,7 @@
                         <h2>Wiley</h2>
                     </hgroup>
                     <form method="get" action ="ViewMenu">
-                        <button class="btn btn-hero btn-lg" type="submit" name="viewMenu" role="button" value="Wiley">View Menu</button>
+                        <button class="btn btn-hero btn-lg" type="submit" name="diningCourt" role="button" value="Wiley">View Menu</button>
                     </form>
                 </div>
                 <img src="http://lorempixel.com/1500/600/food/2" alt="Wiley" />
@@ -94,7 +94,7 @@
                         <h2>Windsor</h2>
                     </hgroup>
                     <form method="get" action ="ViewMenu">
-                        <button class="btn btn-hero btn-lg" type="submit" name="viewMenu" role="button" value="Windsor">View Menu</button>
+                        <button class="btn btn-hero btn-lg" type="submit" name="diningCourt" role="button" value="Windsor">View Menu</button>
                     </form>
                 </div>
                 <img src="http://lorempixel.com/1500/600/food/3" alt="Windsor" />
@@ -105,7 +105,7 @@
                         <h2>Ford</h2>
                     </hgroup>
                     <form method="get" action ="ViewMenu">
-                        <button class="btn btn-hero btn-lg" type="submit" name="viewMenu" role="button" value="Ford">View Menu</button>
+                        <button class="btn btn-hero btn-lg" type="submit" name="diningCourt" role="button" value="Ford">View Menu</button>
                     </form>
                 </div>
                 <img src="http://lorempixel.com/1500/600/food/4" alt="Ford" />
@@ -116,7 +116,7 @@
                         <h2>Hillenbrand</h2>
                     </hgroup>
                     <form method="get" action ="ViewMenu">
-                        <button class="btn btn-hero btn-lg" type="submit" name="viewMenu" role="button" value="Hillenbrand">View Menu</button>
+                        <button class="btn btn-hero btn-lg" type="submit" name="diningCourt" role="button" value="Hillenbrand">View Menu</button>
                     </form>
                 </div>
                 <img src="http://lorempixel.com/1500/600/food/5" alt="Hillenbrand" />
@@ -127,7 +127,7 @@
                         <h2>The Gathering Place</h2>
                     </hgroup>
                     <form method="get" action ="ViewMenu">
-                        <button class="btn btn-hero btn-lg" type="submit" name="viewMenu" role="button" value="The Gathering Place">View Menu</button>
+                        <button class="btn btn-hero btn-lg" type="submit" name="diningCourt" role="button" value="The Gathering Place">View Menu</button>
                     </form>
                 </div>
                 <img src="http://lorempixel.com/1500/600/food/6" alt="The Gathering Place" />

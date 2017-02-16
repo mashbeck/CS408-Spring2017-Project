@@ -24,7 +24,7 @@ public class MenuServlet extends HttpServlet {
 
         String input;
         try{
-             input = request.getParameter("viewMenu");
+             input = request.getParameter("diningCourt");
         }
         catch(NullPointerException e){
             System.out.println("requested parameter is null");
