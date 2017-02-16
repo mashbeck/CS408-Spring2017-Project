@@ -1,4 +1,4 @@
-package boilerhungry;
+package boilerhungry.backend.javafx;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
