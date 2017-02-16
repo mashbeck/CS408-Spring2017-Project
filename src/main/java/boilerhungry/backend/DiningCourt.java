@@ -19,6 +19,7 @@ public class DiningCourt {
     private String name;
     private String address;
     private DiningCourtAPI api;
+    public static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("MM-dd-yyy");
 
     public DiningCourt(DiningCourtAPI api, String name, String address) {
         this.api = api;
@@ -35,8 +36,7 @@ public class DiningCourt {
     }
 
     public Menu getMenu(LocalDate date) throws IOException {
-        DateTimeFormatter format = DateTimeFormatter.ofPattern("MM-dd-yyyy");
-        String day = format.format(date);
+        String day = DATE_TIME_FORMATTER.format(date);
         URL url = new URL("https://api.hfs.purdue.edu/menus/v2/locations/" + this.name + "/" + day);
         Menu menu = new Menu(date);
         JSONObject root = api.getJSON(url);

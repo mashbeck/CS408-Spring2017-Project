@@ -1,8 +1,10 @@
 package boilerhungry.backend.servlets;
 
 import boilerhungry.backend.DiningCourt;
-import boilerhungry.backend.Food;
+import boilerhungry.backend.DiningCourtAPI;
 import boilerhungry.backend.Menu;
+import boilerhungry.backend.purdue.PurdueDiningCourtAPI;
+import com.google.gson.Gson;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,56 +13,34 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.time.LocalDate;
-import java.util.Iterator;
-import java.util.List;
-
+import java.util.Optional;
 
 public class MenuServlet extends HttpServlet {
 
     @Override
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType("application/json");
-        response.setCharacterEncoding("utf-8");
-
-        String input;
-        try{
-             input = request.getParameter("diningCourt");
+    public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+        res.setContentType("application/json");
+        DiningCourtAPI api = new PurdueDiningCourtAPI();
+        res.setCharacterEncoding("utf-8");
+        String diningCourtName = req.getParameter("diningCourt");
+        String dateString = req.getParameter("date");
+        LocalDate date = LocalDate.now();
+        if (dateString != null && !dateString.isEmpty()) {
+            date = LocalDate.parse(dateString, DiningCourt.DATE_TIME_FORMATTER);
         }
-        catch(NullPointerException e){
-            System.out.println("requested parameter is null");
-            return;
+        Optional<DiningCourt> maybeDiningCourt = DiningCourt.getDiningCourt(api, diningCourtName);
+        if (maybeDiningCourt.isPresent()) {
+            DiningCourt diningCourt = maybeDiningCourt.get();
+            Menu menu = diningCourt.getMenu(date);
+            Gson gson = new Gson();
+            String json = gson.toJson(menu);
+//            res.getWriter().write(json);
+            req.setAttribute("menu",json);
+            RequestDispatcher view = req.getRequestDispatcher("menu.jsp");
+            view.forward(req, res);
+        } else {
+            res.sendError(HttpServletResponse.SC_NOT_FOUND);
         }
-        DiningCourt diningCourt = (DiningCourt) getServletContext().getAttribute(input);
-        //IF DININGCOURT iS NULL...
-        StringBuilder ret = new StringBuilder();
-        try {
-            Menu menu = diningCourt.getMenu(LocalDate.now());
-                for(Iterator iterator = menu.getMealNames().iterator(); iterator.hasNext();) {
-                    String mealName = (String) iterator.next();
-                    List<Food> foods = menu.getMeal((mealName));
-                    for (int i = 0; i < foods.size(); i++) {
-                        Food food = foods.get(i);
-                        List<String> allergens = food.getAllergens();
-                        ret.append("--"+food.getName());
-                        ret.append(System.getProperty("line.separator"));
-                        ret.append("    Station: "+food.getStation());
-                        ret.append(System.getProperty("line.separator"));
-                        for(String allergen: allergens){
-
-                            ret.append("        Contains: "+allergen);
-                            ret.append(System.getProperty("line.separator"));
-                        }
-                        ret.append(System.getProperty("line.separator"));
-                    }
-                }
-
-        } catch (RuntimeException ex) {
-            System.out.println("Dining court menu not available");
-        }
-        request.setAttribute("Menu",ret);
-        RequestDispatcher view = request.getRequestDispatcher("menu.jsp");
-//        view.forward(request, response);
-        System.out.println(ret);
     }
 
 }
