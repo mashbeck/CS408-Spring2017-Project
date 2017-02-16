@@ -1,0 +1,3242 @@
+{
+    "Meals": [
+        {
+            "Order": 1,
+            "Stations": [
+                {
+                    "Items": [{
+                        "IsVegetarian": false,
+                        "ID": "6088886f-c6d1-4a70-ab53-5c267353e7d8",
+                        "Name": "Crepe Bar"
+                    }],
+                    "Name": "Romeo & Parmesan"
+                },
+                {
+                    "Items": [
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": true,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": true,
+                            "ID": "6c883ba0-e283-4086-ab01-e181a6615435",
+                            "Name": "Scrambled Eggs"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": true,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "6f527be8-ffc6-4af1-94e1-c66043c5f25e",
+                            "Name": "Baked Oatmeal"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "8385eea7-970e-413a-9139-d6fdee87794e",
+                            "Name": "Fuji Flame Roasted Apple Topping"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": true,
+                            "ID": "d5e2d289-fee2-47b9-ae20-a140b21058e2",
+                            "Name": "Hash Browns"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "d11a09a0-8e37-4a30-8b4d-f439923b688e",
+                            "Name": "Multi Grain Cereal"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "c175e6a0-5ce1-44b9-92bf-0df9b8efba68",
+                            "Name": "Sausage Links"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": true,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "7ff9018a-ae58-49d0-87ef-f356ff88612d",
+                            "Name": "Raisin Bread French Toast"
+                        }
+                    ],
+                    "Name": "Classic Flavors"
+                },
+                {
+                    "Items": [
+                        {
+                            "IsVegetarian": false,
+                            "ID": "279d40f1-a8cd-4f2b-825c-a70fe3f8237d",
+                            "Name": "Assorted Donuts"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": true,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "9f6c936a-05b2-492d-8b10-6959bcddd6a1",
+                            "Name": "Blueberry Muffin"
+                        }
+                    ],
+                    "Name": "Mozzarella Fresca"
+                },
+                {
+                    "Items": [
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "cbf5a318-caf0-4aba-a824-1631f82ed9f6",
+                            "Name": "Double Berry Smoothie"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "16c699f3-c01d-48c7-bfde-5d8e68a530bb",
+                            "Name": "Blueberries"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "f676dec5-b342-4daa-90d7-c854a1f19848",
+                            "Name": "Pink Grapefruit Half"
+                        }
+                    ],
+                    "Name": "Fresh Tastes"
+                }
+            ],
+            "Hours": {
+                "EndTime": "10:00:00",
+                "StartTime": "06:30:00"
+            },
+            "ID": "885346a2-9a41-4748-9716-081693b11677",
+            "Name": "Breakfast"
+        },
+        {
+            "Order": 4,
+            "Stations": [
+                {
+                    "Items": [
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "b82a53af-81b4-4ea0-a5b2-c0eec2a6c1bb",
+                            "Name": "Hamburger"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "9b8ad2af-89f4-4dae-85e3-5cb40e139ca3",
+                            "Name": "Smoked Fresh Polish Sausage"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "129d75eb-ad95-48a2-8c8f-e7961926060b",
+                            "Name": "Bavarian Sauerkraut"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": true,
+                            "ID": "5befb4c1-9fe2-4d58-aead-4721a7df022b",
+                            "Name": "Thincut Fries"
+                        }
+                    ],
+                    "Name": "Open Flame"
+                },
+                {
+                    "Items": [
+                        {
+                            "IsVegetarian": false,
+                            "ID": "6cc5bb71-d7ed-4381-af8f-b039486962d8",
+                            "Name": "Asian Stir Fry Bar"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": true,
+                            "ID": "9e6eb50a-0778-49fd-a84e-d9d476f1a297",
+                            "Name": "Long Grain Rice"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": true,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "94b8b244-1e70-4f3b-9840-31bd0ccc6159",
+                            "Name": "Garlic Cheese Biscuits"
+                        }
+                    ],
+                    "Name": "Romeo & Parmesan"
+                },
+                {
+                    "Items": [
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": true,
+                            "ID": "c557db19-72c7-48dd-aa44-53b2fb17fa2f",
+                            "Name": "Lentil Soup"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "3cfbde0e-1421-4a83-ba4b-a497a80a267f",
+                            "Name": "Popcorn Chicken"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "e30251bb-a70f-4977-a8ba-d6de9dfacf74",
+                            "Name": "Baked Ziti Pork Ragu"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": true,
+                            "ID": "722830c0-6f75-4b2d-93ab-0c77d9bc7b1c",
+                            "Name": "Escalloped Potatoes"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": true,
+                            "ID": "379dbaea-5011-436b-b1fa-4b6976ad000c",
+                            "Name": "Peas And Carrots"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": true,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "e4b82473-5b1e-40ca-a863-17abcce2ad76",
+                            "Name": "Honey Mustard Dressing"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "7aeb9ae6-8fc2-4324-8f13-99345c484e8b",
+                            "Name": "Red Hot Frank's Buffalo Sauce"
+                        }
+                    ],
+                    "Name": "Classic Flavors"
+                },
+                {
+                    "Items": [
+                        {
+                            "IsVegetarian": false,
+                            "ID": "577fec9f-0c1b-47b2-8127-332d5203a738",
+                            "Name": "Antipasto Bar"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "62230e02-ac24-48d7-b320-afba66fc3eac",
+                            "Name": "Chicken Drumsticks"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "e988363a-ed72-4d72-8557-7a73341a2b5c",
+                            "Name": "Parmesan Pork"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": true,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": true,
+                            "ID": "f5393493-fb40-43d3-a96d-1713821358ca",
+                            "Name": "Baked Cheese Grits"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "de1d971b-1f65-4c6c-afcc-363d8f5a023a",
+                            "Name": "Kidney Beans"
+                        }
+                    ],
+                    "Name": "Churrascaria"
+                },
+                {
+                    "Items": [
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "347b5a58-4ead-444a-846d-661577bc4042",
+                            "Name": "Crispy Chicken Alfredo Pizza"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": true,
+                            "ID": "5db0f026-2431-4471-a8e1-b59d906d0e0a",
+                            "Name": "Crispy Magherita Pizza"
+                        }
+                    ],
+                    "Name": "Mozzarella Fresca"
+                },
+                {
+                    "Items": [
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "af09103e-df09-42e3-b52c-fad4aa773e11",
+                            "Name": "Italian Beef"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": true,
+                            "ID": "cb389e1f-a2f5-44f1-b538-6f046dccdbb0",
+                            "Name": "Brown Rice"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "972ddf7f-0548-43c8-9fd4-2f0c2a38f222",
+                            "Name": "Tossed Vegetable Spinach Salad"
+                        },
+                        {
+                            "IsVegetarian": false,
+                            "ID": "fe0568bf-8cbe-40c7-909c-45cdb9a487bf",
+                            "Name": "Fresh Tastes Salads"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "16c699f3-c01d-48c7-bfde-5d8e68a530bb",
+                            "Name": "Blueberries"
+                        },
+                        {
+                            "IsVegetarian": false,
+                            "ID": "09eb08bc-b8b7-4216-9309-b9988302ca39",
+                            "Name": "Fresh Tastes Deli"
+                        }
+                    ],
+                    "Name": "Fresh Tastes"
+                },
+                {
+                    "Items": [
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": true,
+                            "ID": "a684be90-d913-40a7-80ef-1713c6ec1be2",
+                            "Name": "Vegetarian Spanish Paella"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": true,
+                            "ID": "379dbaea-5011-436b-b1fa-4b6976ad000c",
+                            "Name": "Peas And Carrots"
+                        }
+                    ],
+                    "Name": "No Wheat No Meat"
+                },
+                {
+                    "Items": [
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "512f31b3-2637-475e-8d87-3107f442638c",
+                            "Name": "White Grapes"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": true,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "c6bd79f3-77d4-47de-899f-884ffc77c235",
+                            "Name": "White Chocolate Chip Cookie"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": true,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "08b0e608-89e7-475a-b206-384a66025b92",
+                            "Name": "Carnival Cookie"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": true,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "fe3a628c-1dce-463f-938b-700fea19c5be",
+                            "Name": "Banana Nut Cake"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "e7900fec-7ab9-483f-8f6f-9aa37ed17f7b",
+                            "Name": "Coconut Cream Pie"
+                        }
+                    ],
+                    "Name": "Delectables"
+                }
+            ],
+            "Type": "Dinner",
+            "Hours": {
+                "EndTime": "21:00:00",
+                "StartTime": "17:00:00"
+            },
+            "ID": "6b4abd9c-6410-499a-8d52-dc2e1ac3c8d4",
+            "Name": "Dinner"
+        }
+    ],
+    "Date": "2/7/2017",
+    "Notes": "",
+    "Location": "Wiley"
+}
+// Wiley Lunch section removed to test ChangingDiningCourtShouldChangeTheMenu() testing function
+/*{
+            "Order": 2,
+            "Stations": [
+                {
+                    "Items": [
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "b82a53af-81b4-4ea0-a5b2-c0eec2a6c1bb",
+                            "Name": "Hamburger"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": true,
+                            "ID": "5befb4c1-9fe2-4d58-aead-4721a7df022b",
+                            "Name": "Thincut Fries"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "129d75eb-ad95-48a2-8c8f-e7961926060b",
+                            "Name": "Bavarian Sauerkraut"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "9b8ad2af-89f4-4dae-85e3-5cb40e139ca3",
+                            "Name": "Smoked Fresh Polish Sausage"
+                        }
+                    ],
+                    "Name": "Open Flame"
+                },
+                {
+                    "Items": [
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": true,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": true,
+                            "ID": "97df663e-3272-4eff-84cb-57eda9864ef3",
+                            "Name": "Pesto Ravioli"
+                        },
+                        {
+                            "IsVegetarian": false,
+                            "ID": "6cc5bb71-d7ed-4381-af8f-b039486962d8",
+                            "Name": "Asian Stir Fry Bar"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": true,
+                            "ID": "9e6eb50a-0778-49fd-a84e-d9d476f1a297",
+                            "Name": "Long Grain Rice"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "738ffca8-3684-4a36-97da-c2152971cd2e",
+                            "Name": "Sliced French Bread"
+                        }
+                    ],
+                    "Name": "Romeo & Parmesan"
+                },
+                {
+                    "Items": [
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": true,
+                            "ID": "c557db19-72c7-48dd-aa44-53b2fb17fa2f",
+                            "Name": "Lentil Soup"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "3cfbde0e-1421-4a83-ba4b-a497a80a267f",
+                            "Name": "Popcorn Chicken"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": true,
+                            "ID": "5b1ed078-fe1e-43b4-bba0-5628e87d1951",
+                            "Name": "Whipped Potatoes"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": true,
+                            "ID": "c7ce16ab-523c-425d-969a-c20a9698144a",
+                            "Name": "Corn"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": true,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "e4b82473-5b1e-40ca-a863-17abcce2ad76",
+                            "Name": "Honey Mustard Dressing"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "7aeb9ae6-8fc2-4324-8f13-99345c484e8b",
+                            "Name": "Red Hot Frank's Buffalo Sauce"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "c5f3bcbe-9575-4c4c-9101-b639843e154d",
+                            "Name": "Sicilian Parmi Sandwich"
+                        }
+                    ],
+                    "Name": "Classic Flavors"
+                },
+                {
+                    "Items": [
+                        {
+                            "IsVegetarian": false,
+                            "ID": "577fec9f-0c1b-47b2-8127-332d5203a738",
+                            "Name": "Antipasto Bar"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "62230e02-ac24-48d7-b320-afba66fc3eac",
+                            "Name": "Chicken Drumsticks"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "e988363a-ed72-4d72-8557-7a73341a2b5c",
+                            "Name": "Parmesan Pork"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": true,
+                            "ID": "7da1874f-32c9-40ec-bdd4-574140e85852",
+                            "Name": "Roasted Baby Potatoes"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "de1d971b-1f65-4c6c-afcc-363d8f5a023a",
+                            "Name": "Kidney Beans"
+                        }
+                    ],
+                    "Name": "Churrascaria"
+                },
+                {
+                    "Items": [
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "347b5a58-4ead-444a-846d-661577bc4042",
+                            "Name": "Crispy Chicken Alfredo Pizza"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": true,
+                            "ID": "5db0f026-2431-4471-a8e1-b59d906d0e0a",
+                            "Name": "Crispy Magherita Pizza"
+                        }
+                    ],
+                    "Name": "Mozzarella Fresca"
+                },
+                {
+                    "Items": [
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "af09103e-df09-42e3-b52c-fad4aa773e11",
+                            "Name": "Italian Beef"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": true,
+                            "ID": "cb389e1f-a2f5-44f1-b538-6f046dccdbb0",
+                            "Name": "Brown Rice"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "972ddf7f-0548-43c8-9fd4-2f0c2a38f222",
+                            "Name": "Tossed Vegetable Spinach Salad"
+                        },
+                        {
+                            "IsVegetarian": false,
+                            "ID": "fe0568bf-8cbe-40c7-909c-45cdb9a487bf",
+                            "Name": "Fresh Tastes Salads"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "16c699f3-c01d-48c7-bfde-5d8e68a530bb",
+                            "Name": "Blueberries"
+                        },
+                        {
+                            "IsVegetarian": false,
+                            "ID": "09eb08bc-b8b7-4216-9309-b9988302ca39",
+                            "Name": "Fresh Tastes Deli"
+                        }
+                    ],
+                    "Name": "Fresh Tastes"
+                },
+                {
+                    "Items": [{
+                        "Allergens": [
+                            {
+                                "Value": false,
+                                "Name": "Eggs"
+                            },
+                            {
+                                "Value": false,
+                                "Name": "Fish"
+                            },
+                            {
+                                "Value": false,
+                                "Name": "Gluten"
+                            },
+                            {
+                                "Value": true,
+                                "Name": "Milk"
+                            },
+                            {
+                                "Value": false,
+                                "Name": "Peanuts"
+                            },
+                            {
+                                "Value": false,
+                                "Name": "Shellfish"
+                            },
+                            {
+                                "Value": true,
+                                "Name": "Soy"
+                            },
+                            {
+                                "Value": false,
+                                "Name": "Tree Nuts"
+                            },
+                            {
+                                "Value": false,
+                                "Name": "Wheat"
+                            }
+                        ],
+                        "IsVegetarian": true,
+                        "ID": "a684be90-d913-40a7-80ef-1713c6ec1be2",
+                        "Name": "Vegetarian Spanish Paella"
+                    }],
+                    "Name": "No Wheat No Meat"
+                },
+                {
+                    "Items": [
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "512f31b3-2637-475e-8d87-3107f442638c",
+                            "Name": "White Grapes"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": true,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "08b0e608-89e7-475a-b206-384a66025b92",
+                            "Name": "Carnival Cookie"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": true,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "c6bd79f3-77d4-47de-899f-884ffc77c235",
+                            "Name": "White Chocolate Chip Cookie"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": true,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "8f801543-b29a-4d80-8ece-602fb2011d7b",
+                            "Name": "Chunky Pecan Pie Bar"
+                        },
+                        {
+                            "Allergens": [
+                                {
+                                    "Value": false,
+                                    "Name": "Eggs"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Fish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Gluten"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Milk"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Peanuts"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Shellfish"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Soy"
+                                },
+                                {
+                                    "Value": false,
+                                    "Name": "Tree Nuts"
+                                },
+                                {
+                                    "Value": true,
+                                    "Name": "Wheat"
+                                }
+                            ],
+                            "IsVegetarian": false,
+                            "ID": "e7900fec-7ab9-483f-8f6f-9aa37ed17f7b",
+                            "Name": "Coconut Cream Pie"
+                        }
+                    ],
+                    "Name": "Delectables"
+                }
+            ],
+            "Type": "Lunch",
+            "Hours": {
+                "EndTime": "14:00:00",
+                "StartTime": "11:00:00"
+            },
+            "ID": "57806d5e-542b-414a-b167-06ac1ddcbe20",
+            "Name": "Lunch"
+        },*/

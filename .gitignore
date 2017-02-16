@@ -34,3 +34,6 @@ nbproject/
 
 # merge tooling
 *.orig
+
+#boilerhungry
+settings.json

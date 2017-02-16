@@ -11,12 +11,12 @@
   <uri>http://www.acme.com/taglib</uri>
   <description>taglib example</description>
   <listener>
-    <listener-class>com.acme.TagListener</listener-class>
+    <listener-class>examples.TagListener</listener-class>
   </listener>
 
   <tag>
     <name>date</name>
-    <tag-class>com.acme.DateTag</tag-class>
+    <tag-class>examples.DateTag</tag-class>
     <body-content>TAGDEPENDENT</body-content>
     <description>Display Date</description>
     <attribute>

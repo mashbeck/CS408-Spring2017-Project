@@ -11,7 +11,7 @@
     <tag>
         <description>Simple Date formatting</description>
         <name>date2</name>
-        <tag-class>com.acme.Date2Tag</tag-class>
+        <tag-class>examples.Date2Tag</tag-class>
         <body-content>scriptless</body-content>
         <variable>
             <description>Day of the Month</description>
