@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-default" style="margin-bottom: 0">
+    <nav class="navbar navbar-default navbar-fixed-top" style="margin-bottom: 0">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="#">Boilerhungry</a>
@@ -36,6 +36,12 @@
                         </div>
                         <div>
                             <h4>Open Hours:</h4>
+                            <c:forEach items="${menu.getMealNames()}" var = "mealName">
+                                <div>
+                                    <label style="font-size: larger">${mealName}</label>
+                                    <label style="padding-left: 10px">${menu.getMeal(mealName).get().getHours()}</label>
+                                </div>
+                            </c:forEach>
                         </div>
                         <div>
                             <h4>Wait time range:</h4>
@@ -45,13 +51,13 @@
                     </div>
                 </nav>
             </div>
-            <div class="col-sm-9 col-lg-10" style="margin-top:20px;">
+            <div class="col-sm-9 col-lg-10 menu" >
                 <div class="container-fluid">
                     <div class="col-sm-9 col-lg-10" style="">
                         <c:forEach items="${menu.getMealNames()}" var = "menuName">
                             <div>
                             <label style="font-size: larger">${menuName}</label>
-                            <c:forEach items="${menu.getMeal(menuName)}" var =  "food">
+                            <c:forEach items="${menu.getMeal(menuName).get().getFoods()}" var =  "food">
                                 <div>
                                     <label style="padding-left: 15px">${food.getName()}</label><br>
                                 </div>
