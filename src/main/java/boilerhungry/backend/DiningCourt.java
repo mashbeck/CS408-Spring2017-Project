@@ -36,6 +36,17 @@ public class DiningCourt {
         return address;
     }
 
+    private Hours getHours(JSONObject meal) {
+        if (meal.optJSONObject("Hours") != null) {
+            JSONObject mealHoursObj = meal.getJSONObject("Hours");
+            String startTime = mealHoursObj.getString("StartTime");
+            String endTime = mealHoursObj.getString("EndTime");
+            return new Hours(startTime, endTime);
+        } else {
+            return new Hours();
+        }
+    }
+
     public Menu getMenu(LocalDate date) throws IOException {
         String day = DATE_TIME_FORMATTER.format(date);
         URL url = new URL("https://api.hfs.purdue.edu/menus/v2/locations/" + this.name + "/" + day);
@@ -45,10 +56,7 @@ public class DiningCourt {
         for (int i = 0; i < meals.length(); i++) {
             JSONObject meal = meals.getJSONObject(i);
             String mealName = meal.getString("Name");
-            JSONObject mealHours = meal.getJSONObject("Hours");
-            String startTime = mealHours.getString("StartTime");
-            String endTime = mealHours.getString("EndTime");
-            Hours hours = new Hours(startTime, endTime);
+            final Hours hours = getHours(meal);
             JSONArray stations = meal.getJSONArray("Stations");
             for (int j = 0; j < stations.length(); j++) {
                 JSONObject station = stations.getJSONObject(j);
