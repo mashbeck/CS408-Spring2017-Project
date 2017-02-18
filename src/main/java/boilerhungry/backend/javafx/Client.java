@@ -10,11 +10,13 @@ import boilerhungry.webapp.WebApp;
 public class Client extends Application {
 
     private WebApp server;
-    private static final String LANDING_PAGE = "http://localhost:8080/";
+    private static final int PORT = 8080;
+    private static final String LANDING_PAGE = String.format("http://localhost:%d/home", PORT);
+    private static final boolean USING_GUI = false;
 
     @Override
     public void start(Stage stage) throws Exception {
-        server = new WebApp(8080);
+        server = new WebApp(PORT);
         server.start();
 
         stage.setTitle("BoilerHungry");
@@ -31,11 +33,16 @@ public class Client extends Application {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         //System.setProperty("prism.order", "sw");
         //System.setProperty("prism.verbose", "true");
         System.setProperty("org.apache.jasper.compiler.disablejsr199","false");
-
-        launch(args);
+        if (USING_GUI) {
+            launch(args);
+        } else {
+            Client client = new Client();
+            client.server = new WebApp(PORT);
+            client.server.start();
+        }
     }
 }

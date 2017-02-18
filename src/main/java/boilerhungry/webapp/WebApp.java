@@ -18,6 +18,7 @@
 
 package boilerhungry.webapp;
 
+import boilerhungry.backend.servlets.HomeServlet;
 import boilerhungry.backend.servlets.MenuServlet;
 import examples.DateServlet;
 import org.apache.tomcat.InstanceManager;
@@ -147,7 +148,8 @@ public class WebApp {
         sch.addServlet(DateServlet.class, "/date/");
         sch.addServlet(exampleJspFileMappedServletHolder(), "/test/foo/");
         sch.addServlet(defaultServletHolder(baseUri), "/");
-        sch.addServlet(MenuServlet.class,"/ViewMenu");
+        sch.addServlet(MenuServlet.class, "/ViewMenu");
+        sch.addServlet(HomeServlet.class, "/home");
         return sch;
     }
 

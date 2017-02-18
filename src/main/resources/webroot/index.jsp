@@ -1,3 +1,5 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,6 +10,7 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
+
 <nav class="navbar navbar-default" role="navigation">
     <div class="container">
 
@@ -22,7 +25,6 @@
         </div>
 
         <div class="navbar-collapse collapse" id="navbar-collapsible">
-
 
             <ul class="nav navbar-header navbar-right">
                 <li class="dropdown">
@@ -54,84 +56,26 @@
 </nav>
 <div class="container">
     <div id="carousel" class="carousel slide" data-ride="carousel">
-        <!-- Menu -->
         <ol class="carousel-indicators">
-            <li data-target="#carousel" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel" data-slide-to="1"></li>
-            <li data-target="#carousel" data-slide-to="2"></li>
-            <li data-target="#carousel" data-slide-to="3"></li>
-            <li data-target="#carousel" data-slide-to="4"></li>
-            <li data-target="#carousel" data-slide-to="5"></li>
+            <c:forEach items="${diningCourts}" var="diningCourt" varStatus="loop">
+                <li data-target="#carousel" data-slide-to="${loop.index}" class="${loop.index == 0 ? 'active' : ''}"></li>
+            </c:forEach>
         </ol>
 
-        <!-- Items -->
         <div class="carousel-inner">
-            <div class="item active">
-                <div class="hero">
-                    <hgroup>
-                        <h2>Earhart</h2>
-                    </hgroup>
-                    <form method="get" action ="ViewMenu">
-                        <button class="btn btn-hero btn-lg" type="submit" name="diningCourt" role="button" value="Earhart">View Menu</button>
-                    </form>
+            <c:forEach items="${diningCourts}" var="diningCourt" varStatus="loop">
+                <div class="${loop.index == 0 ? 'item active' : 'item' }">
+                    <div class="hero">
+                        <hgroup>
+                            <h2>${diningCourt.getName()}</h2>
+                        </hgroup>
+                        <form method="get" action ="ViewMenu">
+                            <button class="btn btn-hero btn-lg" type="submit" name="diningCourt" role="button" value="${diningCourt.getName()}">View Menu</button>
+                        </form>
+                    </div>
+                    <img src="http://lorempixel.com/1500/600/food/${loop.index}" alt="Earhart" />
                 </div>
-                <img src="http://lorempixel.com/1500/600/food/1" alt="Earhart" />
-            </div>
-            <div class="item">
-                <div class="hero">
-                    <hgroup>
-                        <h2>Wiley</h2>
-                    </hgroup>
-                    <form method="get" action ="ViewMenu">
-                        <button class="btn btn-hero btn-lg" type="submit" name="diningCourt" role="button" value="Wiley">View Menu</button>
-                    </form>
-                </div>
-                <img src="http://lorempixel.com/1500/600/food/2" alt="Wiley" />
-            </div>
-            <div class="item">
-                <div class="hero">
-                    <hgroup>
-                        <h2>Windsor</h2>
-                    </hgroup>
-                    <form method="get" action ="ViewMenu">
-                        <button class="btn btn-hero btn-lg" type="submit" name="diningCourt" role="button" value="Windsor">View Menu</button>
-                    </form>
-                </div>
-                <img src="http://lorempixel.com/1500/600/food/3" alt="Windsor" />
-            </div>
-            <div class="item">
-                <div class="hero">
-                    <hgroup>
-                        <h2>Ford</h2>
-                    </hgroup>
-                    <form method="get" action ="ViewMenu">
-                        <button class="btn btn-hero btn-lg" type="submit" name="diningCourt" role="button" value="Ford">View Menu</button>
-                    </form>
-                </div>
-                <img src="http://lorempixel.com/1500/600/food/4" alt="Ford" />
-            </div>
-            <div class="item">
-                <div class="hero">
-                    <hgroup>
-                        <h2>Hillenbrand</h2>
-                    </hgroup>
-                    <form method="get" action ="ViewMenu">
-                        <button class="btn btn-hero btn-lg" type="submit" name="diningCourt" role="button" value="Hillenbrand">View Menu</button>
-                    </form>
-                </div>
-                <img src="http://lorempixel.com/1500/600/food/5" alt="Hillenbrand" />
-            </div>
-            <div class="item">
-                <div class="hero">
-                    <hgroup>
-                        <h2>The Gathering Place</h2>
-                    </hgroup>
-                    <form method="get" action ="ViewMenu">
-                        <button class="btn btn-hero btn-lg" type="submit" name="diningCourt" role="button" value="The Gathering Place">View Menu</button>
-                    </form>
-                </div>
-                <img src="http://lorempixel.com/1500/600/food/6" alt="The Gathering Place" />
-            </div>
+            </c:forEach>
         </div>
 
         <a href="#carousel" class="left carousel-control" data-slide="prev">

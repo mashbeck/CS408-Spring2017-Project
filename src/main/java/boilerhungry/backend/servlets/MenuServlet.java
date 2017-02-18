@@ -34,8 +34,8 @@ public class MenuServlet extends HttpServlet {
             Menu menu = diningCourt.getMenu(date);
             Gson gson = new Gson();
             String json = gson.toJson(menu);
-//            res.getWriter().write(json);
-            req.setAttribute("menu",json);
+            //res.getWriter().write(json);
+            req.setAttribute("menu", json);
             RequestDispatcher view = req.getRequestDispatcher("menu.jsp");
             view.forward(req, res);
         } else {
