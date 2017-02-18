@@ -1,3 +1,4 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
     <title>Menu</title>
@@ -7,45 +8,63 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default" style="margin-bottom: 0">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="#">Boilerhungry</a>
                 </div>
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
+                    <li class="active"><a href="/home">Home</a></li>
                     <li><a href="#">Page 1</a></li>
                     <li><a href="#">Page 2</a></li>
                     <li><a href="#">Page 3</a></li>
                 </ul>
             </div>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-3 col-lg-2">
-                        <nav class="navbar navbar-default navbar-fixed-side">
-                            <div class = "side-bar">
-                                <div>
-                                    <h2>Information:</h2>
-                                </div>
-                                <div>
-                                    <h4>Location:</h4>
-                                    <label>${diningCourt.getAddress()}</label>
-                                </div>
-                                <div>
-                                    <h4>Open Hours:</h4>
-                                </div>
-                                <div>
-                                    <h4>Wait time range:</h4>
-                                    
-                                </div>
-                            </div>
-                        </nav>
+    </nav>
+
+    <%--<div class="container-fluid">--%>
+        <div class="row">
+            <div class="col-sm-3 col-lg-2">
+                <nav class="navbar navbar-default navbar-fixed-side">
+                    <div class = "side-bar">
+                        <div>
+                            <h2>Information:</h2>
+                        </div>
+                        <div>
+                            <h4>Location:</h4>
+                            <label>${diningCourt.getAddress()}</label>
+                        </div>
+                        <div>
+                            <h4>Open Hours:</h4>
+                        </div>
+                        <div>
+                            <h4>Wait time range:</h4>
+
+                        </div>
+
                     </div>
-                    <div class="col-sm-9 col-lg-10">
-                        <!-- your page content -->
-    
+                </nav>
+            </div>
+            <div class="col-sm-9 col-lg-10" style="margin-top:20px;">
+                <div class="container-fluid">
+                    <div class="col-sm-9 col-lg-10" style="">
+                        <c:forEach items="${menu.getMealNames()}" var = "menuName">
+                            <div>
+                            <label style="font-size: larger">${menuName}</label>
+                            <c:forEach items="${menu.getMeal(menuName)}" var =  "food">
+                                <div>
+                                    <label style="padding-left: 15px">${food.getName()}</label><br>
+                                </div>
+                            </c:forEach>
+                            </div>
+                        </c:forEach>
                     </div>
                 </div>
-            </div>
-        </nav>
 
+            </div>
+        </div>
+
+
+
+</body>
+</html>
