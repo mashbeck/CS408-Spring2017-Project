@@ -18,6 +18,7 @@ public class DiningCourt {
 
     private String name;
     private String address;
+    //private DiningCourtHours hours;
     private DiningCourtAPI api;
     public static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("MM-dd-yyy");
 
@@ -44,6 +45,10 @@ public class DiningCourt {
         for (int i = 0; i < meals.length(); i++) {
             JSONObject meal = meals.getJSONObject(i);
             String mealName = meal.getString("Name");
+            JSONObject mealHours = meal.getJSONObject("Hours");
+            String startTime = mealHours.getString("StartTime");
+            String endTime = mealHours.getString("EndTime");
+            Hours hours = new Hours(startTime, endTime);
             JSONArray stations = meal.getJSONArray("Stations");
             for (int j = 0; j < stations.length(); j++) {
                 JSONObject station = stations.getJSONObject(j);
@@ -92,7 +97,8 @@ public class DiningCourt {
                         }
                     }
                     menu.getMeals()
-                        .computeIfAbsent(mealName, foods -> new ArrayList<>())
+                        .computeIfAbsent(mealName, foods -> new Meal(mealName, hours))
+                        .getFoods()
                         .add(food);
                 }
             }

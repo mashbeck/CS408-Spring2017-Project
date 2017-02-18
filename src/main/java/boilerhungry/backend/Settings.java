@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import java.io.*;
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -40,8 +41,8 @@ public class Settings {
         return dietaryPreferences;
     }
 
-    public HashSet<String> getMyFoods() {
-        return (HashSet<String>) myFoods;
+    public Collection<String> getMyFoods() {
+        return myFoods;
     }
 
     public static Settings load(File file) throws IOException {

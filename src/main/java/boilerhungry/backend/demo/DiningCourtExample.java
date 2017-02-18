@@ -1,9 +1,6 @@
 package boilerhungry.backend.demo;
 
-import boilerhungry.backend.DiningCourt;
-import boilerhungry.backend.DiningCourtAPI;
-import boilerhungry.backend.Food;
-import boilerhungry.backend.Menu;
+import boilerhungry.backend.*;
 import boilerhungry.backend.purdue.PurdueDiningCourtAPI;
 import com.google.gson.Gson;
 
@@ -29,14 +26,17 @@ public class DiningCourtExample {
                 Menu menu = diningCourt.getMenu(LocalDate.now());
                 System.out.println("Meals Served: (" + menu.getMealNames().stream().collect(Collectors.joining(", ")) + ")");
                 String mealName = "Breakfast";
-                List<Food> breakfast = menu.getMeal(mealName);
-                System.out.println(mealName + " Menu (top 3):");
-                for (int i = 0; i < breakfast.size() && i < 3; i++) {
-                    Food food = breakfast.get(i);
-                    String json = gson.toJson(food);
-                    System.out.println(json);
-                }
-                System.out.println();
+                menu.getMeal(mealName)
+                    .map(Meal::getFoods)
+                    .ifPresent(breakfast -> {
+                        System.out.println(mealName + " Menu (top 3):");
+                        for (int i = 0; i < breakfast.size() && i < 3; i++) {
+                            Food food = breakfast.get(i);
+                            String json = gson.toJson(food);
+                            System.out.println(json);
+                        }
+                        System.out.println();
+                    });
             } catch (RuntimeException ex) {
                 System.out.println("Dining court menu not available");
             }

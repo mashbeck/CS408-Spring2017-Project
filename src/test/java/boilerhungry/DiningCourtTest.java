@@ -8,10 +8,9 @@ import org.junit.Test;
 import java.io.File;
 import java.io.IOException;
 import java.time.LocalDate;
-import java.util.HashSet;
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
-import java.util.Set;
 
 import static org.junit.Assert.*;
 
@@ -34,7 +33,6 @@ public class DiningCourtTest {
         assertTrue("Earhart should serve breakfast", menu.getMealNames().contains("Breakfast"));
         assertTrue("Earhart should serve lunch", menu.getMealNames().contains("Lunch"));
         assertTrue("Earhart should serve dinner", menu.getMealNames().contains("Dinner"));
-
     }
 
     @Test
@@ -44,7 +42,7 @@ public class DiningCourtTest {
         DiningCourt earhart = diningCourt.get();
         Menu earhartMenu = earhart.getMenu(LocalDate.parse("2017-02-07"));
         assertTrue("Earhart should serve breakfast", earhartMenu.getMealNames().contains("Lunch"));
-        assertFalse("There should be data for Earhart lunch", earhartMenu.getMeal("Lunch").isEmpty());
+        assertTrue("There should be data for Earhart lunch", earhartMenu.getMeal("Lunch").isPresent());
 
         diningCourt = DiningCourt.getDiningCourt(mockApi, "Wiley");
         assertTrue("Wiley dining court should exist", diningCourt.isPresent());
@@ -52,7 +50,7 @@ public class DiningCourtTest {
         Menu wileyMenu = wiley.getMenu(LocalDate.parse("2017-02-07"));
         // remove lunch from the mockdata for wiley to test if getMenu function works when we change the dining court
         assertFalse("Wiley shouldn't serve lunch", wileyMenu.getMealNames().contains("Lunch"));
-        assertTrue("There shouldn't be data for Wiley Lunch",wileyMenu.getMeal("Lunch").isEmpty());
+        assertFalse("There shouldn't be data for Wiley Lunch", wileyMenu.getMeal("Lunch").isPresent());
     }
 
     @Test
@@ -65,7 +63,7 @@ public class DiningCourtTest {
         boolean containsFood = false;
 
         Menu menuCurrentDate = earhart.getMenu(currentDate);
-        List<Food> listFoodCurrent = menuCurrentDate.getMeal("Breakfast");
+        List<Food> listFoodCurrent = menuCurrentDate.getMeal("Breakfast").get().getFoods();
         //Breakfast should be served and should contain "Breakfast Polenta"
         assertTrue("Earhart should serve Breakfast for this current date", menuCurrentDate.getMealNames().contains("Breakfast"));
         for (Food food : listFoodCurrent) {
@@ -76,7 +74,7 @@ public class DiningCourtTest {
         assertTrue("Earhart breakfast menu should serve Breakfast Polenta for this current date", containsFood);
 
         Menu menuNewDate = earhart.getMenu(newDate);
-        List<Food> listFoodNew = menuNewDate.getMeal("Breakfast");
+        List<Food> listFoodNew = menuNewDate.getMeal("Breakfast").get().getFoods();
         //When date changed breakfast should be served for new date and should contain "MYO Breakfast Bowl"
         assertTrue("Earhart should serve Breakfast for this new changed date", menuNewDate.getMealNames().contains("Breakfast"));
         containsFood = false;
@@ -97,10 +95,10 @@ public class DiningCourtTest {
         LocalDate currentDate = LocalDate.parse("2017-02-02");
         Menu earhartMenu = earhart.getMenu(currentDate);
         assertTrue("Earhart should serve breakfast", earhartMenu.getMealNames().contains("Lunch"));
-        assertFalse("There should be data for Earhart lunch", earhartMenu.getMeal("Lunch").isEmpty());
+        assertTrue("There should be data for Earhart lunch", earhartMenu.getMeal("Lunch").isPresent());
 
         Menu menuCurrentDate = earhart.getMenu(currentDate);
-        List<Food> listFoodCurrent = menuCurrentDate.getMeal("Breakfast");
+        List<Food> listFoodCurrent = menuCurrentDate.getMeal("Breakfast").get().getFoods();
         //Breakfast should be served and should contain "Breakfast Polenta"
         assertTrue("Earhart should serve Breakfast for this current date", menuCurrentDate.getMealNames().contains("Breakfast"));
         boolean containsFood = false;
@@ -119,7 +117,7 @@ public class DiningCourtTest {
         DiningCourt wiley = diningCourt.get();
 
         Menu menuNewDate = wiley.getMenu(newDate);
-        List<Food> listFoodNew = menuNewDate.getMeal("Breakfast");
+        List<Food> listFoodNew = menuNewDate.getMeal("Breakfast").get().getFoods();
         //When date changed breakfast should be served for new date and should contain "MYO Breakfast Bowl"
         assertTrue("Wiley should serve Breakfast for this new changed date", menuNewDate.getMealNames().contains("Breakfast"));
         containsFood = false;
@@ -192,32 +190,21 @@ public class DiningCourtTest {
         assertTrue("Ford dining court should exist", maybeFord.isPresent());
         DiningCourt ford = maybeFord.get();
         Menu fordMenu = ford.getMenu(LocalDate.parse("2017-02-02"));
-        boolean containsFood = false;
-        List<Food> listFoodBreakfast = fordMenu.getMeal("Breakfast");
-        for (Food food : listFoodBreakfast) {
-            if (food.getName().equals("Blueberry Pancakes")) {
-                containsFood = true;
-            }
-        }
-        assertTrue("Ford breakfast food displayed is correct data", containsFood);
 
-        List<Food> listFoodLunch = fordMenu.getMeal("Lunch");
-        containsFood = false;
-        for (Food food : listFoodLunch) {
-            if (food.getName().equals("Apple Nut Cake")) {
-                containsFood = true;
-            }
-        }
-        assertTrue("Ford lunch food displayed is correct data", containsFood);
+        Optional<Meal> maybeBreakfast = fordMenu.getMeal("Breakfast");
+        assertTrue("Ford should serve breakfast", maybeBreakfast.isPresent());
+        List<Food> breakfastFoods = maybeBreakfast.get().getFoods();
+        assertTrue("Ford should serve blueberry pancakes for breakfast", breakfastFoods.stream().anyMatch(food -> food.getName().equals("Blueberry Pancakes")));
 
-        List<Food> listFoodDinner = fordMenu.getMeal("Dinner");
-        containsFood = false;
-        for (Food food : listFoodDinner) {
-            if (food.getName().equals("Cheese Pizza")) {
-                containsFood = true;
-            }
-        }
-        assertTrue("Ford dinner food displayed is correct data", containsFood);
+        Optional<Meal> maybeLunch = fordMenu.getMeal("Lunch");
+        assertTrue("Ford should serve lunch", maybeLunch.isPresent());
+        List<Food> lunchFoods = maybeLunch.get().getFoods();
+        assertTrue("Ford should serve apple nut cake for lunch", lunchFoods.stream().anyMatch(food -> food.getName().equals("Apple Nut Cake")));
+
+        Optional<Meal> maybeDinner = fordMenu.getMeal("Dinner");
+        assertTrue("Ford should serve dinner", maybeDinner.isPresent());
+        List<Food> dinnerFoods = maybeDinner.get().getFoods();
+        assertTrue("Ford should serve cheese pizza for dinner", dinnerFoods.stream().anyMatch(food -> food.getName().equals("Cheese Pizza")));
     }
 
     @Test
@@ -226,32 +213,21 @@ public class DiningCourtTest {
         assertTrue("Wiley dining court should exist", maybeWiley.isPresent());
         DiningCourt wiley = maybeWiley.get();
         Menu wileyMenu = wiley.getMenu(LocalDate.parse("2017-02-02"));
-        boolean containsFood = false;
-        List<Food> listFoodLunch = wileyMenu.getMeal("Lunch");
-        for (Food food : listFoodLunch) {
-            if (food.getName().equals("Broccoli Florets")) {
-                containsFood = true;
-            }
-        }
-        //test the correct data is obtained for the current time
-        assertTrue("Ford food displayed is correct data for current time", containsFood);
 
-        containsFood = false;
-        List<Food> listFoodDinner = wileyMenu.getMeal("Dinner");
-        for (Food food : listFoodDinner) {
-            if (food.getName().equals("Tortilla Chips")) {
-                containsFood = true;
-            }
-        }
-        //test the correct data is obtained when time is changed
-        assertTrue("Ford food displayed is correct data for changed time", containsFood);
+        Optional<Meal> maybeLunch = wileyMenu.getMeal("Lunch");
+        assertTrue("Wiley should serve lunch", maybeLunch.isPresent());
+        List<Food> lunchFoods = maybeLunch.get().getFoods();
+        assertTrue("Wiley should server broccoli florets for lunch", lunchFoods.stream().anyMatch(food -> food.getName().equals("Broccoli Florets")));
+
+        Optional<Meal> maybeDinner = wileyMenu.getMeal("Dinner");
+        assertTrue("Wiley should serve dinner", maybeDinner.isPresent());
     }
 
     @Test
     public void MyFoodsSaveAndLoad() throws IOException {
         Settings settings = Settings.load(new File(DATA_DIR + "settings-save.json"));
         assertNotNull("settings should not be null", settings);
-        HashSet<String> myFoods = settings.getMyFoods();
+        Collection<String> myFoods = settings.getMyFoods();
         assertNotNull("myFoods should not be null", myFoods);
         myFoods.add("Blueberry");
         myFoods.add("Pizza");
@@ -309,7 +285,7 @@ public class DiningCourtTest {
         assertTrue("dietaryPreferences.noShellfish should be true", preferences.isNoShellfish());
         assertTrue("dietaryPreferences.noSoy should be true", preferences.isNoSoy());
         assertTrue("dietaryPreferences.noWheat should be true", preferences.isNoWheat());
-        Set<String> myFoods = settings.getMyFoods();
+        Collection<String> myFoods = settings.getMyFoods();
         assertNotNull("myFoods should not be null", myFoods);
         assertTrue("myFoods should contain 'bacon'", myFoods.contains("bacon"));
         assertTrue("myFoods should contain 'strawberries'", myFoods.contains("strawberries"));
