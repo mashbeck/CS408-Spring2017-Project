@@ -7,7 +7,7 @@ import javafx.stage.Stage;
 import boilerhungry.webapp.WebApp;
 
 
-public class Client extends Application {
+public class Bootstrap extends Application {
 
     private WebApp server;
     private static final int PORT = 8080;
@@ -40,9 +40,9 @@ public class Client extends Application {
         if (USING_GUI) {
             launch(args);
         } else {
-            Client client = new Client();
-            client.server = new WebApp(PORT);
-            client.server.start();
+            Bootstrap launch = new Bootstrap();
+            launch.server = new WebApp(PORT);
+            launch.server.start();
         }
     }
 }

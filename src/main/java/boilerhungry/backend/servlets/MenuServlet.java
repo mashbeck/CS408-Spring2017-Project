@@ -4,7 +4,6 @@ import boilerhungry.backend.DiningCourt;
 import boilerhungry.backend.DiningCourtAPI;
 import boilerhungry.backend.Menu;
 import boilerhungry.backend.purdue.PurdueDiningCourtAPI;
-import com.google.gson.Gson;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -32,8 +31,8 @@ public class MenuServlet extends HttpServlet {
         if (maybeDiningCourt.isPresent()) {
             DiningCourt diningCourt = maybeDiningCourt.get();
             Menu menu = diningCourt.getMenu(date);
-            req.setAttribute("diningCourt",diningCourt);
-            req.setAttribute("menu",menu);
+            req.setAttribute("diningCourt", diningCourt);
+            req.setAttribute("menu", menu);
             RequestDispatcher view = req.getRequestDispatcher("menu.jsp");
             view.forward(req, res);
         } else {
