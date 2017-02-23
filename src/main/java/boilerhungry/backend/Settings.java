@@ -14,22 +14,28 @@ import java.util.Set;
 public class Settings {
 
     private int version;
-    private DietaryPreferences dietaryPreferences;
     private Set<String> myFoods;
+    private Set<String> dietaryPreferences;
+    private Set<String> dietaryExclusions;
 
     private transient File file;
 
-    private Settings(File file, int version, DietaryPreferences dietaryPreferences, Set<String> myFoods) {
+    private Settings(File file,
+                     int version,
+                     Set<String> dietaryPreferences,
+                     Set<String> dietaryExclusions,
+                     Set<String> myFoods) {
         this.file = file;
         this.version = version;
         this.dietaryPreferences = dietaryPreferences;
+        this.dietaryExclusions = dietaryExclusions;
         this.myFoods = myFoods;
     }
 
     private Settings(File file) {
         this.file = file;
         this.version = 1;
-        this.dietaryPreferences = new DietaryPreferences();
+        this.dietaryExclusions = new HashSet<>();
         this.myFoods = new HashSet<>();
     }
 
@@ -37,8 +43,20 @@ public class Settings {
         this.file = file;
     }
 
-    public DietaryPreferences getDietaryPreferences() {
+    public Collection<String> getDietaryExclusions() {
+        return dietaryExclusions;
+    }
+
+    public Collection<String> getDietaryPreferences() {
         return dietaryPreferences;
+    }
+
+    public boolean isDietaryExclusion(String food) {
+        return dietaryExclusions.contains(food);
+    }
+
+    public boolean hasDietaryPreference(String preference) {
+        return dietaryPreferences.contains(preference);
     }
 
     public Collection<String> getMyFoods() {

@@ -1,16 +1,5 @@
 {
   "version": 1,
-  "dietaryPreferences": {
-    "vegetarian": false,
-    "noEggs": false,
-    "noFish": true,
-    "noGluten": false,
-    "noMilk": false,
-    "noPeanuts": true,
-    "noShellfish": true,
-    "noSoy": false,
-    "noWheat": false
-  },
   "myFoods": [
     "bacon",
     "strawberries",
@@ -18,5 +7,19 @@
     "Pizza",
     "Corn bread",
     "Chili"
+  ],
+  "dietaryPreferences": [
+    "vegetarian"
+  ],
+  "dietaryExclusions": [
+    "eggs",
+    "fish",
+    "gluten",
+    "milk",
+    "peanuts",
+    "shellfish",
+    "soy",
+    "wheat",
+    "vegetarian"
   ]
 }

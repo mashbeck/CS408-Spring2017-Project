@@ -14,8 +14,8 @@ public class SettingsExample {
         Settings settings = Settings.load(new File("settings.json"));
         settings.getMyFoods().add("bacon");
         settings.getMyFoods().add("strawberries");
-        settings.getDietaryPreferences().setNoEggs(true);
-        settings.getDietaryPreferences().setNoFish(true);
+        settings.getDietaryExclusions().add("egg");
+        settings.getDietaryExclusions().add("fish");
         settings.save();
     }
 

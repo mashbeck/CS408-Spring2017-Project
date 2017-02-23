@@ -1,7 +1,7 @@
 package boilerhungry.backend;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Created by Matthew on 2/6/2017.
@@ -10,27 +10,13 @@ public class Food {
 
     private String name;
     private String station;
+    private Map<String, Boolean> allergens;
     private boolean isVegetarian;
-    private boolean eggs;
-    private boolean fish;
-    private boolean gluten;
-    private boolean milk;
-    private boolean peanuts;
-    private boolean shellfish;
-    private boolean soy;
-    private boolean treeNuts;
-    private boolean wheat;
 
-    public Food(String name) {
+    public Food(String name, String station) {
         this.name = name;
-    }
-
-    public String getStation() {
-        return station;
-    }
-
-    public void setStation(String station) {
         this.station = station;
+        this.allergens = new HashMap<>();
     }
 
     public String getName() {
@@ -41,93 +27,32 @@ public class Food {
         return isVegetarian;
     }
 
-    public boolean hasEggs() {
-        return eggs;
-    }
-
-    public boolean hasFish() {
-        return fish;
-    }
-
-    public boolean hasGluten() {
-        return gluten;
-    }
-
-    public boolean hasMilk() {
-        return milk;
-    }
-
-    public boolean hasPeanuts() {
-        return peanuts;
-    }
-
-    public boolean hasShellfish() {
-        return shellfish;
-    }
-
-    public boolean hasSoy() {
-        return soy;
-    }
-
-    public boolean hasTreeNuts() {
-        return treeNuts;
-    }
-
-    public boolean hasWheat() {
-        return wheat;
-    }
-
-    public List<String> getAllergens(){
-        List<String> allergens= new ArrayList<>();
-        if(hasEggs())allergens.add("Eggs");
-        if(hasFish())allergens.add("Fish");
-        if(hasGluten())allergens.add("Gluten");
-        if(hasMilk())allergens.add("Peanuts");
-        if(hasPeanuts())allergens.add("Peanuts");
-        if(hasShellfish())allergens.add("Shellfish");
-        if(hasSoy())allergens.add("Soy");
-        if(hasTreeNuts())allergens.add("Tree Nuts");
-        if(hasWheat())allergens.add("Wheat");
-        return allergens;
-    }
-
     public void setVegetarian(boolean vegetarian) {
-        isVegetarian = vegetarian;
+        this.isVegetarian = vegetarian;
     }
 
-    public void setEggs(boolean eggs) {
-        this.eggs = eggs;
+    public List<String> getAllergens() {
+        return allergens.entrySet().stream()
+                    .filter(Map.Entry::getValue)
+                    .map(Map.Entry::getKey)
+                    .collect(Collectors.toList());
     }
 
-    public void setFish(boolean fish) {
-        this.fish = fish;
+    public List<String> getPossibleAllergens() {
+        return allergens.keySet().stream()
+                .collect(Collectors.toList());
     }
 
-    public void setGluten(boolean gluten) {
-        this.gluten = gluten;
+    public boolean hasAllergen(String allergen) {
+        return allergens.getOrDefault(allergen, false);
     }
 
-    public void setMilk(boolean milk) {
-        this.milk = milk;
+    public boolean addAllergen(String allergen, boolean value) {
+        return allergens.put(allergen, value);
     }
 
-    public void setPeanuts(boolean peanuts) {
-        this.peanuts = peanuts;
+    public void addAllergens(Map<String, Boolean> allergens) {
+        this.allergens.putAll(allergens);
     }
 
-    public void setShellfish(boolean shellfish) {
-        this.shellfish = shellfish;
-    }
-
-    public void setSoy(boolean soy) {
-        this.soy = soy;
-    }
-
-    public void setTreeNuts(boolean treeNuts) {
-        this.treeNuts = treeNuts;
-    }
-
-    public void setWheat(boolean wheat) {
-        this.wheat = wheat;
-    }
 }

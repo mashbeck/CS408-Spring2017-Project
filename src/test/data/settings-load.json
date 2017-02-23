@@ -1,16 +1,19 @@
 {
   "version": 1,
-  "dietaryPreferences": {
-    "vegetarian": true,
-    "noEggs": true,
-    "noFish": true,
-    "noGluten": false,
-    "noMilk": false,
-    "noPeanuts": false,
-    "noShellfish": true,
-    "noSoy": true,
-    "noWheat": true
-  },
+  "dietaryPreferences" : [
+    "vegetarian"
+  ],
+  "dietaryExclusions": [
+    "eggs",
+    "fish",
+    "eggs",
+    "peanuts",
+    "shellfish",
+    "soy",
+    "wheat",
+    "gluten",
+    "milk"
+  ],
   "myFoods": [
     "bacon",
     "strawberries"

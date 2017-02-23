@@ -8,6 +8,7 @@ import org.junit.Test;
 import java.io.File;
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
@@ -250,47 +251,38 @@ public class DiningCourtTest {
     public void DietaryPreferencesSaveAndLoad() throws IOException {
         Settings settings = Settings.load(new File(DATA_DIR + "settings-save.json"));
         assertNotNull("settings should not be null", settings);
-        DietaryPreferences preferences = settings.getDietaryPreferences();
-        assertNotNull("dietary preferences should not be null", preferences);
-        preferences.setNoFish(true);
-        preferences.setNoShellfish(true);
-        preferences.setNoPeanuts(true);
-        preferences.setVegetarian(false);
-        preferences.setNoEggs(false);
+        assertNotNull("dietary exclusions should not be null", settings.getDietaryExclusions());
+        String[] exclusions = { "fish", "shellfish", "peanuts", "vegetarian", "eggs" };
+        settings.getDietaryExclusions().addAll(Arrays.asList(exclusions));
         settings.save();
         //reload setting after saving
         settings = Settings.load(new File(DATA_DIR + "settings-save.json"));
         assertNotNull("settings should not be null", settings);
-        preferences = settings.getDietaryPreferences();
-        assertNotNull("dietary preferences should not be null", preferences);
-        assertTrue("dietaryPreferences isNoFish should be true", preferences.isNoFish());
-        assertTrue("dietaryPreferences isNoShellfish should be true", preferences.isNoShellfish());
-        assertTrue("dietaryPreferences isNoPeanuts should be true", preferences.isNoPeanuts());
-        assertFalse("dietaryPreferences isNoEggs should be false", preferences.isNoEggs());
-        assertFalse("dietaryPreferences isVegeterian should be false", preferences.isVegetarian());
+        Collection<String> after = settings.getDietaryExclusions();
+        for (String exclusion : exclusions) {
+            assertTrue("dietary exclusions should contain " + exclusion, after.contains(exclusion));
+        }
     }
 
     @Test
     public void TestSettingsLoad() throws IOException {
         Settings settings = Settings.load(new File(DATA_DIR + "settings-load.json"));
         assertNotNull("settings should not be null", settings);
-        DietaryPreferences preferences = settings.getDietaryPreferences();
-        assertNotNull("dietary preferences should not be null", preferences);
-        assertTrue("dietaryPreferences.vegetarian should be true", preferences.isVegetarian());
-        assertTrue("dietaryPreferences.noEggs should be true", preferences.isNoEggs());
-        assertTrue("dietaryPreferences.noFish should be true", preferences.isNoFish());
-        assertFalse("dietaryPreferences.noGluten should be false", preferences.isNoGluten());
-        assertFalse("dietaryPreferences.noMilk should be false", preferences.isNoMilk());
-        assertFalse("dietaryPreferences.noPeanuts should be false", preferences.isNoPeanuts());
-        assertTrue("dietaryPreferences.noShellfish should be true", preferences.isNoShellfish());
-        assertTrue("dietaryPreferences.noSoy should be true", preferences.isNoSoy());
-        assertTrue("dietaryPreferences.noWheat should be true", preferences.isNoWheat());
+        assertNotNull("dietary exclusions should not be null", settings.getDietaryExclusions());
+        assertTrue("dietary preferences should contain vegetarian", settings.hasDietaryPreference("vegetarian"));
+        assertTrue("dietary exclusions should contain eggs", settings.isDietaryExclusion("eggs"));
+        assertTrue("dietary exclusions should contain fish", settings.isDietaryExclusion("fish"));
+        assertTrue("dietary exclusions should contain gluten", settings.isDietaryExclusion("gluten"));
+        assertTrue("dietary exclusions should contain milk", settings.isDietaryExclusion("milk"));
+        assertTrue("dietary exclusions should contain peanuts", settings.isDietaryExclusion("peanuts"));
+        assertTrue("dietary exclusions should contain shellfish", settings.isDietaryExclusion("shellfish"));
+        assertTrue("dietary exclusions should contain soy", settings.isDietaryExclusion("soy"));
+        assertTrue("dietary exclusions should contain wheat", settings.isDietaryExclusion("wheat"));
         Collection<String> myFoods = settings.getMyFoods();
         assertNotNull("myFoods should not be null", myFoods);
         assertTrue("myFoods should contain 'bacon'", myFoods.contains("bacon"));
         assertTrue("myFoods should contain 'strawberries'", myFoods.contains("strawberries"));
         assertFalse("myFoods should not contain 'lettuce'", myFoods.contains("lettuce"));
     }
-
 
 }
