@@ -1,0 +1,14 @@
+#ticker{
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width:50%;
+}
+#container{
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width:50%;
+    border-color:#5bc0de;
+}
