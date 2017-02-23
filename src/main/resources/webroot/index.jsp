@@ -78,10 +78,10 @@
             </c:forEach>
         </div>
 
-        <a href="#carousel" class="left carousel-control" data-slide="prev">
+        <a href="#carousel" class="left carousel-control" id="prev" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left"></span>
         </a>
-        <a href="#carousel" class="right carousel-control" data-slide="next">
+        <a href="#carousel" class="right carousel-control" id="next" data-slide="next">
             <span class="glyphicon glyphicon-chevron-right"></span>
         </a>
     </div>
