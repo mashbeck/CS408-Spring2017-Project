@@ -57,6 +57,8 @@
         </div>
     </div>
 </nav>
+
+<h4 id="notificationTitle">Notifications:</h4>
 <div id="container">
     <div id="ticker">
         <ul style="text-align:center">
