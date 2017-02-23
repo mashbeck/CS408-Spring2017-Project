@@ -16,7 +16,7 @@ public class DiningCourt {
     private String address;
     private DiningCourtAPI api;
     public static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("MM-dd-yyy");
-    private Map<String, Menu> menuCache = new ConcurrentHashMap<>();
+    private static final Map<String, Object> cache = new ConcurrentHashMap<>();
 
     public DiningCourt(DiningCourtAPI api, String name, String address) {
         this.api = api;
@@ -34,13 +34,13 @@ public class DiningCourt {
 
     public Menu getMenu(final LocalDate date) throws IOException {
         final String day = DATE_TIME_FORMATTER.format(date);
-        final String base = "https://api.hfs.purdue.edu/menus/v2";
-        final String endpoint = "/locations/" + this.name + "/" + day;
-        if (menuCache.containsKey(endpoint)) {
-            return menuCache.get(endpoint);
+        final String base = "https://api.hfs.purdue.edu/menus/v2/";
+        final String endpoint = String.format("locations/%s/%s", this.name, day);
+        if (cache.containsKey(endpoint)) {
+            return (Menu) cache.get(endpoint);
         } else {
             URL url = new URL(base + endpoint);
-            Menu menu = new Menu(date);
+            final Menu menu = new Menu(date);
             JSONObject root = api.getJSON(url);
             JSONArray meals = root.getJSONArray("Meals");
             for (int i = 0; i < meals.length(); i++) {
@@ -67,7 +67,7 @@ public class DiningCourt {
                     }
                 }
             }
-            menuCache.putIfAbsent(endpoint, menu);
+            cache.putIfAbsent(endpoint, menu);
             return menu;
         }
     }
@@ -95,17 +95,24 @@ public class DiningCourt {
     }
 
     public static List<DiningCourt> getDiningCourts(DiningCourtAPI api) throws IOException {
-        List<DiningCourt> diningCourts = new ArrayList<>();
-        JSONObject root = api.getJSON(new URL("https://api.hfs.purdue.edu/menus/v2/locations/"));
-        JSONArray locations = root.getJSONArray("Location");
-        for (int i = 0; i < locations.length(); i++) {
-            JSONObject location = locations.getJSONObject(i);
-            String name = location.getString("Name");
-            String address = api.getAddressString(location);
-            // TODO get hours
-            diningCourts.add(new DiningCourt(api, name, address));
+        final List<DiningCourt> diningCourts = new ArrayList<>();
+        final String base = "https://api.hfs.purdue.edu/menus/v2/";
+        final String endpoint = "locations/";
+        if (cache.containsKey(endpoint)) {
+            return (List<DiningCourt>) cache.get(endpoint);
+        } else {
+            JSONObject root = api.getJSON(new URL(base + endpoint));
+            JSONArray locations = root.getJSONArray("Location");
+            for (int i = 0; i < locations.length(); i++) {
+                JSONObject location = locations.getJSONObject(i);
+                String name = location.getString("Name");
+                String address = api.getAddressString(location);
+                // TODO get hours
+                diningCourts.add(new DiningCourt(api, name, address));
+            }
+            cache.putIfAbsent(endpoint, diningCourts);
+            return diningCourts;
         }
-        return diningCourts;
     }
 
     public static Optional<DiningCourt> getDiningCourt(DiningCourtAPI api, String name) throws IOException {

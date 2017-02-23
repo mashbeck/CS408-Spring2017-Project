@@ -149,7 +149,7 @@ public class WebApp {
         sch.addServlet(exampleJspFileMappedServletHolder(), "/test/foo/");
         sch.addServlet(defaultServletHolder(baseUri), "/");
         sch.addServlet(MenuServlet.class, "/ViewMenu");
-        sch.addServlet(HomeServlet.class, "/home");
+        sch.addServlet(HomeServlet.class, "/home").setInitOrder(1);
         return sch;
     }
 
