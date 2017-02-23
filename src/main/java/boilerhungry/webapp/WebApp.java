@@ -217,7 +217,7 @@ public class WebApp {
         }
         int port = connector.getLocalPort();
         serverURI = new URI(String.format("%s://%s:%d/", scheme, host, port));
-        LOG.info("Server URI: " + serverURI);
+        LOG.info("Server URI: " + serverURI+"home");
         return serverURI;
     }
 

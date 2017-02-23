@@ -3,9 +3,6 @@ package boilerhungry.backend;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by eric on 2/17/17.
- */
 public class Meal {
 
     private String name;

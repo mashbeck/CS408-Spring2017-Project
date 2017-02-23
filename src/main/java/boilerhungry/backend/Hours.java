@@ -4,9 +4,6 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 
-/**
- * Created by eric on 2/17/17.
- */
 public class Hours {
 
     private LocalTime startTime;

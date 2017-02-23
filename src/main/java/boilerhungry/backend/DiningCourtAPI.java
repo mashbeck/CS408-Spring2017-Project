@@ -5,9 +5,6 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.net.URL;
 
-/**
- * Created by eric on 2/6/17.
- */
 public interface DiningCourtAPI {
 
     JSONObject getJSON(URL url) throws IOException;

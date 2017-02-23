@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Search</title>
+    <title>BoilerHungry</title>
     <link href="static/css/bootstrap.min.css" rel="stylesheet">
     <link href="static/css/default.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -78,10 +78,10 @@
             </c:forEach>
         </div>
 
-        <a href="#carousel" class="left carousel-control" data-slide="prev">
+        <a href="#carousel" class="left carousel-control" id="prev" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left"></span>
         </a>
-        <a href="#carousel" class="right carousel-control" data-slide="next">
+        <a href="#carousel" class="right carousel-control" id="next" data-slide="next">
             <span class="glyphicon glyphicon-chevron-right"></span>
         </a>
     </div>

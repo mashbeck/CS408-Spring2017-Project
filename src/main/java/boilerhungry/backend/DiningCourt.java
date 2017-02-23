@@ -10,9 +10,6 @@ import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
-/**
- * Created by eric on 2/6/17.
- */
 public class DiningCourt {
 
     private String name;
