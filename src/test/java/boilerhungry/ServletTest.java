@@ -17,7 +17,7 @@ public class ServletTest {
     public void prepare() throws Exception {
         server = new WebApp(8080);
         server.start();
-        setBaseUrl("http://localhost:8080");
+        setBaseUrl("http://localhost:8080/home");
         setScriptingEnabled(false);
     }
 
