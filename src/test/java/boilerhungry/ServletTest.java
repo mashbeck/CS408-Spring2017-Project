@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static net.sourceforge.jwebunit.junit.JWebUnit.*;
+import static net.sourceforge.jwebunit.junit.JWebUnit.assertElementPresentByXPath;
 
 public class ServletTest {
 
@@ -15,19 +16,20 @@ public class ServletTest {
     public void prepare() throws Exception {
         server = new WebApp(8080);
         server.start();
-        setBaseUrl("http://localhost:8080/home");
+        setBaseUrl("http://localhost:8080");
         setScriptingEnabled(false);
     }
 
     @Test
     public void testTabTitle() {
         beginAt("/home");
-        assertTitleEquals("BoilerHungry");
+        assertElementPresentByXPath("/html/body/nav/div/div[1]/a");
     }
 
     @Test
     public void testWebPageTitle() {
         beginAt("/home");
+//        assertElementPresentByXPath("/html/body/nav/div/div[1]/a");
         assertTextPresent("BoilerHungry");
     }
 
