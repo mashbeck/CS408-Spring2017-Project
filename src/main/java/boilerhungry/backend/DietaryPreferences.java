@@ -1,8 +1,5 @@
 package boilerhungry.backend;
 
-/**
- * Created by eric on 2/6/17.
- */
 public class DietaryPreferences {
 
     private boolean vegetarian;
