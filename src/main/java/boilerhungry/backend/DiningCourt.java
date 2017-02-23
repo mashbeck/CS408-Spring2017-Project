@@ -11,9 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-/**
- * Created by eric on 2/6/17.
- */
 public class DiningCourt {
 
     private String name;

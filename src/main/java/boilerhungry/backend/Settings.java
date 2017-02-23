@@ -8,9 +8,6 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * Created by eric on 2/6/17.
- */
 public class Settings {
 
     private int version;

@@ -7,9 +7,6 @@ import org.junit.Test;
 
 import static net.sourceforge.jwebunit.junit.JWebUnit.*;
 
-/**
- * Created by eric on 2/22/17.
- */
 public class ServletTest {
 
     private WebApp server;
