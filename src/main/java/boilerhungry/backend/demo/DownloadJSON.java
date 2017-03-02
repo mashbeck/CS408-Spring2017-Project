@@ -9,9 +9,6 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-/**
- * Created by eric on 2/6/17.
- */
 public class DownloadJSON {
 
     private static final String DEST = "src/main/test/data/";

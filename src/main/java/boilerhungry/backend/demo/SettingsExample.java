@@ -5,9 +5,6 @@ import boilerhungry.backend.Settings;
 import java.io.File;
 import java.io.IOException;
 
-/**
- * Created by eric on 2/6/17.
- */
 public class SettingsExample {
 
     public static void main(String[] args) throws IOException {

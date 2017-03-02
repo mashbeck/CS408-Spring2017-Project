@@ -9,9 +9,6 @@ import javafx.scene.layout.Region;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 
-/**
- * Created by eric on 2/5/17.
- */
 class Browser extends Region {
 
     final WebView browser = new WebView();

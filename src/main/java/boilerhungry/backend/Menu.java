@@ -6,9 +6,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
-/**
- * Created by Matthew on 2/4/2017.
- */
 public class Menu {
 
     private LocalDate date;

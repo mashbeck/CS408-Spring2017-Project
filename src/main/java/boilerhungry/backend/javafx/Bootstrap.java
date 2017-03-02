@@ -6,7 +6,6 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import boilerhungry.webapp.WebApp;
 
-
 public class Bootstrap extends Application {
 
     private WebApp server;

@@ -9,9 +9,6 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * Created by eric on 2/6/17.
- */
 public class DiningCourtExample {
 
     public static void main(String[] args) throws IOException {

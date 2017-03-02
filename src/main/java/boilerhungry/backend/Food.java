@@ -3,9 +3,6 @@ package boilerhungry.backend;
 import java.util.*;
 import java.util.stream.Collectors;
 
-/**
- * Created by Matthew on 2/6/2017.
- */
 public class Food {
 
     private String name;

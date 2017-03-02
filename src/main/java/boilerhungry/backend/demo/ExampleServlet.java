@@ -7,9 +7,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-/**
- * Created by eric on 10/23/16.
- */
 public class ExampleServlet extends HttpServlet {
 
     @Override

@@ -11,9 +11,6 @@ import java.nio.file.Files;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- * Created by eric on 2/7/17.
- */
 public class MockDiningCourtAPI implements DiningCourtAPI {
 
     private static final String DEST = "src/test/data/";

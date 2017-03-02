@@ -9,9 +9,6 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-/**
- * Created by eric on 2/6/17.
- */
 public class PurdueDiningCourtAPI implements DiningCourtAPI {
 
     @Override

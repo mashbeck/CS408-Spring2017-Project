@@ -1,54 +1,53 @@
 package boilerhungry.backend;
 
-import boilerhungry.backend.DiningCourt;
-import boilerhungry.backend.Meal;
+import java.util.Optional;
 
-import java.time.format.DateTimeFormatter;
-
-/**
- * Created by Lena Adel on 2/22/2017.
- */
 public class ItemAppearance {
-    private String searchFood;
-    private String diningCourt;
-    private String station;
-    private String meal;
-    private String date;
+
+    private final String searchFood;
+    private Optional<String> diningCourt;
+    private Optional<String> station;
+    private Optional<String> meal;
+    private Optional<String> date;
 
     public ItemAppearance(String searchFood) {
         this.searchFood = searchFood;
+        this.diningCourt = Optional.empty();
+        this.station = Optional.empty();
+        this.meal = Optional.empty();
+        this.date = Optional.empty();
     }
-    public String getSearchFood() {
-        return searchFood;
-    }
-    public String getStation() {
 
+    public Optional<String> getStation() {
         return station;
     }
-    public String getDiningCourt() {
+
+    public Optional<String> getDiningCourt() {
         return diningCourt;
     }
-    public String getMeal() {
+
+    public Optional<String> getMeal() {
         return meal;
     }
-    public String getDate() {
+
+    public Optional<String> getDate() {
         return date;
     }
 
-    public void setSearchFood(String searchFood) {
-        this.searchFood = searchFood;
-    }
     public void setStation(String station) {
-        this.station = station;
+        this.station = Optional.ofNullable(station);
     }
+
     public void setDiningCourt(String diningCourt) {
-        this.diningCourt = diningCourt;
+        this.diningCourt = Optional.ofNullable(diningCourt);
     }
+
     public void setMeal(String meal) {
-        this.meal = meal;
+        this.meal = Optional.ofNullable(meal);
     }
+
     public void setDate(String date) {
-        this.date = date;
+        this.date = Optional.ofNullable(date);
     }
 
 }
