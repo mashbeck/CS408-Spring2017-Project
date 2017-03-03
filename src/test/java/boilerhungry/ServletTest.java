@@ -123,6 +123,17 @@ public class ServletTest {
 
     }
 
+    @Test
+    public void testDiningCourtNavigation() throws InterruptedException {
+        beginAt("/home");
+        assertElementPresentByXPath("//*[@id=\"carousel\"]/div/div[1][@class='item active']");
+        assertElementPresentByXPath("//*[@id=\"carousel\"]/div/div[1]/img");
+        clickElementByXPath("//*[@id=\"next\"]");
+        assertElementNotPresentByXPath("//*[@id=\"carousel\"]/div/div[1][@class='item']");
+        assertElementPresentByXPath("//*[@id=\"carousel\"]/div/div[2]/img");
+
+    }
+
     @After
     public void refreshOrTearDown() throws Exception {
         server.stop();
