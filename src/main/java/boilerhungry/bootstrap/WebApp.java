@@ -29,7 +29,8 @@ import org.eclipse.jetty.servlet.ServletHolder;
 import org.eclipse.jetty.util.log.JavaUtilLog;
 import org.eclipse.jetty.util.log.Log;
 
-import java.net.URISyntaxException;
+import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.net.URLClassLoader;
 
@@ -59,9 +60,21 @@ public class WebApp {
         }
     }
 
-    private ServletContextHandler getServletContextHandler() throws URISyntaxException {
+    private File getScratchDir() throws IOException {
+        File tempDir = new File(System.getProperty("java.io.tmpdir"));
+        File scratchDir = new File(tempDir.toString(), "embedded-jetty-jsp");
+        if (!scratchDir.exists()) {
+            if (!scratchDir.mkdirs()) {
+                throw new IOException("Unable to create scratch directory: " + scratchDir);
+            }
+        }
+        return scratchDir;
+    }
+
+    private ServletContextHandler getServletContextHandler() throws Exception {
         ServletContextHandler sch = new ServletContextHandler(ServletContextHandler.SESSIONS);
         sch.setContextPath("/");
+        sch.setAttribute("javax.servlet.context.tempdir", getScratchDir());
         sch.setResourceBase(this.getClass().getResource("/webroot").toURI().toASCIIString());
         sch.setAttribute(InstanceManager.class.getName(), new SimpleInstanceManager());
         sch.addBean(new JspStarter(sch));
