@@ -21,9 +21,10 @@ public class HomeServlet extends HttpServlet {
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
         try {
-            config.getServletContext().setAttribute("Settings", Settings.load(new File("settings.json")));
-        }catch (IOException e){
-            e.printStackTrace();
+            Settings settings = Settings.load(new File("settings.json"));
+            config.getServletContext().setAttribute("settings", settings);
+        } catch (IOException ex) {
+            ex.printStackTrace();
         }
     }
 

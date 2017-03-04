@@ -148,7 +148,7 @@ public class WebApp {
         sch.addServlet(DateServlet.class, "/date/");
         sch.addServlet(exampleJspFileMappedServletHolder(), "/test/foo/");
         sch.addServlet(defaultServletHolder(baseUri), "/");
-        sch.addServlet(MenuServlet.class, "/ViewMenu");
+        sch.addServlet(MenuServlet.class, "/menu/*");
         sch.addServlet(HomeServlet.class, "/home").setInitOrder(1);
         return sch;
     }

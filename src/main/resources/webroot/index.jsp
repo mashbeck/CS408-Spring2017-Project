@@ -98,9 +98,7 @@
                         <hgroup>
                             <h2>${diningCourt.getName()}</h2>
                         </hgroup>
-                        <form method="get" action ="ViewMenu">
-                            <button class="btn btn-hero btn-lg" type="submit" name="diningCourt" role="button" value="${diningCourt.getName()}">View Menu</button>
-                        </form>
+                        <a class="btn btn-hero btn-lg" href="/menu/${diningCourt.getName()}" role="button">View Menu</a>
                     </div>
                     <img src="http://lorempixel.com/1500/600/food/${loop.index}" alt="Earhart" />
                 </div>

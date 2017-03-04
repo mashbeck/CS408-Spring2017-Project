@@ -2,9 +2,9 @@
 <html>
 <head>
     <title>Menu</title>
-        <link href="static/css/bootstrap.min.css" rel="stylesheet" />
-        <link href="static/css/navbar-fixed-side.css" rel="stylesheet" />
-        <link href="static/css/menu.css" rel = "stylesheet"/>
+        <link href="/static/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="/static/css/navbar-fixed-side.css" rel="stylesheet" />
+        <link href="/static/css/menu.css" rel = "stylesheet"/>
 </head>
 <body>
 
@@ -69,8 +69,5 @@
 
             </div>
         </div>
-
-
-
 </body>
 </html>
