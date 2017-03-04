@@ -9,8 +9,8 @@ public class Hours {
     private LocalTime startTime;
     private LocalTime endTime;
     private boolean isOpen;
-    public static final DateTimeFormatter TIME_FORMAT_IN = DateTimeFormatter.ofPattern("HH:mm:ss");
-    public static final DateTimeFormatter TIME_FORMAT_OUT = DateTimeFormatter.ofPattern("hh:mm a");
+    public static final DateTimeFormatter TIME_FORMAT_IN = DateTimeFormatter.ISO_LOCAL_TIME;
+    public static final DateTimeFormatter TIME_FORMAT_OUT = DateTimeFormatter.ofPattern("h:mm a");
 
 
     public Hours(String startTime, String endTime) throws DateTimeParseException  {
