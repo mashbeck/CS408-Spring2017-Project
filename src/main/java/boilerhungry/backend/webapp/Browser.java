@@ -1,4 +1,4 @@
-package boilerhungry.backend.javafx;
+package boilerhungry.backend.webapp;
 
 import javafx.geometry.HPos;
 import javafx.geometry.VPos;
