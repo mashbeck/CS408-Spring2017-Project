@@ -5,18 +5,16 @@ import java.util.*;
 
 public class Notifications {
 
-    private Map<String, List<UpcomingFood>> upcomingFoods;
-    private Settings settings;
-    private ItemFinder searchFood;
+    private ItemFinder itemFinder;
 
-    public Notifications(DiningCourtAPI api, Settings settings) {
-        this.upcomingFoods = new HashMap<>();
-        this.searchFood = new ItemFinder(api);
-        this.settings = settings;
+    public Notifications(DiningCourtAPI api) {
+        this.itemFinder = new ItemFinder(api);
     }
-    public Map<String, List<UpcomingFood>> getMyFoodAppearances() throws IOException {
+
+    public Map<String, List<UpcomingFood>> getMyFoodAppearances(Settings settings) throws IOException {
+        Map<String, List<UpcomingFood>> upcomingFoods = new HashMap<>();
         for (String myFood : settings.getMyFoods()) {
-            List<UpcomingFood> upcoming = searchFood.searchUpComing(myFood);
+            List<UpcomingFood> upcoming = itemFinder.searchUpComing(myFood);
             upcomingFoods.put(myFood, upcoming);
         }
         return upcomingFoods;

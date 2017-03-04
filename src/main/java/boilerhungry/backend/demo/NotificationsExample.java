@@ -15,8 +15,8 @@ public class NotificationsExample {
         settings.getMyFoods().add("pizza");
         settings.save();
         DiningCourtAPI api = new PurdueDiningCourtAPI();
-        Notifications notifications = new Notifications(api, settings);
-        Map<String, List<UpcomingFood>> myFoodNotifications = notifications.getMyFoodAppearances();
+        Notifications notifications = new Notifications(api);
+        Map<String, List<UpcomingFood>> myFoodNotifications = notifications.getMyFoodAppearances(settings);
         for (Map.Entry<String, List<UpcomingFood>> entry : myFoodNotifications.entrySet()) {
             List<UpcomingFood> upcomingFoods = entry.getValue();
             for (UpcomingFood food : upcomingFoods) {

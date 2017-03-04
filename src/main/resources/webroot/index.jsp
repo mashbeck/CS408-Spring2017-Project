@@ -62,9 +62,9 @@
 <div id="container">
     <div id="ticker">
         <ul style="text-align:center">
-            <li style="text-align:center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</li>
-            <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut</li>
-            <li>Duis aute irure dolor in </li>
+            <c:forEach items="${notifications}" var="notification" varStatus="loop">
+                <li>${notification}</li>
+            </c:forEach>
         </ul>
     </div>
 </div>

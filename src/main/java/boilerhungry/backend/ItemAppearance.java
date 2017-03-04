@@ -63,7 +63,7 @@ public class ItemAppearance {
         String time = getDateTime().map(dt -> dt.format(DateTimeFormatter.ofPattern("h:mm a"))).orElse("(unknown)");
         String station = getStation().orElse("(unknown)");
         String diningCourt = getDiningCourt().orElse("(unknown)");
-        return String.format("%s appears at %s on %s at %s at the station %s during %s", foodName, diningCourt, date, time, station, meal);
+        return String.format("%s will be served at %s on %s at %s at the station %s during %s", foodName, diningCourt, date, time, station, meal);
     }
 
 }
