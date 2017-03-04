@@ -1,5 +1,6 @@
 package boilerhungry.backend;
 
+import java.time.LocalDateTime;
 import java.util.Optional;
 
 public class ItemAppearance {
@@ -8,14 +9,14 @@ public class ItemAppearance {
     private Optional<String> diningCourt;
     private Optional<String> station;
     private Optional<String> meal;
-    private Optional<String> date;
+    private Optional<LocalDateTime> dateTime;
 
     public ItemAppearance(String searchFood) {
         this.searchFood = searchFood;
         this.diningCourt = Optional.empty();
         this.station = Optional.empty();
         this.meal = Optional.empty();
-        this.date = Optional.empty();
+        this.dateTime = Optional.empty();
     }
 
     public Optional<String> getStation() {
@@ -30,8 +31,8 @@ public class ItemAppearance {
         return meal;
     }
 
-    public Optional<String> getDate() {
-        return date;
+    public Optional<LocalDateTime> getDateTime() {
+        return dateTime;
     }
 
     public void setStation(String station) {
@@ -46,8 +47,8 @@ public class ItemAppearance {
         this.meal = Optional.ofNullable(meal);
     }
 
-    public void setDate(String date) {
-        this.date = Optional.ofNullable(date);
+    public void setDateTime(LocalDateTime date) {
+        this.dateTime = Optional.ofNullable(date);
     }
 
 }

@@ -5,6 +5,8 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,8 +14,13 @@ public class ItemFinder extends JsonParser {
 
     private DiningCourtAPI api;
 
+
     public ItemFinder(DiningCourtAPI api) {
         this.api = api;
+    }
+
+    private LocalDateTime parseDate(String str) {
+        return LocalDateTime.parse(str, DateTimeFormatter.ISO_LOCAL_DATE_TIME);
     }
 
     public List<UpcomingFood> searchUpComing(String searchFood) throws IOException {
@@ -32,7 +39,7 @@ public class ItemFinder extends JsonParser {
                 ItemAppearance itemAppearance = new ItemAppearance(searchFood);
                 get(appearance, "Location", String.class).ifPresent(itemAppearance::setDiningCourt);
                 get(appearance, "Meal", String.class).ifPresent(itemAppearance::setMeal);
-                get(appearance, "Date", String.class).ifPresent(itemAppearance::setDate);
+                get(appearance, "Date", String.class).map(this::parseDate).ifPresent(itemAppearance::setDateTime);
                 get(appearance, "Station", String.class).ifPresent(itemAppearance::setStation);
                 upcomingFood.addAppearance(itemAppearance);
             }
