@@ -76,7 +76,7 @@ public class DiningCourt {
         }
     }
 
-    private Map<String, Boolean> getAllergens(JSONArray arr) {
+    private static Map<String, Boolean> getAllergens(JSONArray arr) {
         Map<String, Boolean> allergens = new HashMap<>();
         for (int a = 0; a < arr.length(); a++) {
             JSONObject allergen = arr.getJSONObject(a);
@@ -87,7 +87,7 @@ public class DiningCourt {
         return allergens;
     }
 
-    private Hours getHours(JSONObject meal) {
+    private static Hours getHours(JSONObject meal) {
         if (meal.optJSONObject("Hours") != null) {
             JSONObject mealHoursObj = meal.getJSONObject("Hours");
             String startTime = mealHoursObj.getString("StartTime");
@@ -96,6 +96,16 @@ public class DiningCourt {
         } else {
             return new Hours();
         }
+    }
+
+    private static String getAddressString(JSONObject location) {
+        StringBuilder res = new StringBuilder();
+        JSONObject address = location.getJSONObject("Address");
+        res.append(address.getString("Street")).append(", ");
+        res.append(address.getString("City")).append(", ");
+        res.append(address.getString("State")).append(" ");
+        res.append(address.getString("ZipCode"));
+        return res.toString();
     }
 
     public static List<DiningCourt> getDiningCourts(DiningCourtAPI api) throws IOException {
@@ -110,7 +120,7 @@ public class DiningCourt {
             for (int i = 0; i < locations.length(); i++) {
                 JSONObject location = locations.getJSONObject(i);
                 String name = location.getString("Name");
-                String address = api.getAddressString(location);
+                String address = getAddressString(location);
                 diningCourts.add(new DiningCourt(api, name, address));
             }
             cache.putIfAbsent(endpoint, diningCourts);
