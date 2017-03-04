@@ -1,6 +1,6 @@
 package boilerhungry;
 
-import boilerhungry.backend.webapp.WebApp;
+import boilerhungry.bootstrap.WebApp;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

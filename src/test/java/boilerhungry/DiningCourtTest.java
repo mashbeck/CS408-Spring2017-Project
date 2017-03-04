@@ -1,7 +1,6 @@
 package boilerhungry;
 
-import boilerhungry.backend.*;
-import boilerhungry.backend.mock.MockDiningCourtAPI;
+import boilerhungry.mock.MockDiningCourtAPI;
 import org.junit.Before;
 import org.junit.Test;
 

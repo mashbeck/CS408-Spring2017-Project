@@ -114,7 +114,7 @@
             <argument>-Dtomcat.util.scan.StandardJarScanFilter.jarsToSkip=apache-*,ecj-*,jetty-*,asm-*,javax.servlet-*,javax.annotation-*,taglibs-standard-spec-*</argument>
             <argument>-cp</argument>
             <classpath />
-            <argument>boilerhungry.backend.webapp.WebApp</argument>
+            <argument>boilerhungry.bootstrap.WebApp</argument>
             <argument>8080</argument>
           </arguments>
         </configuration>
