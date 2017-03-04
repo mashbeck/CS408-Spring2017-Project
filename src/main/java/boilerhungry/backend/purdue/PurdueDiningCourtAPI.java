@@ -17,7 +17,7 @@ public class PurdueDiningCourtAPI implements DiningCourtAPI {
         conn.setRequestMethod("GET");
         conn.setRequestProperty("Accept", "application/json");
         if (conn.getResponseCode() != 200) {
-            throw new RuntimeException("Bad Response: " + conn.getResponseCode());
+            throw new IOException("Bad Response: " + conn.getResponseCode());
         }
         BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
         StringBuilder sb = new StringBuilder();

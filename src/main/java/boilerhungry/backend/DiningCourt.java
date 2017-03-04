@@ -32,42 +32,46 @@ public class DiningCourt {
         return address;
     }
 
-    public Menu getMenu(final LocalDate date) throws IOException {
+    public Menu getMenu(final LocalDate date) {
         final String day = DATE_TIME_FORMATTER.format(date);
         final String base = "https://api.hfs.purdue.edu/menus/v2/";
         final String endpoint = String.format("locations/%s/%s", this.name, day);
         if (cache.containsKey(endpoint)) {
             return (Menu) cache.get(endpoint);
         } else {
-            URL url = new URL(base + endpoint);
             final Menu menu = new Menu(date);
-            JSONObject root = api.getJSON(url);
-            JSONArray meals = root.getJSONArray("Meals");
-            for (int i = 0; i < meals.length(); i++) {
-                JSONObject meal = meals.getJSONObject(i);
-                String mealName = meal.getString("Name");
-                final Hours hours = getHours(meal);
-                JSONArray stations = meal.getJSONArray("Stations");
-                for (int j = 0; j < stations.length(); j++) {
-                    JSONObject station = stations.getJSONObject(j);
-                    String stationName = station.getString("Name");
-                    JSONArray items = station.getJSONArray("Items");
-                    for (int k = 0; k < items.length(); k++) {
-                        JSONObject item = items.getJSONObject(k);
-                        String foodName = item.getString("Name");
-                        Food food = new Food(foodName, stationName);
-                        if (item.has("Allergens")) {
-                            JSONArray allergenArray = item.getJSONArray("Allergens");
-                            food.addAllergens(getAllergens(allergenArray));
+            try {
+                URL url = new URL(base + endpoint);
+                JSONObject root = api.getJSON(url);
+                JSONArray meals = root.getJSONArray("Meals");
+                for (int i = 0; i < meals.length(); i++) {
+                    JSONObject meal = meals.getJSONObject(i);
+                    String mealName = meal.getString("Name");
+                    final Hours hours = getHours(meal);
+                    JSONArray stations = meal.getJSONArray("Stations");
+                    for (int j = 0; j < stations.length(); j++) {
+                        JSONObject station = stations.getJSONObject(j);
+                        String stationName = station.getString("Name");
+                        JSONArray items = station.getJSONArray("Items");
+                        for (int k = 0; k < items.length(); k++) {
+                            JSONObject item = items.getJSONObject(k);
+                            String foodName = item.getString("Name");
+                            Food food = new Food(foodName, stationName);
+                            if (item.has("Allergens")) {
+                                JSONArray allergenArray = item.getJSONArray("Allergens");
+                                food.addAllergens(getAllergens(allergenArray));
+                            }
+                            menu.getMeals()
+                                    .computeIfAbsent(mealName, foods -> new Meal(mealName, hours))
+                                    .getFoods()
+                                    .add(food);
                         }
-                        menu.getMeals()
-                                .computeIfAbsent(mealName, foods -> new Meal(mealName, hours))
-                                .getFoods()
-                                .add(food);
                     }
                 }
+                cache.putIfAbsent(endpoint, menu);
+            } catch (IOException ex) {
+                System.err.format("Failed to load menu for %s: %s\n", name, ex.toString());
             }
-            cache.putIfAbsent(endpoint, menu);
             return menu;
         }
     }
@@ -107,7 +111,6 @@ public class DiningCourt {
                 JSONObject location = locations.getJSONObject(i);
                 String name = location.getString("Name");
                 String address = api.getAddressString(location);
-                // TODO get hours
                 diningCourts.add(new DiningCourt(api, name, address));
             }
             cache.putIfAbsent(endpoint, diningCourts);
