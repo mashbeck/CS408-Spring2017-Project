@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Optional;
 
-public class ItemAppearance {
+public class ItemAppearance implements Comparable<ItemAppearance> {
 
     private final String foodName;
     private Optional<String> diningCourt;
@@ -64,6 +64,19 @@ public class ItemAppearance {
         String station = getStation().orElse("(unknown)");
         String diningCourt = getDiningCourt().orElse("(unknown)");
         return String.format("%s will be served at %s on %s at %s at the station %s during %s", foodName, diningCourt, date, time, station, meal);
+    }
+
+    @Override
+    public int compareTo(ItemAppearance other) {
+        if (this.dateTime.isPresent() && !other.dateTime.isPresent()) {
+            return 1;
+        } else if (!this.dateTime.isPresent() && other.dateTime.isPresent()) {
+            return -1;
+        } else if (this.dateTime.isPresent() && other.dateTime.isPresent()) {
+            return this.dateTime.get().compareTo(other.dateTime.get());
+        } else {
+            return this.foodName.compareTo(other.foodName);
+        }
     }
 
 }

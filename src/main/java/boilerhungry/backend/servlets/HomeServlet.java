@@ -18,7 +18,8 @@ import java.util.stream.Collectors;
 
 public class HomeServlet extends HttpServlet {
 
-    private Notifications notifier = new Notifications(new PurdueDiningCourtAPI());
+    private DiningCourtAPI api = new PurdueDiningCourtAPI();
+    private Notifications notifier = new Notifications(api);
 
     @Override
     public void init(ServletConfig config) throws ServletException {
@@ -35,7 +36,6 @@ public class HomeServlet extends HttpServlet {
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         RequestDispatcher view = req.getRequestDispatcher("index.jsp");
         res.setContentType("text/html");
-        DiningCourtAPI api = new PurdueDiningCourtAPI();
         res.setCharacterEncoding("utf-8");
         List<DiningCourt> diningCourts = DiningCourt.getDiningCourts(api);
         req.setAttribute("diningCourts", diningCourts);
@@ -44,6 +44,7 @@ public class HomeServlet extends HttpServlet {
         List<String> notifications = upcoming.values().stream()
                 .flatMap(Collection::stream)
                 .flatMap(upcomingFood -> upcomingFood.getAppearances().stream())
+                .sorted()
                 .map(ItemAppearance::toString)
                 .collect(Collectors.toList());
         req.setAttribute("notifications", notifications);
