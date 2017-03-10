@@ -34,7 +34,7 @@ public class HomeServlet extends HttpServlet {
 
     @Override
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-        RequestDispatcher view = req.getRequestDispatcher("index.jsp");
+        RequestDispatcher view = req.getRequestDispatcher("home.jsp");
         res.setContentType("text/html");
         res.setCharacterEncoding("utf-8");
         List<DiningCourt> diningCourts = DiningCourt.getDiningCourts(api);

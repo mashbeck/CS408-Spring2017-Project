@@ -6,6 +6,7 @@ import org.apache.tomcat.InstanceManager;
 import org.apache.tomcat.SimpleInstanceManager;
 import org.eclipse.jetty.jsp.JettyJspServlet;
 import org.eclipse.jetty.server.Server;
+import org.eclipse.jetty.servlet.DefaultServlet;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 import org.eclipse.jetty.util.log.JavaUtilLog;
@@ -54,17 +55,27 @@ public class WebApp {
     }
 
     private ServletContextHandler getServletContextHandler() throws Exception {
-        ServletContextHandler sch = new ServletContextHandler(ServletContextHandler.SESSIONS);
-        sch.setContextPath("/");
-        sch.setAttribute("javax.servlet.context.tempdir", getScratchDir());
-        sch.setResourceBase(this.getClass().getResource("/webroot").toURI().toASCIIString());
-        sch.setAttribute(InstanceManager.class.getName(), new SimpleInstanceManager());
-        sch.addBean(new JspStarter(sch));
-        sch.setClassLoader(new URLClassLoader(new URL[0], this.getClass().getClassLoader()));
-        sch.addServlet(new ServletHolder("jsp", JettyJspServlet.class), "*.jsp");
-        sch.addServlet(MenuServlet.class, "/menu/*");
-        sch.addServlet(HomeServlet.class, "/").setInitOrder(1);
-        return sch;
+        ClassLoader jspClassLoader = new URLClassLoader(new URL[0], this.getClass().getClassLoader());
+        String resourceBase = this.getClass().getResource("/webroot/").toURI().toASCIIString();
+        ServletContextHandler ctx = new ServletContextHandler(ServletContextHandler.SESSIONS);
+        ctx.setContextPath("/");
+        ctx.setAttribute("javax.servlet.context.tempdir", getScratchDir());
+        ctx.setResourceBase(resourceBase);
+        ctx.setAttribute(InstanceManager.class.getName(), new SimpleInstanceManager());
+        // Process Jsp Files
+        ctx.addBean(new JspStarter(ctx));
+        ctx.setClassLoader(jspClassLoader);
+        ctx.addServlet(new ServletHolder("jsp", JettyJspServlet.class), "*.jsp");
+        // Application servlets
+        ServletHolder homeServlet = ctx.addServlet(HomeServlet.class, "/home");
+        homeServlet.setInitOrder(1);
+        ctx.addServlet(MenuServlet.class, "/menu/*");
+        // Default Servlet
+        ServletHolder defaultServlet = new ServletHolder("default", DefaultServlet.class);
+        defaultServlet.setInitParameter("resourceBase", resourceBase);
+        defaultServlet.setInitParameter("dirAllowed", "false");
+        ctx.addServlet(defaultServlet, "/");
+        return ctx;
     }
 
 }

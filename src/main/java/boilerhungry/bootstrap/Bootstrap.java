@@ -9,7 +9,7 @@ public class Bootstrap extends Application {
 
     private static WebApp server;
     private static final int PORT = 8080;
-    private static final String LANDING_PAGE = String.format("http://localhost:%d/", PORT);
+    private static final String LANDING_PAGE = String.format("http://localhost:%d/home", PORT);
     private static final boolean USING_GUI = false;
 
     @Override
