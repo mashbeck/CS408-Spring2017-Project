@@ -18,9 +18,11 @@ public class DietaryPreferencesServlet extends HttpServlet {
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         RequestDispatcher view = req.getRequestDispatcher("dietarypreferences.jsp");
         ServletContext context = ServletContextHandler.getCurrentContext();
-        Settings settings = (Settings) context.getAttribute("Settings");
+        Settings settings = (Settings) context.getAttribute("settings");
         Collection<String> exclusions = settings.getDietaryExclusions();
         Collection<String> preferences = settings.getDietaryPreferences();
+        Collection<String> myFoods = settings.getMyFoods();
+        req.setAttribute("myFoods",myFoods);
         req.setAttribute("exclusions", exclusions);
         req.setAttribute("preferences", preferences);
         res.setContentType("text/html");

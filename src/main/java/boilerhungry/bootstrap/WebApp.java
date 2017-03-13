@@ -1,5 +1,6 @@
 package boilerhungry.bootstrap;
 
+import boilerhungry.servlets.DietaryPreferencesServlet;
 import boilerhungry.servlets.HomeServlet;
 import boilerhungry.servlets.MenuServlet;
 import org.apache.tomcat.InstanceManager;
@@ -70,6 +71,7 @@ public class WebApp {
         ServletHolder homeServlet = ctx.addServlet(HomeServlet.class, "/home");
         homeServlet.setInitOrder(1);
         ctx.addServlet(MenuServlet.class, "/menu/*");
+        ctx.addServlet(DietaryPreferencesServlet.class,"/dietarypreferences");
         // Default Servlet
         ServletHolder defaultServlet = new ServletHolder("default", DefaultServlet.class);
         defaultServlet.setInitParameter("resourceBase", resourceBase);

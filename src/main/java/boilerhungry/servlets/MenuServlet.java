@@ -16,6 +16,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class MenuServlet extends RouteServlet {
+    static boolean testing = true;
 
     private DiningCourtAPI api = new PurdueDiningCourtAPI();
 
@@ -29,9 +30,15 @@ public class MenuServlet extends RouteServlet {
         } else {
             try {
                 String diningCourtName = routes.get(0);
-                LocalDate date = routes.size() == 2 ?
+                LocalDate date;
+                if(testing){
+                    date= LocalDate.of(2017,3,6);
+                }
+                else{
+                    date = routes.size() == 2 ?
                         LocalDate.parse(routes.get(1), DiningCourt.DATE_TIME_FORMATTER) :
                         LocalDate.now();
+                }
                 Optional<DiningCourt> maybeDiningCourt = DiningCourt.getDiningCourt(api, diningCourtName);
                 if (maybeDiningCourt.isPresent()) {
                     DiningCourt diningCourt = maybeDiningCourt.get();

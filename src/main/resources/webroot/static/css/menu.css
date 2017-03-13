@@ -1,7 +1,24 @@
+
 .side-bar{
     margin-left: 10%;
 }
 .menu{
-    margin-left:20%;
-    margin-top:5%;
+    margin-left:22%;
+    margin-top:55px;
+}
+.star {
+    visibility:hidden;
+    font-size:16px;
+    cursor:pointer;
+}
+.star:before {
+    color:#ffd400;
+    content: "\2605";
+    position: absolute;
+    visibility:visible;
+}
+.star:checked:before {
+    color:#d66700;
+    content: "\2606";
+    position: absolute;
 }
