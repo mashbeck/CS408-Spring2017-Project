@@ -16,10 +16,18 @@ import java.util.List;
 import java.util.Optional;
 
 public class MenuServlet extends RouteServlet {
-    static boolean testing = true;
+    static boolean
+            testing = true;
 
     private DiningCourtAPI api = new PurdueDiningCourtAPI();
-
+    @Override
+    public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+        String en = req.getParameter("food");
+        System.out.println(en);
+        System.out.println("hello");
+        RequestDispatcher view = req.getRequestDispatcher("/menu.jsp");
+        view.forward(req, res);
+    }
     @Override
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         res.setContentType("application/json");

@@ -59,9 +59,13 @@
                         <div>
                         <label style="font-size: larger">${menuName}</label>
                         <c:forEach items="${menu.getMeal(menuName).get().getFoods()}" var =  "food">
-                            <div style="white-space: nowrap;">
-                                <label style="padding-left: 15px">${food.getName()}</label>
-                                <input class="star" type="checkbox" title="add to myFoods" checked><br/><br/>
+                            <div>
+                                <form name="input"  method="post">
+                                    <label style="padding-left: 15px">${food.getName()}</label>
+                                    <input class="star" type="checkbox" name = "food" value ="${food.getName()}" title="add to myFoods" checked>
+                                    <input type="submit" value="Submit">
+                                    <br/><br/>
+                                </form>
                             </div>
                         </c:forEach>
                         </div>

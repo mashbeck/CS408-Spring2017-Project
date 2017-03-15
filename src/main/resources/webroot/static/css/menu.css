@@ -18,7 +18,8 @@
     visibility:visible;
 }
 .star:checked:before {
-    color:#d66700;
+    color:#f74509;
+    /*font-weight: bold;*/
     content: "\2606";
     position: absolute;
 }
