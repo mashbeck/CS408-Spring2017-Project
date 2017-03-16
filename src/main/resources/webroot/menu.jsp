@@ -83,7 +83,7 @@
         <div class="col-sm-9 col-lg-10 menu" >
             <div class="container-fluid">
                 <div class="col-sm-9 col-lg-10" style="">
-                    ${menu.getDate()}
+                    ${menu.getDate()} : MAKE SURE TO SWITCH TESTING BOOLEAN TO TEST ON CURRENT DATE
                     <c:forEach items="${menu.getMealNames()}" var = "menuName">
                         <div>
                         <label style="font-size: larger">${menuName}</label>
