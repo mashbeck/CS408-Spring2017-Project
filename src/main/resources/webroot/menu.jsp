@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Menu</title>
+        <script src="/static/js/jquery-3.1.1.min.js"></script>
         <link href="/static/css/bootstrap.min.css" rel="stylesheet" />
         <link href="/static/css/navbar-fixed-side.css" rel="stylesheet" />
         <link href="/static/css/menu.css" rel = "stylesheet"/>
@@ -45,12 +46,29 @@
                     </div>
                     <div>
                         <h4>Wait time range:</h4>
-
                     </div>
 
                 </div>
             </nav>
         </div>
+        <script>
+            function addFood() {
+                var var1 = document.getElementsByName('food')[0].elements;
+                $.ajax({
+
+                    type: "POST",//or POST
+                    url: '/menu',
+                    //  (or whatever your url is)
+                    data: {data1: var1},
+                    //can send multipledata like {data1:var1,data2:var2,data3:var3
+                    //can use dataType:'text/html' or 'json' if response type expected
+                    success: function (responseData) {
+                        alert('nice');
+                    }
+                })
+
+            }
+        </script>
         <div class="col-sm-9 col-lg-10 menu" >
             <div class="container-fluid">
                 <div class="col-sm-9 col-lg-10" style="">
@@ -60,11 +78,9 @@
                         <label style="font-size: larger">${menuName}</label>
                         <c:forEach items="${menu.getMeal(menuName).get().getFoods()}" var =  "food">
                             <div>
-                                <form name="input"  method="post">
+
                                     <label style="padding-left: 15px">${food.getName()}</label>
-                                    <input class="star" type="checkbox" name = "food" value ="${food.getName()}" title="add to myFoods" checked>
-                                    <input type="submit" value="Submit">
-                                    <br/><br/>
+                                    <input class="star" type="checkbox" onclick='addFood()' name = "food" value ="${food.getName()}" title="add to myFoods" checked>
                                 </form>
                             </div>
                         </c:forEach>
