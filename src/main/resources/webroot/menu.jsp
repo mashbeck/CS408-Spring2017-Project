@@ -52,29 +52,32 @@
             </nav>
         </div>
         <script>
-            function addFood() {
-                var var1 = document.getElementsByName('food');
-                var foods=[];
-                var i;
-                for (i = 0; i < var1.length; i++) {
-                    if(var1[i].checked == false){
-                        foods.push(var1[i].value);
+            $(document).ready(function(){
+                var x = document.getElementsByName('foodItem');
+                var myFoodsList = [];
+                <c:forEach items="${myFoods}" var = "item">
+                    myFoodsList.push("${item}");
+                </c:forEach>
+                console.log(myFoodsList)
+                for(var i = 0; i <x.length;i++){
+                    var test1 = myFoodsList[2];
+                    var test2 = x[i].value;
+                    if($.inArray(x[i].value,myFoodsList)>=0){
+                        x[i].checked = false;
                     }
                 }
-//                console.log(var1);
+            });
+            function addFood(food) {
                 $.ajax({
 
                     type: "POST",//or POST
                     url: '/menu',
-                    dataType:'json',
-                    data: {foods: foods},
-                    //can send multipledata like {data1:var1,data2:var2,data3:var3
-                    //can use dataType:'text/html' or 'json' if response type expected
-                    success: function (responseData) {
-                        alert(responseData);
+                    dataType:'text',
+                    data: {food: food},
+                    error: function (thrownError) {
+                        alert("error with: "+thrownError);
                     }
-                })
-
+                });
             }
         </script>
         <div class="col-sm-9 col-lg-10 menu" >
@@ -86,9 +89,8 @@
                         <label style="font-size: larger">${menuName}</label>
                         <c:forEach items="${menu.getMeal(menuName).get().getFoods()}" var =  "food">
                             <div>
-
-                                    <label style="padding-left: 15px">${food.getName()}</label>
-                                    <input class="star" type="checkbox" onclick='addFood()' name = "food" value ="${food.getName()}" title="add to myFoods" checked>
+                                <label style="padding-left: 15px">${food.getName()}</label>
+                                <input class="star" type="checkbox" onclick='addFood("${food.getName()}")' name = "foodItem" value ="${food.getName()}" title="add to myFoods" checked>
                                 </form>
                             </div>
                         </c:forEach>
