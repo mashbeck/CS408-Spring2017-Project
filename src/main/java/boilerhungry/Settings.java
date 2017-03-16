@@ -39,7 +39,9 @@ public class Settings {
     private void setFile(File file) {
         this.file = file;
     }
-
+    public void setMyFoods(Set<String> foods){
+        this.myFoods=foods;
+    }
     public Collection<String> getDietaryExclusions() {
         return dietaryExclusions;
     }

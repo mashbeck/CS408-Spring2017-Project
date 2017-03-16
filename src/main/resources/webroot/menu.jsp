@@ -53,17 +53,25 @@
         </div>
         <script>
             function addFood() {
-                var var1 = document.getElementsByName('food')[0].elements;
+                var var1 = document.getElementsByName('food');
+                var foods=[];
+                var i;
+                for (i = 0; i < var1.length; i++) {
+                    if(var1[i].checked == false){
+                        foods.push(var1[i].value);
+                    }
+                }
+//                console.log(var1);
                 $.ajax({
 
                     type: "POST",//or POST
                     url: '/menu',
-                    //  (or whatever your url is)
-                    data: {data1: var1},
+                    dataType:'json',
+                    data: {foods: foods},
                     //can send multipledata like {data1:var1,data2:var2,data3:var3
                     //can use dataType:'text/html' or 'json' if response type expected
                     success: function (responseData) {
-                        alert('nice');
+                        alert(responseData);
                     }
                 })
 
