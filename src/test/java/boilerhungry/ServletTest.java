@@ -22,20 +22,20 @@ public class ServletTest {
 
     @Test
     public void testTabTitle() {
-        beginAt("/");
+        beginAt("/home");
         assertElementPresentByXPath("/html/body/nav/div/div[1]/a");
     }
 
     @Test
     public void testWebPageTitle() {
-        beginAt("/");
+        beginAt("/home");
 //        assertElementPresentByXPath("/html/body/nav/div/div[1]/a");
         assertTextPresent("BoilerHungry");
     }
 
     @Test
     public void testDifferentDiningCourtTitles() {
-        beginAt("/");
+        beginAt("/home");
         /* Test for Earhart */
         assertElementPresentByXPath("//*[@id='carousel']/div/div[1]/div/hgroup/h2");
         /* Test for Ford */
@@ -44,7 +44,7 @@ public class ServletTest {
 
     @Test
     public void testDiningCourtOnPage() throws InterruptedException {
-        beginAt("/");
+        beginAt("/home");
         /* Test for Earhart */
         assertElementPresentByXPath("//*[@id=\"carousel\"]/div/div[1][@class='item active']");
         // Testing for the little ball in the bottom
@@ -55,7 +55,7 @@ public class ServletTest {
 
     @Test
     public void testNavigationToOneDiningCourtMenu() {
-        beginAt("/");
+        beginAt("/home");
         assertElementPresentByXPath("//*[@id=\"carousel\"]/div/div[1][@class='item active']");
         /* Clicking on "View Menu" for Earhart */
         clickElementByXPath("//*[@id=\"carousel\"]/div/div[1]/div/form/button");
@@ -66,7 +66,7 @@ public class ServletTest {
 
     @Test
     public void testNavigationToOneDiningCourtMenuAndBack() {
-        beginAt("/");
+        beginAt("/home");
 
         assertElementPresentByXPath("//*[@id=\"carousel\"]/div/div[1][@class='item active']");
         /* Clicking on "View Menu" for Earhart */
@@ -94,14 +94,14 @@ public class ServletTest {
 
     @Test
     public void testNotificationTicker() {
-        beginAt("/");
+        beginAt("/home");
         assertElementPresentByXPath("//*[@id=\"carousel\"]/div/div[1][@class='item active']");
         assertElementPresentByXPath("//*[@id=\"ticker\"]");
     }
 
     @Test
     public void testPictureOnHomePage() {
-        beginAt("/");
+        beginAt("/home");
 
         assertElementPresentByXPath("//*[@id=\"carousel\"]/div/div[1]/img");
         assertElementPresentByXPath("//*[@id=\"carousel\"]/div/div[1][@class='item active']");
@@ -109,7 +109,7 @@ public class ServletTest {
 
     @Test
     public void testSettingsTab() {
-        beginAt("/");
+        beginAt("/home");
 
         assertElementPresentByXPath("//*[@id=\"navbar-collapsible\"]/ul/li/a");
 
@@ -125,7 +125,7 @@ public class ServletTest {
 
     @Test
     public void testDiningCourtNavigation() throws InterruptedException {
-        beginAt("/");
+        beginAt("/home");
         assertElementPresentByXPath("//*[@id=\"carousel\"]/div/div[1][@class='item active']");
         assertElementPresentByXPath("//*[@id=\"carousel\"]/div/div[1]/img");
         clickElementByXPath("//*[@id=\"next\"]");
