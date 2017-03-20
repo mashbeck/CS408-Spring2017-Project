@@ -18,15 +18,17 @@ import java.util.stream.Collectors;
 
 public class HomeServlet extends HttpServlet {
 
-    private DiningCourtAPI api = new PurdueDiningCourtAPI();
-    private Notifications notifier = new Notifications(api);
+    private Notifications notifier;
 
     @Override
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
         try {
+            DiningCourtAPI api = new PurdueDiningCourtAPI();
+            notifier = new Notifications(api);
             Settings settings = Settings.load(new File("settings.json"));
             config.getServletContext().setAttribute("settings", settings);
+            config.getServletContext().setAttribute("api", api);
         } catch (IOException ex) {
             ex.printStackTrace();
         }
@@ -37,9 +39,10 @@ public class HomeServlet extends HttpServlet {
         RequestDispatcher view = req.getRequestDispatcher("home.jsp");
         res.setContentType("text/html");
         res.setCharacterEncoding("utf-8");
+        DiningCourtAPI api = (DiningCourtAPI) getServletContext().getAttribute("api");
+        Settings settings = (Settings) getServletContext().getAttribute("settings");
         List<DiningCourt> diningCourts = DiningCourt.getDiningCourts(api);
         req.setAttribute("diningCourts", diningCourts);
-        Settings settings = (Settings) getServletContext().getAttribute("settings");
         Map<String, List<UpcomingFood>> upcoming = notifier.getMyFoodAppearances(settings);
         List<String> notifications = upcoming.values().stream()
                 .flatMap(Collection::stream)

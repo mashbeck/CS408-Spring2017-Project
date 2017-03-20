@@ -82,12 +82,11 @@
         </script>
         <div class="col-sm-9 col-lg-10 menu" >
             <div class="container-fluid">
-                <div class="col-sm-9 col-lg-10" style="">
-                    ${menu.getDate()} : MAKE SURE TO SWITCH TESTING BOOLEAN TO TEST ON CURRENT DATE
+                <div class="col-sm-9 col-lg-10">
                     <c:forEach items="${menu.getMealNames()}" var = "menuName">
                         <div>
                         <label style="font-size: larger">${menuName}</label>
-                        <c:forEach items="${menu.getMeal(menuName).get().getFoods()}" var =  "food">
+                        <c:forEach items="${menu.getMeal(menuName).get().getFoods()}" var = "food">
                             <div>
                                 <label style="padding-left: 15px">${food.getName()}</label>
                                 <input class="star" type="checkbox" onclick='addFood("${food.getName()}")' name = "foodItem" value ="${food.getName()}" title="add to myFoods" checked>

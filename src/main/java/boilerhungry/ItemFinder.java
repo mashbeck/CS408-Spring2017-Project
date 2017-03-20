@@ -24,7 +24,8 @@ public class ItemFinder extends JsonParser {
     }
 
     public List<UpcomingFood> searchUpComing(String searchFood) throws IOException {
-        URL url = new URL("https://api.hfs.purdue.edu/menus/v2/items/searchUpcoming/" + searchFood);
+        String urlFoodName = searchFood.replace(" ", "%20");
+        URL url = new URL("https://api.hfs.purdue.edu/menus/v2/items/searchUpcoming/" + urlFoodName);
         JSONObject root = api.getJSON(url);
         JSONArray results = root.getJSONArray("Results");
         List<UpcomingFood> upcomingFoods = new ArrayList<>();

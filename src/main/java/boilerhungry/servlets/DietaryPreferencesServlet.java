@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.Collection;
+import java.util.Set;
 
 public class DietaryPreferencesServlet extends HttpServlet {
 
@@ -19,9 +19,9 @@ public class DietaryPreferencesServlet extends HttpServlet {
         RequestDispatcher view = req.getRequestDispatcher("dietarypreferences.jsp");
         ServletContext context = ServletContextHandler.getCurrentContext();
         Settings settings = (Settings) context.getAttribute("settings");
-        Collection<String> exclusions = settings.getDietaryExclusions();
-        Collection<String> preferences = settings.getDietaryPreferences();
-        Collection<String> myFoods = settings.getMyFoods();
+        Set<String> exclusions = settings.getDietaryExclusions();
+        Set<String> preferences = settings.getDietaryPreferences();
+        Set<String> myFoods = settings.getMyFoods();
         req.setAttribute("myFoods",myFoods);
         req.setAttribute("exclusions", exclusions);
         req.setAttribute("preferences", preferences);

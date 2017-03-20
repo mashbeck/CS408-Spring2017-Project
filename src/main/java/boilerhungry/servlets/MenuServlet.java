@@ -1,10 +1,9 @@
 package boilerhungry.servlets;
 
-import boilerhungry.Menu;
 import boilerhungry.DiningCourt;
 import boilerhungry.DiningCourtAPI;
+import boilerhungry.Menu;
 import boilerhungry.Settings;
-import boilerhungry.purdue.PurdueDiningCourtAPI;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 
 import javax.servlet.RequestDispatcher;
@@ -21,28 +20,23 @@ import java.util.Optional;
 import java.util.Set;
 
 public class MenuServlet extends RouteServlet {
-    static boolean
-            testing = true;
 
-    private DiningCourtAPI api = new PurdueDiningCourtAPI();
     @Override
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         String food = req.getParameter("food");
-        ServletContext context = ServletContextHandler.getCurrentContext();
-        Settings settings = (Settings) context.getAttribute("settings");
-        Collection<String> myFoods = settings.getMyFoods();
-        if(myFoods.contains(food)){
-            myFoods.remove(food);
-        }
-        else{
-            myFoods.add(food);
-        }
-        settings.setMyFoods((Set<String>) myFoods);
-        settings.save();
-        if (food != null ) {
-            res.setStatus(HttpServletResponse.SC_OK);
+        if (food == null ) {
+            res.sendError(HttpServletResponse.SC_NOT_FOUND, "The requested object food was not found.");
         } else {
-            res.sendError(HttpServletResponse.SC_NOT_FOUND, "The requested object foods[] not found.");
+            ServletContext context = ServletContextHandler.getCurrentContext();
+            Settings settings = (Settings) context.getAttribute("settings");
+            Set<String> myFoods = settings.getMyFoods();
+            if (myFoods.contains(food)) {
+                myFoods.remove(food);
+            } else {
+                myFoods.add(food);
+            }
+            settings.save();
+            res.setStatus(HttpServletResponse.SC_OK);
         }
     }
     @Override
@@ -55,23 +49,18 @@ public class MenuServlet extends RouteServlet {
         } else {
             try {
                 String diningCourtName = routes.get(0);
-                LocalDate date;
-                if(testing){
-                    date= LocalDate.of(2017,3,6);
-                }
-                else{
-                    date = routes.size() == 2 ?
+                LocalDate date = routes.size() == 2 ?
                         LocalDate.parse(routes.get(1), DiningCourt.DATE_TIME_FORMATTER) :
                         LocalDate.now();
-                }
                 ServletContext context = ServletContextHandler.getCurrentContext();
                 Settings settings = (Settings) context.getAttribute("settings");
                 Collection<String> myFoods = settings.getMyFoods();
-                if(myFoods!=null){
+                if(myFoods != null) {
                     req.setAttribute("myFoods",myFoods);
-                }else{
+                } else {
                     res.sendError(HttpServletResponse.SC_NOT_FOUND);
                 }
+                DiningCourtAPI api = (DiningCourtAPI) getServletContext().getAttribute("api");
                 Optional<DiningCourt> maybeDiningCourt = DiningCourt.getDiningCourt(api, diningCourtName);
                 if (maybeDiningCourt.isPresent()) {
                     DiningCourt diningCourt = maybeDiningCourt.get();

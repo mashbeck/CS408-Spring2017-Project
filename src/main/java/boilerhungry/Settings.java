@@ -4,7 +4,6 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import java.io.*;
-import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -39,14 +38,16 @@ public class Settings {
     private void setFile(File file) {
         this.file = file;
     }
+
     public void setMyFoods(Set<String> foods){
         this.myFoods=foods;
     }
-    public Collection<String> getDietaryExclusions() {
+
+    public Set<String> getDietaryExclusions() {
         return dietaryExclusions;
     }
 
-    public Collection<String> getDietaryPreferences() {
+    public Set<String> getDietaryPreferences() {
         return dietaryPreferences;
     }
 
@@ -58,7 +59,7 @@ public class Settings {
         return dietaryPreferences.contains(preference);
     }
 
-    public Collection<String> getMyFoods() {
+    public Set<String> getMyFoods() {
         return myFoods;
     }
 
