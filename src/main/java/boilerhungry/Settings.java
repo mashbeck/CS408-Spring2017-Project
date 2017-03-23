@@ -55,7 +55,7 @@ public class Settings {
         return dietaryExclusions.contains(food);
     }
 
-    public boolean hasDietaryPreference(String preference) {
+    public boolean isDietaryPreference(String preference) {
         return dietaryPreferences.contains(preference);
     }
 

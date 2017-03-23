@@ -47,7 +47,7 @@ public class Food {
     }
 
     public List<String> getPreferences(Settings settings) {
-        if (isVegetarian) {
+        if (settings.isDietaryPreference("vegetarian") && isVegetarian) {
             return Collections.singletonList("vegetarian");
         } else {
             return new ArrayList<>();

@@ -268,7 +268,7 @@ public class DiningCourtTest {
         Settings settings = Settings.load(new File(DATA_DIR + "settings-load.json"));
         assertNotNull("settings should not be null", settings);
         assertNotNull("dietary exclusions should not be null", settings.getDietaryExclusions());
-        assertTrue("dietary preferences should contain vegetarian", settings.hasDietaryPreference("vegetarian"));
+        assertTrue("dietary preferences should contain vegetarian", settings.isDietaryPreference("vegetarian"));
         assertTrue("dietary exclusions should contain eggs", settings.isDietaryExclusion("eggs"));
         assertTrue("dietary exclusions should contain fish", settings.isDietaryExclusion("fish"));
         assertTrue("dietary exclusions should contain gluten", settings.isDietaryExclusion("gluten"));
