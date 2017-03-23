@@ -62,6 +62,7 @@ public class ServletTest {
         /* Verifying the location label and the location for Earhart */
         assertElementPresentByXPath("/html/body/div/div[1]/nav/div/div[2]/h4");
         assertElementPresentByXPath("/html/body/div/div[1]/nav/div/div[2]/label");
+        assertTextPresent("1275 First Street, West Lafayette, IN 47906-4231");
     }
 
     @Test
@@ -78,8 +79,6 @@ public class ServletTest {
         assertElementPresentByXPath("/html/body/div/div[1]/nav/div/div[2]/label");
         assertTextPresent("1275 First Street, West Lafayette, IN 47906-4231");
         assertTextNotPresent("Late Lunch");
-
-//        assertDownloadedFileEquals("http://localhost:8080/ViewMenu?diningCourt=Earhart");
 
         /* Going back to home page */
         clickElementByXPath("/html/body/nav/div/ul/li[1]/a");
