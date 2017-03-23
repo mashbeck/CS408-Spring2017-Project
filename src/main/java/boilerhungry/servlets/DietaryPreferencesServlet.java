@@ -16,7 +16,7 @@ public class DietaryPreferencesServlet extends HttpServlet {
 
     @Override
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-        RequestDispatcher view = req.getRequestDispatcher("dietarypreferences.jsp");
+        RequestDispatcher view = req.getRequestDispatcher("preferences.jsp");
         ServletContext context = ServletContextHandler.getCurrentContext();
         Settings settings = (Settings) context.getAttribute("settings");
         Set<String> exclusions = settings.getDietaryExclusions();

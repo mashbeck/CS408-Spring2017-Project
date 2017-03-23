@@ -40,6 +40,20 @@ public class Food {
                 .collect(Collectors.toList());
     }
 
+    public List<String> getExclusions(Settings settings) {
+        return settings.getDietaryExclusions().stream()
+                .filter(this::hasAllergen)
+                .collect(Collectors.toList());
+    }
+
+    public List<String> getPreferences(Settings settings) {
+        if (isVegetarian) {
+            return Collections.singletonList("vegetarian");
+        } else {
+            return new ArrayList<>();
+        }
+    }
+
     public boolean hasAllergen(String allergen) {
         return allergens.getOrDefault(allergen, false);
     }

@@ -71,7 +71,7 @@ public class WebApp {
         ServletHolder homeServlet = ctx.addServlet(HomeServlet.class, "/home");
         homeServlet.setInitOrder(1);
         ctx.addServlet(MenuServlet.class, "/menu/*");
-        ctx.addServlet(DietaryPreferencesServlet.class,"/dietarypreferences");
+        ctx.addServlet(DietaryPreferencesServlet.class, "/preferences");
         // Default Servlet
         ServletHolder defaultServlet = new ServletHolder("default", DefaultServlet.class);
         defaultServlet.setInitParameter("resourceBase", resourceBase);
