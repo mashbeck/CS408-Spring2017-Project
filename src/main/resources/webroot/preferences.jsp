@@ -31,7 +31,7 @@
         <h4>Preferences</h4>
         <table id="preferenceTable" class="table">
             <tbody>
-                <c:forEach items="${exclusions}" var="preference">
+                <c:forEach items="${preferences}" var="preference">
                     <tr>
                         <div class="checkbox">
                             <label>
@@ -73,17 +73,11 @@
                 var inp = $("#addPreferenceInput");
                 var pref = inp.val();
                 update(pref, "preference");
-                var row = "<tr><div class='checkbox'><label><input class='checked' type='checkbox' onclick='update(\"" + pref + "\", \"preference\")' value='" + pref + "' checked>" + pref + "</input></label></div></tr>";
-                $("#preferenceTable > tbody:last-child").append(row);
-                inp.val("");
             });
             $("#addExclusionButton").click(function() {
                 var inp = $("#addExclusionInput");
                 var pref = inp.val();
                 update(pref, "exclusion");
-                var row = "<tr><div class='checkbox'><label><input class='checked' type='checkbox' onclick='update(\"" + pref + "\", \"exclusion\")' value='" + pref + "' checked>" + pref + "</input></label></div></tr>";
-                $("#exclusionTable > tbody:last-child").append(row);
-                inp.val("");
             });
             function update(food, foodType) {
                 $.ajax({
