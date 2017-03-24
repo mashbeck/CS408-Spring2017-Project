@@ -22,6 +22,10 @@
                     <li><a href="/menu/Windsor">Windsor</a></li>
                     <li><a href="/menu/Ford">Ford</a></li>
                 </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li></b><a href="/myfoods" style="font-weight: bold">MyFoods</a></li>
+                    <li><a href="/preferences" style="font-weight: bold">Preferences</a></li>
+                </ul>
             </div>
     </nav>
     <div class="row">
@@ -58,10 +62,7 @@
                 <c:forEach items="${myFoods}" var = "item">
                     myFoodsList.push("${item}");
                 </c:forEach>
-                console.log(myFoodsList)
                 for(var i = 0; i <x.length;i++){
-                    var test1 = myFoodsList[2];
-                    var test2 = x[i].value;
                     if($.inArray(x[i].value,myFoodsList)>=0){
                         x[i].checked = false;
                     }

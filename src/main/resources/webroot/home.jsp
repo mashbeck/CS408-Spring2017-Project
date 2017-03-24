@@ -14,54 +14,30 @@
 </head>
 <body>
 
-<nav class="navbar navbar-default" role="navigation">
-    <div class="container">
-
+<nav class="navbar navbar-default" style="margin-bottom: 0" role="navigation">
+    <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsible">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">BoilerHungry</a>
+            <a class="navbar-brand" >Boilerhungry</a>
         </div>
-
-        <div class="navbar-collapse collapse" id="navbar-collapsible">
-
-            <ul class="nav navbar-header navbar-right">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-gear fa-fw"></i> Settings <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">My Foods</a></li>
-                        <li><a href="#">Dietary Preferences</a></li>
-                    </ul>
-                </li>
-            </ul>
-
-            <form class="navbar-form">
-                <div class="form-group" style="display:inline;">
-                    <div class="input-group">
-                        <form method="get" action ="ViewMenu">
-                            <input type="Search" placeholder="Search..." class="form-control" />
-                        </form>
-                        <div class="input-group-btn">
-                            <button class="btn btn-info">
-                                <span class="glyphicon glyphicon-search"></span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-
-        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="/home">Home</a></li>
+            <li><a href="/menu/Earhart">Earhart</a></li>
+            <li><a href="/menu/Hillenbrand">Hillenbrand</a></li>
+            <li><a href="/menu/Wiley">Wiley</a></li>
+            <li><a href="/menu/Windsor">Windsor</a></li>
+            <li><a href="/menu/Ford">Ford</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li></b><a href="/myfoods" style="font-weight: bold">MyFoods</a></li>
+            <li><a href="/preferences" style="font-weight: bold">Preferences</a></li>
+        </ul>
     </div>
 </nav>
 
 <h4 id="notificationTitle">Notifications:</h4>
 <div id="container">
     <div id="ticker">
-        <ul style="text-align:center">
+        <ul style="text-align:center;font-size: 10px" type="disc">
             <c:forEach items="${notifications}" var="notification" varStatus="loop">
                 <li>${notification}</li>
             </c:forEach>
@@ -71,15 +47,15 @@
 
 <script>
 
-       $('#ticker').vTicker({
-            speed: 2000,
-            pause: 100,
+       window.onload($('#ticker').vTicker({
+            speed: 3000,
+            pause: 400,
             showItems: 1,
             animation:'fade',
             mousePause:true,
-            height: 24,
+            height: 30,
             direction:'down'
-      });
+      }));
 
 </script>
 

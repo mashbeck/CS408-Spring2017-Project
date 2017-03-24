@@ -3,6 +3,7 @@ package boilerhungry.bootstrap;
 import boilerhungry.servlets.DietaryPreferencesServlet;
 import boilerhungry.servlets.HomeServlet;
 import boilerhungry.servlets.MenuServlet;
+import boilerhungry.servlets.MyFoodsServlet;
 import org.apache.tomcat.InstanceManager;
 import org.apache.tomcat.SimpleInstanceManager;
 import org.eclipse.jetty.jsp.JettyJspServlet;
@@ -71,6 +72,7 @@ public class WebApp {
         ServletHolder homeServlet = ctx.addServlet(HomeServlet.class, "/home");
         homeServlet.setInitOrder(1);
         ctx.addServlet(MenuServlet.class, "/menu/*");
+        ctx.addServlet(MyFoodsServlet.class,"/myfoods");
         ctx.addServlet(DietaryPreferencesServlet.class, "/preferences");
         // Default Servlet
         ServletHolder defaultServlet = new ServletHolder("default", DefaultServlet.class);
