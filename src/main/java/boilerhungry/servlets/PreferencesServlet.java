@@ -1,7 +1,6 @@
 package boilerhungry.servlets;
 
 import boilerhungry.Settings;
-import com.google.gson.Gson;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 
 import javax.servlet.RequestDispatcher;
@@ -38,6 +37,7 @@ public class PreferencesServlet extends HttpServlet {
                     res.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid foodType provided.");
                     return;
             }
+            food = food.toLowerCase();
             if (pref.contains(food)) {
                 pref.remove(food);
             } else {
@@ -60,8 +60,7 @@ public class PreferencesServlet extends HttpServlet {
         req.setAttribute("myFoods", myFoods);
         req.setAttribute("exclusions", exclusions);
         req.setAttribute("preferences", preferences);
-        req.setAttribute("preferencesArr", new Gson().toJson(preferences));
-        req.setAttribute("exclusionsArr", new Gson().toJson(exclusions));
+        req.setAttribute("settings", settings);
         res.setContentType("text/html");
         res.setCharacterEncoding("utf-8");
         view.forward(req, res);

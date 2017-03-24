@@ -57,6 +57,10 @@ public class DiningCourt {
                             JSONObject item = items.getJSONObject(k);
                             String foodName = item.getString("Name");
                             Food food = new Food(foodName, stationName);
+                            if (item.has("IsVegetarian")) {
+                                boolean isVegetarian = item.getBoolean("IsVegetarian");
+                                food.setVegetarian(isVegetarian);
+                            }
                             if (item.has("Allergens")) {
                                 JSONArray allergenArray = item.getJSONArray("Allergens");
                                 food.addAllergens(getAllergens(allergenArray));
@@ -82,7 +86,7 @@ public class DiningCourt {
             JSONObject allergen = arr.getJSONObject(a);
             String name = allergen.getString("Name");
             boolean value = allergen.getBoolean("Value");
-            allergens.put(name, value);
+            allergens.put(name.toLowerCase(), value);
         }
         return allergens;
     }

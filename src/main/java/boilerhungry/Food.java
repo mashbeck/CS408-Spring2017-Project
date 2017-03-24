@@ -48,18 +48,18 @@ public class Food {
 
     public List<String> getPreferences(Settings settings) {
         if (settings.isDietaryPreference("vegetarian") && isVegetarian) {
-            return Collections.singletonList("vegetarian");
+            return Arrays.asList("vegetarian");
         } else {
             return new ArrayList<>();
         }
     }
 
     public boolean hasAllergen(String allergen) {
-        return allergens.getOrDefault(allergen, false);
+        return allergens.getOrDefault(allergen.toLowerCase(), false);
     }
 
     public boolean addAllergen(String allergen, boolean value) {
-        return allergens.put(allergen, value);
+        return allergens.put(allergen.toLowerCase(), value);
     }
 
     public void addAllergens(Map<String, Boolean> allergens) {

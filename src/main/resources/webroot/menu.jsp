@@ -83,16 +83,21 @@
         <div class="col-sm-9 col-lg-10 menu" >
             <div class="container-fluid">
                 <div class="col-sm-9 col-lg-10">
-                    <c:forEach items="${menu.getMealNames()}" var = "menuName">
+                    <c:forEach items="${menu.getMealNames()}" var="menuName">
                         <div>
-                        <label style="font-size: larger">${menuName}</label>
-                        <c:forEach items="${menu.getMeal(menuName).get().getFoods()}" var = "food">
-                            <div>
-                                <label style="padding-left: 15px">${food.getName()}</label>
-                                <input class="star" type="checkbox" onclick='addFood("${food.getName()}")' name = "foodItem" value ="${food.getName()}" title="add to myFoods" checked>
-                                </form>
-                            </div>
-                        </c:forEach>
+                            <label style="font-size: larger">${menuName}</label>
+                            <c:forEach items="${menu.getMeal(menuName).get().getFoods()}" var="food">
+                                <div>
+                                    <label style="padding-left: 15px">${food.getName()}</label>
+                                    <input class="star" type="checkbox" onclick='addFood("${food.getName()}")' name = "foodItem" value ="${food.getName()}" title="add to myFoods" checked>
+                                    <c:if test="${!food.getPreferences(settings).isEmpty()}">
+                                        <p>Exclusions: ${food.getPreferences(settings)}</p>
+                                    </c:if>
+                                    <c:if test="${!food.getExclusions(settings).isEmpty()}">
+                                        <p>Exclusions: ${food.getExclusions(settings)}</p>
+                                    </c:if>
+                                </div>
+                            </c:forEach>
                         </div>
                     </c:forEach>
                 </div>
