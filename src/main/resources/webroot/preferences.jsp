@@ -93,6 +93,9 @@
                     data: { food, foodType },
                     error: function (thrownError) {
                         alert("error with: "+thrownError);
+                    },
+                    success: function(json){
+                        if(!json.error) location.reload(true);
                     }
                 });
             }

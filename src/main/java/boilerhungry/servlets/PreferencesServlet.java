@@ -46,6 +46,7 @@ public class PreferencesServlet extends HttpServlet {
             settings.save();
             res.setStatus(HttpServletResponse.SC_OK);
         }
+      
     }
 
     @Override
