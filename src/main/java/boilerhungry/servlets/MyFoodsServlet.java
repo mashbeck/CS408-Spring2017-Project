@@ -17,6 +17,26 @@ import java.util.Set;
  */
 public class MyFoodsServlet extends HttpServlet{
     @Override
+    public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+        String food = req.getParameter("food");
+        if (food == null ) {
+            res.sendError(HttpServletResponse.SC_NOT_FOUND, "The requested object food was not found.");
+        } else {
+            ServletContext context = ServletContextHandler.getCurrentContext();
+            Settings settings = (Settings) context.getAttribute("settings");
+            Set<String> myFoods = settings.getMyFoods();
+
+            if (myFoods.contains(food)) {
+                myFoods.remove(food);
+            } else {
+                myFoods.add(food);
+            }
+            settings.save();
+            res.setStatus(HttpServletResponse.SC_OK);
+        }
+    }
+
+    @Override
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         RequestDispatcher view = req.getRequestDispatcher("myFoods.jsp");
         ServletContext context = ServletContextHandler.getCurrentContext();

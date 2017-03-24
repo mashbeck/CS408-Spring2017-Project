@@ -7,9 +7,11 @@
         <title>BoilerHungry</title>
         <script src="static/js/jquery-3.1.1.min.js"></script>
         <link href="static/css/bootstrap.min.css" rel="stylesheet">
+        <link href="static/css/preferences.css" rel="stylesheet">
+        <link href="static/css/default.css" rel="stylesheet">
     </head>
     <body>
-        <nav class="navbar navbar-default navbar-fixed-top" style="margin-bottom: 0">
+        <nav class="navbar navbar-default" style="margin-bottom: 0">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <a class="navbar-brand" >Boilerhungry</a>
@@ -28,7 +30,10 @@
                 </ul>
             </div>
         </nav>
-        ${preferences}
-        ${exclusions}
+        <div>
+            ${preferences}
+            ${exclusions}
+            <h1>D  A  N  K    M  E  M  E  S</h1>
+        </div>
     </body>
 </html>
