@@ -24,7 +24,7 @@ public class MenuServlet extends RouteServlet {
     @Override
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         String food = req.getParameter("food");
-        if (food == null ) {
+        if (food == null) {
             res.sendError(HttpServletResponse.SC_NOT_FOUND, "The requested object food was not found.");
         } else {
             ServletContext context = ServletContextHandler.getCurrentContext();
@@ -39,6 +39,7 @@ public class MenuServlet extends RouteServlet {
             res.setStatus(HttpServletResponse.SC_OK);
         }
     }
+
     @Override
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         res.setContentType("application/json");
@@ -55,8 +56,8 @@ public class MenuServlet extends RouteServlet {
                 ServletContext context = ServletContextHandler.getCurrentContext();
                 Settings settings = (Settings) context.getAttribute("settings");
                 Collection<String> myFoods = settings.getMyFoods();
-                if(myFoods != null) {
-                    req.setAttribute("myFoods",myFoods);
+                if (myFoods != null) {
+                    req.setAttribute("myFoods", myFoods);
                 } else {
                     res.sendError(HttpServletResponse.SC_NOT_FOUND);
                 }
