@@ -32,6 +32,7 @@ public class Settings {
         this.file = file;
         this.version = 1;
         this.dietaryExclusions = new HashSet<>();
+        this.dietaryPreferences = new HashSet<>();
         this.myFoods = new HashSet<>();
     }
 
