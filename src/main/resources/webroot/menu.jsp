@@ -91,7 +91,7 @@
                                     <label style="padding-left: 15px">${food.getName()}</label>
                                     <input class="star" type="checkbox" onclick='addFood("${food.getName()}")' name = "foodItem" value ="${food.getName()}" title="add to myFoods" checked>
                                     <c:if test="${!food.getPreferences(settings).isEmpty()}">
-                                        <p>Exclusions: ${food.getPreferences(settings)}</p>
+                                        <p>Preferences: ${food.getPreferences(settings)}</p>
                                     </c:if>
                                     <c:if test="${!food.getExclusions(settings).isEmpty()}">
                                         <p>Exclusions: ${food.getExclusions(settings)}</p>
