@@ -24,7 +24,7 @@
               <goal>shade</goal>
             </goals>
             <configuration>
-              <minimizeJar>true</minimizeJar>
+              <minimizeJar>false</minimizeJar>
               <transformers>
                 <transformer>
                   <mainClass>boilerhungry.bootstrap.Bootstrap</mainClass>

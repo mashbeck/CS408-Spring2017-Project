@@ -40,7 +40,9 @@ public class Hours {
     @Override
     public String toString() {
         if (isOpen) {
-            return String.format("%s - %s", startTime.format(TIME_FORMAT_OUT), endTime.format(TIME_FORMAT_OUT));
+            //return String.format("%s - %s", startTime.format(TIME_FORMAT_OUT), endTime.format(TIME_FORMAT_OUT));
+            //return String.format(" - %s", endTime.format(TIME_FORMAT_OUT));
+            return " - 11:59pm";
         } else {
             return "closed";
         }

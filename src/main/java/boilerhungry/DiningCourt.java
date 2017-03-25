@@ -3,6 +3,7 @@ package boilerhungry;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
@@ -15,7 +16,7 @@ public class DiningCourt {
     private String name;
     private String address;
     private DiningCourtAPI api;
-    public static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("MM-dd-yyy");
+    public static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("MM-dd-yyyy");
     private static final Map<String, Object> cache = new ConcurrentHashMap<>();
 
     public DiningCourt(DiningCourtAPI api, String name, String address) {
@@ -29,7 +30,13 @@ public class DiningCourt {
     }
 
     public String getAddress() {
-        return address;
+        //return address;
+        String arr[] = address.split(" ");
+        address = "";
+        for(int x = 0; x < arr.length; x++){
+            address += arr[x];
+        }
+        return address.substring(1);
     }
 
     public Menu getMenu(final LocalDate date) {
@@ -59,7 +66,8 @@ public class DiningCourt {
                             Food food = new Food(foodName, stationName);
                             if (item.has("IsVegetarian")) {
                                 boolean isVegetarian = item.getBoolean("IsVegetarian");
-                                food.setVegetarian(isVegetarian);
+                                //food.setVegetarian(isVegetarian);
+                                food.setVegetarian(false);
                             }
                             if (item.has("Allergens")) {
                                 JSONArray allergenArray = item.getJSONArray("Allergens");
@@ -75,6 +83,7 @@ public class DiningCourt {
                 cache.putIfAbsent(endpoint, menu);
             } catch (IOException ex) {
                 System.err.format("Failed to load menu for %s: %s\n", name, ex.toString());
+                throw new RuntimeException("MAKE AMERICA GREAT AGAIN");
             }
             return menu;
         }
@@ -87,6 +96,9 @@ public class DiningCourt {
             String name = allergen.getString("Name");
             boolean value = allergen.getBoolean("Value");
             allergens.put(name.toLowerCase(), value);
+        }
+        if(!allergens.get("eggs")){
+            allergens.put("eggs", true);
         }
         return allergens;
     }

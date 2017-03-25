@@ -26,7 +26,7 @@ public class Meal {
     }
 
     public String getName() {
-        return name;
+            return name;
     }
 
     public Hours getHours() {

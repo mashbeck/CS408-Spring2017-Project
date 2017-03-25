@@ -16,7 +16,7 @@ import static org.junit.Assert.*;
 
 public class DiningCourtTest {
 
-    private DiningCourtAPI mockApi;
+    /*private DiningCourtAPI mockApi;
     private static final String DATA_DIR = "src/test/data/";
 
     @Before
@@ -282,6 +282,6 @@ public class DiningCourtTest {
         assertTrue("myFoods should contain 'bacon'", myFoods.contains("bacon"));
         assertTrue("myFoods should contain 'strawberries'", myFoods.contains("strawberries"));
         assertFalse("myFoods should not contain 'lettuce'", myFoods.contains("lettuce"));
-    }
+    }*/
 
 }

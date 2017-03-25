@@ -70,7 +70,7 @@ public class WebApp {
         ctx.addServlet(new ServletHolder("jsp", JettyJspServlet.class), "*.jsp");
         // Application servlets
         ServletHolder homeServlet = ctx.addServlet(HomeServlet.class, "/home");
-        homeServlet.setInitOrder(1);
+        //homeServlet.setInitOrder(1);
         ctx.addServlet(MenuServlet.class, "/menu/*");
         ctx.addServlet(PreferencesServlet.class, "/preferences");
         ctx.addServlet(MyFoodsServlet.class,"/myfoods");

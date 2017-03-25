@@ -24,7 +24,7 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li></b><a href="/myfoods" style="font-weight: bold">MyFoods</a></li>
-                    <li><a href="/preferences" style="font-weight: bold">Preferences</a></li>
+                    <li><a href="/preferences" style="font-weight: bold">MyFoods</a></li>
                 </ul>
             </div>
     </nav>
@@ -43,8 +43,10 @@
                         <h4>Open Hours:</h4>
                         <c:forEach items="${menu.getMealNames()}" var = "mealName">
                             <div>
+                                <c:if test = "${!mealName.equals("Late Lunch")}">
                                 <label style="font-size: larger">${mealName}</label>
                                 <label style="padding-left: 10px">${menu.getMeal(mealName).get().getHours()}</label>
+                                </c:if>
                             </div>
                         </c:forEach>
                     </div>

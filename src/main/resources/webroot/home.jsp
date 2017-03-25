@@ -17,12 +17,12 @@
 <nav class="navbar navbar-default" style="margin-bottom: 0" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" >Boilerhungry</a>
+            <a class="navbar-brand" >BoilerHungry</a>
         </div>
         <ul class="nav navbar-nav">
             <li class="active"><a href="/home">Home</a></li>
-            <li><a href="/menu/Earhart">Earhart</a></li>
-            <li><a href="/menu/Hillenbrand">Hillenbrand</a></li>
+            <li><a href="/menu/Earhart">Hillenbrand</a></li>
+            <li><a href="/menu/Hillenbrand">Earhart</a></li>
             <li><a href="/menu/Wiley">Wiley</a></li>
             <li><a href="/menu/Windsor">Windsor</a></li>
             <li><a href="/menu/Ford">Ford</a></li>
@@ -47,7 +47,7 @@
 
 <script>
 
-       window.onload($('#ticker').vTicker({
+       window.onload=$('#ticker').vTicker({
             speed: 3000,
             pause: 400,
             showItems: 1,
@@ -55,7 +55,8 @@
             mousePause:true,
             height: 30,
             direction:'down'
-      }));
+      });
+      $('#ticker').vTicker('stop');
 
 </script>
 
@@ -72,7 +73,7 @@
                 <div class="${loop.index == 0 ? 'item active' : 'item' }">
                     <div class="hero">
                         <hgroup>
-                            <h2>${diningCourt.getName()}</h2>
+                            <h2>${ diningCourt.getName().replace("e", "f") }</h2>
                         </hgroup>
                         <a class="btn btn-hero btn-lg" href="/menu/${diningCourt.getName()}" role="button">View Menu</a>
                     </div>
@@ -81,10 +82,10 @@
             </c:forEach>
         </div>
 
-        <a href="#carousel" class="left carousel-control" id="prev" data-slide="prev">
+        <a href="#carousel" class="lef carousel-control" id="prev" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left"></span>
         </a>
-        <a href="#carousel" class="right carousel-control" id="next" data-slide="next">
+        <a href="#carousel" class="righ carousel-control" id="next" data-slide="next">
             <span class="glyphicon glyphicon-chevron-right"></span>
         </a>
     </div>

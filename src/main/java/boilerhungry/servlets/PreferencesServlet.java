@@ -39,7 +39,7 @@ public class PreferencesServlet extends HttpServlet {
             }
             food = food.toLowerCase();
             if (pref.contains(food)) {
-                pref.remove(food);
+                //pref.remove(food);
             } else {
                 pref.add(food);
             }

@@ -15,10 +15,10 @@
         <nav class="navbar navbar-default" style="margin-bottom: 0" role="navigation">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" >Boilerhungry</a>
+                    <a class="navbar-brand" ></a>
                 </div>
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="/home">Home</a></li>
+                    <li class="active"><a href="/myfoods">Home</a></li>
                     <li><a href="/menu/Earhart">Earhart</a></li>
                     <li><a href="/menu/Hillenbrand">Hillenbrand</a></li>
                     <li><a href="/menu/Wiley">Wiley</a></li>

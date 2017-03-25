@@ -23,8 +23,8 @@
                     <li><a href="/menu/Ford">Ford</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li></b><a href="/myfoods" style="font-weight: bold">MyFoods</a></li>
-                    <li><a href="/preferences" style="font-weight: bold">Preferences</a></li>
+                    <li></b><a href="/home" style="font-weight: bold">MyFoods</a></li>
+                    <li><a href="/home" style="font-weight: bold">Preferences</a></li>
                 </ul>
             </div>
         </nav>
@@ -42,8 +42,8 @@
                 </c:forEach>
                 <tr>
                      <div id="container">
-                        <input id="addPreferenceInput" type="search" name="chosen" placeholder="Add a preference">
-                        <input id="addPreferenceButton" type="submit" value="Add">
+                        <input id="addPreferenceInput" type="search" name="chosen" placeholder="Add an exclusion">
+                        <input id="addPreferenceButton" type="submit" value="Button">
                      </div>
                 </tr>
             </tbody>
@@ -63,7 +63,7 @@
                 <tr>
                      <div id="container">
                         <input id="addExclusionInput" type="search" name="chosen" placeholder="Add an exclusion">
-                        <input id="addExclusionButton" type="submit" value="Add">
+                        <input id="addExclusionButton" type="submit" value="Button">
                      </div>
                 </tr>
             </tbody>
